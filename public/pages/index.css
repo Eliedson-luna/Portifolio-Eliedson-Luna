@@ -1,0 +1,355 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.6;
+    background: linear-gradient(#1a1a1a, #1b1b1b, #1c1c1c);
+    color: #333;
+
+}
+
+h3 {
+    color: #AfAfAf
+}
+
+header {
+    background: #333333;
+    color: #cbcbcb;
+    padding: 1.5rem 0;
+    text-align: center;
+    filter: drop-shadow(0px 0px 5px #000000);
+}
+
+header h1 {
+    filter: drop-shadow(0px 0px 1px #000000);
+    font-size: 2.5rem;
+}
+
+header p {
+    filter: drop-shadow(0px 0px 0.5px #000000);
+    font-size: 1.2rem;
+}
+
+nav {
+    color: white;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 0.5rem 0;
+}
+
+nav a {
+    filter: brightness(50%);
+    font-size: 14px;
+    color: #c5bbbb;
+    margin: 0 1rem;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+nav a:hover {
+    filter: brightness(100%);
+}
+
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 1rem 0;
+}
+
+.container h2 {
+    color: #BfBfBf;
+    text-align: center;
+}
+
+section {
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    background-color: #222222;
+    filter: drop-shadow(0px 0px 10px #000);
+}
+
+section p {
+    margin: 5px auto;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    color: #afafaf;
+    font-size: 1.1rem;
+}
+
+.slide-carroussel {
+    padding: 0;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    height: 400px;
+}
+
+.slides {
+    display: flex;
+    transition: 1.5s ease-in-out;
+}
+
+.slide {
+    color: white;
+    flex: 0 0 100%;
+    padding: 1rem;
+    height: 100%;
+    min-width: 23rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#slide-1 {
+    background-image: url('https://10.0.0.149:3130/assets/img/slides/fundoNode.png');
+}
+
+#slide-2 {
+
+    background-image: url('https://10.0.0.149:3130/assets/img/slides/fundoReactNative.png');
+}
+
+#project-box {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 400px;
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+}
+
+#project-section button {
+    filter: brightness(50%);
+    background-color: #888;
+    min-height: 50%;
+    height: 100%;
+    min-width: 2.5rem;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    z-index: 10;
+    position: absolute;
+}
+
+#previous-project {
+    border-radius: 5px 0px 0px 5px;
+    left: 0;
+}
+
+#next-project {
+    border-radius: 0px 5px 5px 0px;
+    right: 0;
+}
+
+#project-section button:hover {
+    filter: drop-shadow(0px 0px 5px #000);
+    filter: brightness(100%);
+}
+
+#project-list {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    min-width: 23rem;
+    max-width: 60rem;
+    scroll-behavior: smooth;
+    margin: 0 2.5rem;
+}
+
+.project {
+    overflow-y: scroll;
+    flex: 0 0 100%;
+    padding: 0 1rem;
+    height: 25rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.project h3 {
+    background-color: #222222;
+    font-size: 1.1rem;
+    max-width: 30%;
+    min-width: 30%;
+    position: absolute;
+}
+
+.article-box {
+    max-width: 30%;
+    overflow: scroll;
+}
+
+.project-text-box {
+    padding-top: 1.5rem;
+}
+
+.project-text-box p {
+    font-size: 0.9rem;
+}
+
+#project-1 {
+    background-color: #000;
+    background-image: url('https://10.0.0.149:3130/assets/img/projects/canhotoApi.png');
+}
+
+#project-2 {
+    background-color: #000;
+    background-image: url('https://10.0.0.149:3130/assets/img/projects/appCanhoto.png');
+}
+
+
+.project div p::-webkit-scrollbar {
+    scroll-behavior: smooth;
+    display: inherit;
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+.project::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+
+.project::-webkit-scrollbar-thumb:active {
+    background: #555;
+}
+
+#contacts-section {
+    text-align: center;
+}
+
+#contact-list {
+    height: 5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#contact-list a {
+    display: inline-block;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.3s ease-in-out;
+}
+
+#contact-list a:not(#link-mail) {
+    width: 35px;
+    height: 35px;
+}
+
+#link-mail {
+
+    filter: drop-shadow(0px 0px 3px #000);
+    border-radius: 5px;
+    width: 40px;
+    height: 25px;
+    background-color: #9f9f9f;
+    background-image: url('https://10.0.0.149:3130/assets/img/contacts/mail.png');
+}
+
+#link-mail:hover {
+    filter: drop-shadow(0px 0px 5px #dfdfdf);
+    background-color: #dfdfdf;
+}
+
+#link-linkedin {
+    filter: drop-shadow(0px 0px 3px #000);
+    background-image: url('https://10.0.0.149:3130/assets/img/contacts/linkedin.png');
+}
+
+#link-linkedin:hover {
+    filter: drop-shadow(0px 0px 5px #0077B5);
+}
+
+#link-github {
+
+    filter: drop-shadow(0px 0px 3px #000);
+    border-radius: 25%;
+    background-color: #9f9f9f;
+    background-image: url('https://10.0.0.149:3130/assets/img/contacts/github-logo.png');
+}
+
+#link-github:hover {
+    filter: drop-shadow(0px 0px 5px #dfdfdf);
+    background-color: #dfdfdf;
+}
+
+#download-cv {
+    filter: drop-shadow(0px 0px 5px #aaa);
+    background-image: url('https://10.0.0.149:3130/assets/img/contacts/download-cv.png');
+}
+
+#download-cv:hover {
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 5px#dfdfdf);
+}
+
+
+
+footer {
+    text-align: center;
+    background: #08080880;
+    color: white;
+    padding: 1rem 0;
+}
+
+@media (max-width: 1024px) {
+    .slide-carroussel {
+        height: 300px;
+
+    }
+
+    .slide {
+        min-width: 18rem;
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .slide-carroussel {
+        height: 250px;
+    }
+
+    .slide {
+        min-width: 17rem;
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .slide-carroussel {
+        height: 200px;
+    }
+
+    .slide {
+        min-width: 8.5rem;
+    }
+
+    .project {
+        min-width: 8.5rem;
+    }
+
+    .contact-link {
+        width: 20px;
+        height: 20px;
+    }
+}
