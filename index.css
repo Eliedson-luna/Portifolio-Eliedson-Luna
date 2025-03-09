@@ -116,12 +116,12 @@ section p {
 }
 
 #slide-1 {
-    background-image: url('https://10.0.0.149:3130/assets/img/slides/fundoNode.png');
+    background-image: url('/assets/img/slides/fundoNode.png');
 }
 
 #slide-2 {
 
-    background-image: url('https://10.0.0.149:3130/assets/img/slides/fundoReactNative.png');
+    background-image: url('/assets/img/slides/fundoReactNative.png');
 }
 
 #project-box {
@@ -206,12 +206,12 @@ section p {
 
 #project-1 {
     background-color: #000;
-    background-image: url('https://10.0.0.149:3130/assets/img/projects/canhotoApi.png');
+    background-image: url('/assets/img/projects/canhotoApi.png');
 }
 
 #project-2 {
     background-color: #000;
-    background-image: url('https://10.0.0.149:3130/assets/img/projects/appCanhoto.png');
+    background-image: url('/assets/img/projects/appCanhoto.png');
 }
 
 
@@ -263,7 +263,7 @@ section p {
     width: 40px;
     height: 25px;
     background-color: #9f9f9f;
-    background-image: url('https://10.0.0.149:3130/assets/img/contacts/mail.png');
+    background-image: url('/assets/img/contacts/mail.png');
 }
 
 #link-mail:hover {
@@ -273,7 +273,7 @@ section p {
 
 #link-linkedin {
     filter: drop-shadow(0px 0px 3px #000);
-    background-image: url('https://10.0.0.149:3130/assets/img/contacts/linkedin.png');
+    background-image: url('/assets/img/contacts/linkedin.png');
 }
 
 #link-linkedin:hover {
@@ -285,7 +285,7 @@ section p {
     filter: drop-shadow(0px 0px 3px #000);
     border-radius: 25%;
     background-color: #9f9f9f;
-    background-image: url('https://10.0.0.149:3130/assets/img/contacts/github-logo.png');
+    background-image: url('/assets/img/contacts/github-logo.png');
 }
 
 #link-github:hover {
@@ -295,7 +295,7 @@ section p {
 
 #download-cv {
     filter: drop-shadow(0px 0px 5px #aaa);
-    background-image: url('https://10.0.0.149:3130/assets/img/contacts/download-cv.png');
+    background-image: url('/assets/img/contacts/download-cv.png');
 }
 
 #download-cv:hover {
