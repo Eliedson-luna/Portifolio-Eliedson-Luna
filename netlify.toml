@@ -2,8 +2,6 @@
   command = "npm run build"
   publish = ".next"
 
-[build.environment]
-  NEXT_FORCE_FULL_BUILD = "true"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
