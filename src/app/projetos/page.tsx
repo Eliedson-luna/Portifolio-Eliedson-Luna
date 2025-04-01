@@ -6,9 +6,9 @@ export default function Projetos() {
             <section id="project-section">
                 <h2>Projetos</h2>
                 <div id="project-box">
-                    <button id="previous-project">&lt;</button>
+
                     <div id="project-list" >
-                        <article id="project-1" >
+                        <article className="project" id="project-1" >
                             <div >
                                 <h3>CanhotoAPI</h3>
                                 <div>
@@ -38,7 +38,7 @@ export default function Projetos() {
                                 </div>
                             </div>
                         </article>
-                        <article id="project-2">
+                        <article className="project" id="project-2">
                             <div>
                                 <h3>AppCanhoto</h3>
                                 <div >
@@ -55,7 +55,7 @@ export default function Projetos() {
                             </div>
                         </article>
                     </div>
-                    <button id="next-project">&gt;</button>
+
                 </div>
             </section>
         </Container>
