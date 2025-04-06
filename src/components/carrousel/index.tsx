@@ -19,7 +19,7 @@ export default function Carrousel({ children }: { children: ReactNode }) {
     }, []);
 
     return (
-        <div className="w-full overflow-hidden relative flex justify-center rounded">
+        <div className="h-full w-full overflow-hidden relative flex justify-center rounded">
             <div
                 ref={slidesRef}
                 className="flex transition-transform duration-1000 ease-in-out"
