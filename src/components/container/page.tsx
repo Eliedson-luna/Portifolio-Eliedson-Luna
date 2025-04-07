@@ -8,6 +8,7 @@ export default function Container({ children }: { children: ReactNode }) {
         mb-[2vh]
         rounded
         text-[1.1rem]
+        overflow-scroll
         "
         >
             {children}

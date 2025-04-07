@@ -30,15 +30,14 @@ export default function Projetos() {
 
     return (
         <Container>
-            <section id="project-section">
+            <section id="project-section" className="p-10 max-h-[50rem] overflow-scroll">
                 <h2>Projetos</h2>
                 <div id="project-box" className="p-10">
                     {
                         projects.map((proj: any, index: number) => (
                             <article className="project flex flex-row h-100 w-[100%]" id={`Project-${index + 1}`} key={index}>
                                 <div>
-
-                                    <h3>{proj.title}</h3>
+                                    <h3 className="mb-3">{proj.title}</h3>
                                     <div id="text">
                                         {proj.txt.map((p: string, i: number) => (
                                             <p key={i}>{p}</p>
@@ -46,7 +45,6 @@ export default function Projetos() {
                                     </div>
                                 </div>
                                 <div className="w-[100%]">
-
                                     <Carrousel>
                                         {
                                             proj.img.map((link: string, n: number) => (
@@ -63,8 +61,6 @@ export default function Projetos() {
                                         }
                                     </Carrousel>
                                 </div>
-
-
                             </article>
                         )
                         )}
