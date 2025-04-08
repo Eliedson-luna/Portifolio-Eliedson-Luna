@@ -30,7 +30,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} min-h-screen antialiased flex flex-col overflow-scroll`}
       >
         <Header />
-        <main className="flex-grow min-h-[80%] justify-items-center">
+        <main className="grid place-items-center flex-grow min-h-[80%] items-center justify-items-center">
           {children}
         </main>
         <Footer />

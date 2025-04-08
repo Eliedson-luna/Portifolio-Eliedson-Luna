@@ -12,13 +12,13 @@ export default function Home() {
 
   return (
     <section id="Container" className="
-    w-450
-    h-200
+    w-[80vw]
+    h-[75vh]
     mt-5
     mb-5
     rounded
     ">
-      <div className="h-full flex justify-center">
+      <div className="h-full flexs justify-center">
         <Carrousel>
           {
             sources.map((src: any, index: number) => (

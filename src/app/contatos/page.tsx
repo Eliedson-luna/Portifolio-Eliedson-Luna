@@ -8,8 +8,8 @@ export default function Contatos() {
 
     function downloadCv() {
 
-        const cvPath = "/assets/curriculoEliedsonLuna.pdf";
-        const archiveName = "curriculoEliedsonLuna.pdf";
+        const cvPath = "/assets/Curriculo_Eliedson_Luna_Dev_Frontend.pdf";
+        const archiveName = "Curriculo_Eliedson_Luna_Dev_Frontend.pdf";
 
         const a = document.createElement('a');
         a.style.display = 'none';
@@ -22,6 +22,13 @@ export default function Contatos() {
 
     }
 
+
+    const icons = [
+        { alt: 'Email', src: "/images/mail.png", href: "/contatos/sendMail" },
+        { alt: 'Linkedin', src: "/images/linkedin.png", href: "https://www.linkedin.com/in/eliedsonluna/" },
+        { alt: 'Github', src: "/images/github-logo.png", href: "https://github.com/Eliedson-luna" },
+    ]
+
     return (
         <Container>
             <div className="
@@ -31,30 +38,16 @@ export default function Contatos() {
             ">
                 <h3>Fique vontade para me chamar caso queira trabalhar comigo!</h3>
                 <div id="contact-list" className="flex justify-center">
-                    <Link className="m-5" href="/contatos/sendMail">
-                        <Image
-                            alt="Email"
-                            src="/images/mail.png"
-                            width={30}
-                            height={30} />
-                    </Link>
 
-                    <Link className="m-5" href="https://www.linkedin.com/in/eliedsonluna/" target="_blank">
-                        <Image
-                            alt="Linkedin"
-                            src="/images/linkedin.png"
-                            width={30}
-                            height={30} />
-
-                    </Link>
-
-                    <Link className="m-5" href="https://github.com/Eliedson-luna" target="_blank">
-                        <Image
-                            alt="Github"
-                            src="/images/github-logo.png"
-                            width={30}
-                            height={30} />
-                    </Link>
+                    {icons.map((icon, index) => (
+                        <Link key={index} className="m-5" href={icon.href} target="_blank">
+                            <Image
+                                alt={icon.alt}
+                                src={icon.src}
+                                width={30}
+                                height={30} />
+                        </Link>
+                    ))}
                     <button className="cursor-pointer m-5" onClick={downloadCv}>
                         <Image
                             alt="Baixar Curriculo"
