@@ -7,7 +7,7 @@
                 " A api conta com um Frontend acessado localmente, possibilitando a configuração de forma facilitada para o usuário.",
                 " É possivel realizar controle de usuários criando, editando, deletando e restringindo acesso em apenas alguns cliques."
             ],
-            "img": []
+            "img": ["/images/github-logo.png"]
         },
         {
             "title": "AppCanhoto",
@@ -15,7 +15,7 @@
                 " Criado para atuar com o CanhotoApi, permite o backup de canhotos de notas fiscais em seu servidor e banco de dados.",
                 " Com ele podemos ler o código de barras de uma nota fiscal, o app fica responsavel de coletar e tratar as informações do código para o processamento e envio para o servidor."
             ],
-            "img": []
+            "img": ["/images/mail.png", "/images/github-logo.png"]
         }
     ]
 }
