@@ -91,7 +91,7 @@ export default function ContatoPage() {
                         <div className="mt-4">
                             <ReCAPTCHA
                                 ref={recaptchaRef}
-                                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
+                                sitekey={process.env.RECAPTCHA_SITE_KEY!}
                                 onChange={setCaptchaValue}
                             />
                         </div>

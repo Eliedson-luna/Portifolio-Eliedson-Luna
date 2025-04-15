@@ -5,6 +5,9 @@ import Link from "next/link";
 export default function Header() {
     return (
         <header className="mb-2 h-[10%]">
+            <div className="text-yellow-300 text-center sm:text-[1rem] md:text-[1.5rem] lg:text-[1rem]">
+                !!! EM DESENVOLVIMENTO !!!
+            </div>
             <div className="
             h-[80%]
             grid

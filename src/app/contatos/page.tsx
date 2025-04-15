@@ -3,7 +3,6 @@ import Container from "@/components/container/page";
 import Image from "next/image";
 import Link from "next/link";
 
-
 export default function Contatos() {
 
     function downloadCv() {
@@ -22,7 +21,6 @@ export default function Contatos() {
 
     }
 
-
     const icons = [
         { alt: 'Email', src: "/images/mail.png", href: "/contatos/sendMail" },
         { alt: 'Linkedin', src: "/images/linkedin.png", href: "https://www.linkedin.com/in/eliedsonluna/" },
@@ -36,11 +34,13 @@ export default function Contatos() {
             justify-center
             content-center
             ">
-                <h3>Fique vontade para me chamar caso queira trabalhar comigo!</h3>
+                <div className="text-center">
+                    <h3>Fique vontade para me chamar caso queira trabalhar comigo!</h3>
+                </div>
                 <div id="contact-list" className="flex justify-center">
 
                     {icons.map((icon, index) => (
-                        <Link key={index} className="m-5" href={icon.href} target="_blank">
+                        <Link key={index} className="m-5 hover:shadow-blue-100" href={icon.href} target="_blank">
                             <Image
                                 alt={icon.alt}
                                 src={icon.src}

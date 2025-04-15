@@ -9,7 +9,7 @@ export async function POST(request: Request) {
         }
 
         const response = await fetch(
-            `https://recaptchaenterprise.googleapis.com/v1/projects/portifolioelieds-1742338758804/assessments?key=${process.env.API_KEY}`,
+            `https://recaptchaenterprise.googleapis.com/v1/projects/portifolioelieds-1742338758804/assessments?key=${process.env.RECAPTCHA_API_KEY}`,
             {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -17,7 +17,7 @@ export async function POST(request: Request) {
                     event: {
                         token,
                         expectedAction,
-                        siteKey: process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY,
+                        siteKey: process.env.RECAPTCHA_SITE_KEY,
                     },
                 }),
             }

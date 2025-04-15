@@ -4,10 +4,13 @@ export default function Container({ children }: { children: ReactNode }) {
     return (
         <section id="Container" className="
         w-[80vw]
-        mt-[2vh]
-        mb-[2vh]
+        max-h-[60vh]
+        mt-2
+        mb-2
         rounded
-        text-[1.1rem]
+        sm:text-[.7rem]
+        md:text-[.8rem]
+        lg:text-[9.rem]
         overflow-scroll
         "
         >

@@ -12,29 +12,25 @@ export default function Home() {
 
   return (
     <section id="Container" className="
-    w-[80vw]
-    h-[75vh]
-    mt-5
-    mb-5
+    w-[80vw] h-[70%] 
+    mt-2
+    mb-2
     rounded
     ">
-      <div className="h-full flexs justify-center">
-        <Carrousel>
-          {
-            sources.map((src: any, index: number) => (
-              <div className="relative w-500">
-                <Image
-                  key={index}
-                  src={src}
-                  alt="Image"
-                  layout="fill"
-                  className="object-fill"
-                />
-              </div>
-            ))
-          }
-        </Carrousel>
-      </div>
+      <Carrousel>
+        {
+          sources.map((src: any, index: number) => (
+            <div className="relative w-screen">
+              <Image
+                key={index}
+                src={src}
+                alt="Image"
+                fill={true}
+              />
+            </div>
+          ))
+        }
+      </Carrousel>
     </section>
   );
 }

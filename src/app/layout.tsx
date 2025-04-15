@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} min-h-screen antialiased flex flex-col overflow-scroll`}
+        className={`${geistSans.variable} ${geistMono.variable} min-h-screen antialiased flex flex-col overflow-hidden`}
       >
         <Header />
         <main className="grid place-items-center flex-grow min-h-[80%] items-center justify-items-center">
