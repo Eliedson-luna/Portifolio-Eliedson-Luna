@@ -1,6 +1,7 @@
 {
     "Projects": [
         {
+            "id": 1,
             "title": "CanhotoAPI",
             "txt": [
                 " O CanhotoApi tem o proposito de facilitar o backup de canhotos de notas fiscais. Desenvolvido com NodeJs e Express para receber imagens via requisições http e armazena-las localmente em um servidor enquanto insere os dados em um banco de dados SQL Server.",
@@ -10,6 +11,7 @@
             "img": ["/images/github-logo.png"]
         },
         {
+            "id": 2,
             "title": "AppCanhoto",
             "txt": [
                 " Criado para atuar com o CanhotoApi, permite o backup de canhotos de notas fiscais em seu servidor e banco de dados.",
