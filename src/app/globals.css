@@ -1,17 +1,51 @@
 @import "tailwindcss";
 
-@keyframes marquee {
+@keyframes marquee-mobile {
   0% { transform: translateX(0) }
-  100% { transform: translateX(-50%) }
+  100% { transform: translateX(-116%) } /* Para 3x repetição */
+}
+
+@keyframes marquee-tablet {
+  0% { transform: translateX(0) }
+  100% { transform: translateX(-60%) } /* Para 2x repetição */
+}
+
+@keyframes marquee-desktop {
+  0% { transform: translateX(0) }
+  100% { transform: translateX(-59.5%) } /* Para 1.7x repetição ou mais imagens */
 }
 
 @layer utilities {
   .animate-marquee {
-    animation: marquee 30s linear infinite;
+    animation: marquee-mobile 5s linear infinite;
   }
-  
-  .animate-marquee:hover {
-    animation-play-state: paused;
+
+  /* Small screens (sm: 640px+) */
+  @media (min-width: 640px) {
+    .animate-marquee {
+      animation: marquee-tablet 40s linear infinite;
+    }
+  }
+
+  /* Medium screens (md: 768px+) */
+  @media (min-width: 768px) {
+    .animate-marquee {
+      animation: marquee-tablet 35s linear infinite;
+    }
+  }
+
+  /* Large screens (lg: 1024px+) */
+  @media (min-width: 1024px) {
+    .animate-marquee {
+      animation: marquee-desktop 30s linear infinite;
+    }
+  }
+
+  /* Extra Large screens (xl: 1280px+) */
+  @media (min-width: 1280px) {
+    .animate-marquee {
+      animation: marquee-desktop 25s linear infinite;
+    }
   }
 }
 
