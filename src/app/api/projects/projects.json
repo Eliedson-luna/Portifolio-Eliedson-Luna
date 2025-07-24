@@ -1,0 +1,42 @@
+{
+    "Projects": [
+        {
+            "id": 1,
+            "title": "CanhotoAPI",
+            "txt": [
+                " O CanhotoApi tem o proposito de facilitar o backup de canhotos de notas fiscais. Desenvolvido com NodeJs e Express para receber imagens via requisições http e armazena-las localmente em um servidor enquanto insere os dados em um banco de dados SQL Server.",
+                " A api conta com um Frontend acessado localmente, possibilitando a configuração de forma facilitada para o usuário.",
+                " É possivel realizar controle de usuários criando, editando, deletando e restringindo acesso em apenas alguns cliques."
+            ],
+            "img": [
+                "/images/header/sun.png"
+            ],
+            "description": "API nodeJs com express responsável por receber e armazenar imagens, persistindo os dados da do código de barras no SQL Server."
+        },
+        {
+            "id": 2,
+            "title": "AppCanhoto",
+            "txt": [
+                " Criado para atuar com o CanhotoApi, permite o backup de canhotos de notas fiscais em seu servidor e banco de dados.",
+                " Com ele podemos ler o código de barras de uma nota fiscal, o app fica responsavel de coletar e tratar as informações do código para o processamento e envio para o servidor."
+            ],
+            "img": [
+                "/images/header/moon.png",
+                "/images/header/sun.png"
+            ],
+            "description": "App mobile criado para armazenar imagens de canhotos de notas fiscais."
+        },{
+            "id": 3,
+            "title": "AppCanhoto",
+            "txt": [
+                " Criado para atuar com o CanhotoApi, permite o backup de canhotos de notas fiscais em seu servidor e banco de dados.",
+                " Com ele podemos ler o código de barras de uma nota fiscal, o app fica responsavel de coletar e tratar as informações do código para o processamento e envio para o servidor."
+            ],
+            "img": [
+                "/images/header/moon.png",
+                "/images/header/sun.png"
+            ],
+            "description": "App mobile criado para armazenar imagens de canhotos de notas fiscais."
+        }
+    ]
+}
