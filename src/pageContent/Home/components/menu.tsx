@@ -1,4 +1,5 @@
 import Container from "@/components/structural/container";
+import { Title } from "@/components/texts";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -35,10 +36,9 @@ export default function HomePageMenu() {
                         w-70 h-40 
                         pt-5 
                         rounded-md
-                        active:animate-ping
                         group
                         "
-                         key={item.title}>
+                            key={item.title}>
                             <Link href={item.link} >
                                 <div className="
                                     place-self-center
@@ -47,30 +47,17 @@ export default function HomePageMenu() {
                                     justify-center
                                     overflow-hidden
                                     group-hover:animate-bounce
-                                    group-active:animate-spin
                                 ">
                                     <Image width={100} height={10} objectFit="cover" className="object-cover" alt="img" src={item.imgUrl} />
                                 </div>
-                                <div className="flex flex-col group-hover:text-[#430275]">
+                                <div className="flex flex-col group-active:scale-110 group-hover:text-[#430275]">
                                     <div className="flex flex-col mt-3 gap-1">
-                                        <span className="
-                                        text-center
-                                        sm:text-[0.7rem] 
-                                        md:text-[0.8rem]
-                                        lg:text-[1rem]
-                                        ">
+                                        <Title type="title" className="self-center">
                                             {item.title}
-                                        </span>
-                                        <p className="
-                                        text-center 
-                                        sm:text-[0.5rem] 
-                                        md:text-[0.6rem]
-                                        lg:text-[0.7rem]
-                                        max-w-50 
-                                        self-center
-                                        ">
+                                        </Title>
+                                        <Title type="subTitle" className="self-center text-center">
                                             {item.description}
-                                        </p>
+                                        </Title>
                                     </div>
                                 </div>
                             </Link>

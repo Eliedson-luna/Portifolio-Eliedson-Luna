@@ -1,0 +1,27 @@
+{
+  "title": "AppCanhoto",
+  "slug": "app-canhoto",
+  "images": [
+    "/images/projects/mail.png"
+  ],
+  "publishedAt": "2025-08-03T00:00:00.000Z",
+  "tags": [
+    "Node",
+    "Javascript",
+    "Expo\r"
+  ],
+  "description": "App mobile criado para armazenar imagens de canhotos de notas fiscais",
+  "body": {
+    "raw": "\r\n# Objetivo\r\n\r\nEste é o conteúdo do meu projeto. Posso usar **markdown** normalmente.\r\n\r\n## Funcionalidades\r\n\r\n- Feature 1\r\n- Feature 2\r\n- Feature 3\r\n\r\n## Tecnologias utilizadas\r\n\r\n- React Native\r\n- Expo\r\n- Javascript",
+    "html": "<h1>Objetivo</h1>\n<p>Este é o conteúdo do meu projeto. Posso usar <strong>markdown</strong> normalmente.</p>\n<h2>Funcionalidades</h2>\n<ul>\n<li>Feature 1</li>\n<li>Feature 2</li>\n<li>Feature 3</li>\n</ul>\n<h2>Tecnologias utilizadas</h2>\n<ul>\n<li>React Native</li>\n<li>Expo</li>\n<li>Javascript</li>\n</ul>"
+  },
+  "_id": "projects/appCanhoto copy.mdx",
+  "_raw": {
+    "sourceFilePath": "projects/appCanhoto copy.mdx",
+    "sourceFileName": "appCanhoto copy.mdx",
+    "sourceFileDir": "projects",
+    "contentType": "mdx",
+    "flattenedPath": "projects/appCanhoto copy"
+  },
+  "type": "Project"
+}

@@ -1,4 +1,4 @@
-import Projetos from "@/pages/Projetos";
+import Projetos from "@/pageContent/Projetos";
 
 export default function PageProjetos() {
 

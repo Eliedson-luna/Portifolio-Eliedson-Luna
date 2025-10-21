@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import ToggleTheme from "./toggleTheme";
-import { StyledTitle } from "@/components/texts";
+import { Title } from "@/components/texts";
 
 export default function Header() {
     return (
@@ -25,9 +25,9 @@ export default function Header() {
                 </div>
                 <div className="flex gap-5">
                     <Link href={'/'} className="self-center hover:animate-pulse ">
-                        <StyledTitle type="title" className="self-center hover:animate-pulse ">Eliedson Luna</StyledTitle>
+                        <Title type="title" className="self-center hover:animate-pulse ">Eliedson Luna</Title>
                     </Link>
-                    <StyledTitle type="subTitle" className="
+                    <Title type="subTitle" className="
                     h-7
                     place-content-center
                     self-center   
@@ -36,7 +36,7 @@ export default function Header() {
                     "
                     >
                         Desenvolvedor junior
-                    </StyledTitle>
+                    </Title>
                 </div>
             </div>
             <ToggleTheme />

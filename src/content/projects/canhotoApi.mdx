@@ -1,0 +1,55 @@
+---
+title: CanhotoApi
+slug: canhoto-api
+publishedAt: 2025-08-03
+description: Api para armazenamento de imagens e persistência de dados em servidor.
+images: 
+    - /images/projects/mail.png
+    - /images/projects/mail.png
+tags: 
+    - Node
+    - Typescript
+    - Whatsapp-web.js
+---
+
+<About className="gap-2">
+    <Text type='small' align='justify' className='m-2'>
+    API desenvolvida em Node.js para receber imagens via requisições HTTP, armazená-las em um servidor local e persistir os dados em um banco de dados SQL Server. 
+    A API é projetada para atuar junto com o <Link className='text-[#4A148C]' href='app-canhoto'>AppCanhoto</Link>, permitindo o envio automático de imagens recebidas para servidor
+    especificado.
+    </Text>
+    <Text type='small' align='justify' className='m-2'>
+    A aplicação utiliza o framework Express para gerenciar as rotas e o middleware Multer para lidar com o upload de arquivos. O banco de dados SQL Server é utilizado para armazenar 
+    informações sobre as imagens recebidas, incluindo metadados como nome do arquivo, caminho de armazenamento e timestamp. 
+    </Text>
+    <Text type='small' align='justify' className='m-2'>
+    A API é configurada para rodar em um servidor
+    local, mas pode ser facilmente adaptada para ambientes de produção com ajustes na configuração do banco de dados e do servidor.
+    </Text>
+</About>
+<Features className="flex flex-col justify-around ">
+    <Feature title='Armazenamento de Imagens'>
+    A API permite o upload e armazenamento de imagens em um servidor local, facilitando a gestão de arquivos.
+    </Feature>
+
+    <Feature title='Persistência de Dados'>
+    Os metadados das imagens, como nome do arquivo e timestamp, são armazenados em um banco de dados SQL Server.
+    </Feature>
+
+    <Feature title='Processamento de Imagens'>
+    A API pode ser estendida para incluir recursos de processamento de imagens, como redimensionamento e aplicação de filtros.
+    </Feature>
+</Features>
+<Tecnologies>
+
+    <Tecnology title='Framworks'>
+    Express, Multer
+    </Tecnology>
+
+    <Tecnology title='Linguagem Base'>
+    Node.js, TypeScript
+    </Tecnology>
+    
+</Tecnologies>
+
+
