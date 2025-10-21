@@ -4,7 +4,7 @@ import React, { useMemo } from 'react'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { Text, Paragraph, Title } from '@/components/texts'
-import Container from '@/components/structural/container'
+import Container from '@/components/structural/containers/container'
 import Image from 'next/image'
 
 export async function generateStaticParams() {

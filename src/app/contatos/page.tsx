@@ -1,7 +1,10 @@
-import Contatos from "@/pageContent/Contatos";
+import { FlexLayout } from "@/components/structural/layout/flexLayout";
+import Contacts from "@/pageContent/Contatos";
 export default function ContatcsPage() {
 
     return (
-        <Contatos />
+        <FlexLayout>
+            <Contacts />
+        </FlexLayout>
     )
 }

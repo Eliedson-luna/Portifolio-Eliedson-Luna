@@ -3,48 +3,31 @@ import Carrousel from "@/components/structural/carrousel";
 import Image from "next/image";
 import Link from "next/link";
 import { allProjects, Project } from 'contentlayer/generated';
+import SubContainer from '@/components/structural/containers/subContainer';
 
 export default function ProjectList() {
     return (
         <div id="project-box"
             className="
-            grid grid-cols-3 
-            h-[90vh] 
-            p-3 
-            gap-10
             overflow-scroll
+            p-30p
         ">
             {
                 allProjects.map((proj: Project, index: number) => {
                     return (
-                        <Link href={`/projetos/${proj.slug.trimEnd()}`} id={`Project-${index + 1}`} key={index} className='
-                                group
-                                flex flex-col
-                                justify-around
-                                h-60 w-[100%] 
-                                p-3
-                                transition-transform
-                                bg-[#000000]
-                                border-[#6b46c1] border-2 rounded-sm
-                                hover:border-[#c084fc]
-                                hover:bg-[#6d28d9]
-                                hover:cursor-pointer 
-                                hover:scale-105 
-                            '>
+                        <ProjectCard key={index} slug={proj.slug!} index={index}>
                             <div
                                 className='
                                 flex flex-row 
                                 '
                             >
-                                <div className="w-[50%]">
-                                    <Title className="mb-3 text-[#c084fc]" type="subTitle">
+                                <div className="w-[50%] transition-colors">
+                                    <Title className="mb-3 group-hover:text-text-inverted" type="subTitle">
                                         {proj.title}
                                     </Title>
                                     <Paragraph className='
-                                    text-gray-400 
-                                    group-hover:text-white
-                                    text-justify
-                                    transition-transform
+                                        group-hover:text-text-inverted
+                                        text-justify
                                     '>
                                         {proj.description}
                                     </Paragraph>
@@ -79,9 +62,27 @@ export default function ProjectList() {
                                     </Title>
                                 ))}
                             </div>
-                        </Link>
+                        </ProjectCard>
                     )
                 })}
         </div>
+    )
+}
+
+
+// ---------- components -------------------- //
+
+const ProjectCard = ({ children, slug, index }: { children: React.ReactNode, slug: string, index: number }) => {
+    return (
+        <Link
+            href={`/projetos/${slug.trimEnd()}`}
+            id={`Project-${index + 1}`}
+            key={index}
+            className='hover:scale-105'
+        >
+            <SubContainer>
+                {children}
+            </SubContainer>
+        </Link>
     )
 }
