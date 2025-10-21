@@ -1,11 +1,21 @@
 import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/structural/footer";
-import Head from "next/head";
-import Header from "@/components/structural/header";
+import Header from "@/components/header/page";
+import Footer from "@/components/footer/page";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
-  title: "DevLuna - Portifólio",
+  title: "DevLuna",
   description: "Portifólio de Desenvolvedor",
 };
 
@@ -16,12 +26,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <Head>
-        <link rel="icon" href="/assets/favicon.ico" />
-      </Head>
-      <body className={`antialiased bg-bg`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} min-h-screen antialiased flex flex-col overflow-hidden`}
+      >
         <Header />
-        {children}
+        <main className="grid place-items-center flex-grow min-h-[80%] items-center justify-items-center">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
