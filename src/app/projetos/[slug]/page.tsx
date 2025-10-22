@@ -1,11 +1,13 @@
-import { allProjects, Project } from 'contentlayer/generated'
-import { useMDXComponent } from 'next-contentlayer2/hooks'
-import React, { useMemo } from 'react'
-import { notFound } from 'next/navigation'
-import Link from 'next/link'
-import { Text, Paragraph, Title } from '@/components/texts'
-import Container from '@/components/structural/containers/container'
-import Image from 'next/image'
+import Container from "@/components/structural/containers/container";
+import { FlexLayout } from "@/components/structural/layout/flexLayout";
+import { Paragraph, ResponsiveText, Title } from "@/components/texts";
+import { allProjects, Project } from "contentlayer/generated";
+import { useMDXComponent } from "next-contentlayer2/hooks";
+import Image from "next/image";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { useMemo } from "react";
+
 
 export async function generateStaticParams() {
   return allProjects.map((project) => ({
@@ -23,7 +25,7 @@ export default function ProjetoPage({ params }: { params: { slug: string } }) {
 
   const components = useMemo(() => ({
     Paragraph: Paragraph,
-    Text: Text,
+    Text: ResponsiveText,
     Link: Link,
     About: About,
     Features: Features,
@@ -33,10 +35,10 @@ export default function ProjetoPage({ params }: { params: { slug: string } }) {
   }), [])
 
   return (
-    <Container className='bg-[#FAF5FF] p-5'>
+    <FlexLayout>
       <div className='flex justify-between'>
         <div className='w-[65%]'>
-          <Text type='biggest' className='text-[#4A148C]'>{project.title}</Text>
+          <ResponsiveText type='biggest' className='text-[#4A148C]'>{project.title}</ResponsiveText>
           <Paragraph>{project.description}</Paragraph>
           <Container className='bg-[#EDE7F6] p-2' >
             <MDXContent components={components} />
@@ -53,7 +55,7 @@ export default function ProjetoPage({ params }: { params: { slug: string } }) {
           ))}
         </div>
       </div>
-    </Container>
+    </FlexLayout>
 
   )
 }

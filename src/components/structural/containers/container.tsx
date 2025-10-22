@@ -5,14 +5,13 @@ export default function Container({ children, className = '', ...props }: Contai
     <section
       {...props}
       className={`
-        flex flex-col flex-nowrap
+        flex flex-col
         align-middle justify-center
         max-h-[80vh]
         my-5 px-15 py-10
-        bg-bg-cont
-        border-2 border-border-cont rounded-md
-        shadow-sm shadow-shadow-cont
         overflow-y-scroll
+        bg-bg-cont
+        border border-border-cont
         ${className}
       `}
     >
