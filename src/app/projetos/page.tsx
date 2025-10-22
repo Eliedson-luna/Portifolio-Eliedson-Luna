@@ -1,20 +1,16 @@
-import Container from "@/components/container/page";
-import ProjectList from "@/components/pages/projetos/projectList/components";
-import StyledTitle from "@/components/styledTitle";
-import { Suspense } from "react";
-export default function Projetos() {
+import { FlexLayout } from "@/components/structural/layout/flexLayout";
+import Projetos from "@/pageContent/Projetos";
 
+export const metadata = {
+    title: 'Projetos',
+    description: 'Aqui estão alguns dos meus projetos desenvolvidos, desde pequenos experimentos até aplicações mais complexas. Cada projeto reflete minha paixão por programação e meu compromisso com a excelência técnica.',
+}
+
+export default function PageProjetos() {
 
     return (
-        <Container>
-            <section id="project-section" className="p-10 max-h-[50rem] overflow-scroll">
-                <div className="text-center sm:text-2xl">
-                    <StyledTitle type="title">Meus Projetos</StyledTitle>
-                </div>
-                <Suspense fallback={<p className="text-center text-3xl">Carregando...</p>}>
-                    <ProjectList />
-                </Suspense>
-            </section>
-        </Container>
+        <FlexLayout>
+            <Projetos />
+        </FlexLayout>
     )
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import Container from "@/components/container/page";
+import Container from "@/components/structural/containers/container";
 import { useState, useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 
@@ -91,7 +91,7 @@ export default function ContatoPage() {
                         <div className="mt-4">
                             <ReCAPTCHA
                                 ref={recaptchaRef}
-                                sitekey={process.env.RECAPTCHA_SITE_KEY!}
+                                sitekey={'asdasdasdasda'}
                                 onChange={setCaptchaValue}
                             />
                         </div>

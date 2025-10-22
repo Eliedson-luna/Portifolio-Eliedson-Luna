@@ -1,28 +1,26 @@
-import Container from "@/components/container/page";
+import Container from "@/components/structural/containers/container";
+import { FlexLayout } from "@/components/structural/layout/flexLayout";
+import { Paragraph, Title } from "@/components/texts";
 
 export default function Sobre() {
     return (
-        <Container>
-            <div id="about" className="
-            justify-center
-            align-middle
-            p-20
-            ">
-                <h2>Sobre mim</h2>
-                <p>
+        <FlexLayout>
+            <Container>
+                <Title type="title">Sobre mim</Title>
+                <Paragraph>
                     🖐 Olá! Sou Eliedson!
-                </p>
-                <p>
+                </Paragraph>
+                <Paragraph>
                     Sou um desenvolvedor com foco em Frontend, mas também tenho experiência no Backend.
-                </p>
-                <p>
+                </Paragraph>
+                <Paragraph>
                     Acredito que
                     determinação, persistência e pensamento crítico são essenciais para alcançar grandes objetivos.
-                </p>
-                <p>
+                </Paragraph>
+                <Paragraph>
                     Estou sempre pronto para encarar novos desafios!
-                </p>
-            </div>
-        </Container>
+                </Paragraph>
+            </Container>
+        </FlexLayout>
     )
 }
