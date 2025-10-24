@@ -11,18 +11,15 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { useMemo } from "react";
 
-
 export async function generateStaticParams() {
   return allProjects.map((project) => ({
     slug: project.slug,
   }))
 }
 
-export default function ProjetoPage({ params }: { params: { slug: string } }) {
-
-  const project: Project = allProjects.find((p) => p.slug === params.slug)!
-
-  if (!project) return notFound();
+export default function ProjetoPage({ params }: any) {
+  const project = allProjects.find((p) => p.slug === params.slug)
+  if (!project) return notFound()
 
   const MDXContent = useMDXComponent(project.body.code);
 
@@ -89,7 +86,7 @@ const Features = ({ children }: React.HTMLAttributes<HTMLElement>) => {
 
 type FeatureType = React.HTMLAttributes<HTMLElement> & {
   title: string
-} 
+}
 
 const Feature = ({ children, title }: FeatureType) => {
   return (

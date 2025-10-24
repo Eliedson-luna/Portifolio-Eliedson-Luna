@@ -14,7 +14,7 @@ export default function SubmitButton({ isSubmitting }: { isSubmitting: boolean }
                 hover:bg-btn-hover"
             disabled={isSubmitting}
         >
-            {isSubmitting ? <ResponsiveText type="tiny">Enviando...</ResponsiveText> : <ResponsiveText type="tiny">Enviar</ResponsiveText>}
+            {isSubmitting ? <ResponsiveText textSize="tiny">Enviando...</ResponsiveText> : <ResponsiveText textSize="tiny">Enviar</ResponsiveText>}
         </button>
     )
 }
