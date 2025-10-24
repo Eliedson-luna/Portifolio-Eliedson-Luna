@@ -1,10 +1,10 @@
+import HomepageBody from "@/bodies/Home";
 import { FlexLayout } from "@/components/structural/layout/flexLayout";
-import Homepage from "@/pageContent/Home";
 
 export default function Home() {
   return (
     <FlexLayout>
-      <Homepage />
+      <HomepageBody />
     </FlexLayout>
   );
 }

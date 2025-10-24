@@ -1,9 +1,10 @@
 'use client'
-import { Paragraph, ResponsiveText, Title } from "@/components/texts/index";
+import { ResponsiveText } from "@/components/texts";
+import { Title } from "@/components/texts/title";
 import { allProjects, Project } from "contentlayer/generated";
 import Image from "next/image";
 import Link from "next/link";
-import { JSX, ReactNode, useState } from "react";
+import { JSX, ReactNode } from "react";
 
 
 export default function TopProjects() {
@@ -30,8 +31,8 @@ const CardContainer = ({ children }: { children: ReactNode }) => {
         pt-10 px-60
         gap-10
         border-t-subcontainer-border border-t-2 
-        ">  
-            <Title type="title">Projetos recentes</Title>
+        ">
+            <Title>Projetos recentes</Title>
             <div className="flex flex-row gap-15">
                 {children}
             </div>
@@ -48,38 +49,31 @@ type CardProps = {
 
 const Card = ({ slug, title, txt, imgUrl }: CardProps): JSX.Element => {
     return (
-        <CardLayout href={`/projects/${slug}`}>
+        <CardLayout href={`/projetos/${slug}`}>
             <Image
-                width={100}
-                height={60}
                 alt={title!}
                 src={imgUrl!}
-                className="transition-all place-self-center duration-300 group-hover:blur-sm"
+                fill
+                className="object-cover transition-all duration-300 group-hover:blur-sm"
             />
             <Description>
+                <Title>
+                    {title}
+                </Title>
                 <ResponsiveText
-                    type="small"
+                    textSize="tiniest"
+                    align="justify"
                     className="
-                    text-text-negative
+                    px-1
+                    text-text
                     "
                 >
-                    {title}
-                </ResponsiveText>
-                <Paragraph
-                    className="
-                        px-1 
-                        pt-1 
-                        text-text-negative
-                        text-justify
-                        "
-                >
                     {txt}
-                </Paragraph>
+                </ResponsiveText>
             </Description>
         </CardLayout>
     );
 };
-
 const CardLayout = ({ children, href }: { children: ReactNode, href: string }) => {
     return (
         <Link
@@ -87,17 +81,22 @@ const CardLayout = ({ children, href }: { children: ReactNode, href: string }) =
             className="
             group
             relative
-            flex justify-center
             w-60 h-40
-            hover:cursor-pointer 
-            rounded-md 
-            bg-subcontainer-bg 
-            hover:shadow-shadow
-            hover:bg-subcontainer-shadow
-            hover:border
-            hover:border-subcontainer-border
-            ">
-            {children}
+            overflow-hidden
+            rounded-lg
+            cursor-pointer
+            transition-all duration-300
+            shadow-md
+            hover:shadow-xl
+            hover:scale-110
+            "
+        >
+            <div className="absolute inset-0 w-full h-full overflow-hidden">
+                <div className="w-full h-full transform transition-transform duration-500 group-hover:scale-105">
+                    {children}
+                </div>
+                <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
         </Link>
     );
 };
@@ -106,12 +105,14 @@ const Description = ({ children }: { children: ReactNode }) => {
     return (
         <div
             className="
-            absolute 
-            opacity-0 
-            group-hover:opacity-100 
-            transition-opacity duration-300 
-            p-10 
-            inset-0 
+            absolute inset-0
+            flex flex-col justify-center items-center
+            p-4
+            text-center
+            opacity-0
+            group-hover:opacity-100
+            transition-opacity duration-300
+            z-10
             "
         >
             {children}

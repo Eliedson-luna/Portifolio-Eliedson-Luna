@@ -5,12 +5,10 @@ export default function SubContainer({ children, className = '', ...props }: Con
             {...props}
             className={`
                 flex flex-col 
-                align-middle
-                justify-around
+                justify-evenly
                 h-60
                 p-3 mx-5
-                bg-bg-subcont
-                border-border-subcont border-2 rounded-sm
+                border-border-subcont border-b rounded-sm
         ${className}
       `}
         >

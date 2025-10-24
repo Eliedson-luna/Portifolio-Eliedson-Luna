@@ -18,8 +18,8 @@ const ToggleButton = () => {
 
     return (
         <>
-            {theme == 'light' && <FaSun onClick={toggleTheme} className="hover:text-yellow-200"/>}
-            {theme == 'dark' && <FaMoon onClick={toggleTheme} className="hover:text-blue-200"/>}
+            {theme == 'light' && <FaSun onClick={toggleTheme} className="text-text hover:text-yellow-200" />}
+            {theme == 'dark' && <FaMoon onClick={toggleTheme} className="text-text hover:text-blue-200" />}
         </>
     )
 }

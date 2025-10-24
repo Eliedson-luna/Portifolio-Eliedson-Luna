@@ -1,7 +1,7 @@
 import Link from "next/link";
-import ToggleTheme from "./toggleTheme";
-import { Title } from "@/components/texts";
+import ToggleTheme from "../../ui/buttons/toggleThemeBtn";
 import { ReactNode } from "react";
+import { SubTitle, Title } from "@/components/texts/title";
 
 export default function Header() {
     return (
@@ -9,9 +9,9 @@ export default function Header() {
             <div className="flex p-1 gap-5 justify-evenly">
                 <div className="flex gap-5">
                     <Link href={'/'} className="self-center hover:scale-105">
-                        <Title type="title" className="self-center ml-3 ">Eliedson Luna</Title>
+                        <Title className="self-center ml-3 ">Eliedson Luna</Title>
                     </Link>
-                    <Title type="subTitle" className="
+                    <SubTitle className="
                         h-7
                         place-content-center
                         self-center   
@@ -20,7 +20,7 @@ export default function Header() {
                         "
                     >
                         Desenvolvedor junior
-                    </Title>
+                    </SubTitle>
                 </div>
             </div>
             <ToggleTheme />
@@ -40,8 +40,8 @@ const HeaderLayout = ({ children }: { children: ReactNode }) => {
         w-full
         sm:text-[0.5rem] md:text-[1rem] lg:text-md
         h-15 sm:h-7 md:h-12 lg:h-15  
-        justify-between 
-        text-text
+        justify-between
+        backdrop-blur-xs
         "
         >
             {children}

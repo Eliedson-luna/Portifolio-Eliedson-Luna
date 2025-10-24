@@ -6,12 +6,11 @@ export default function Container({ children, className = '', ...props }: Contai
       {...props}
       className={`
         flex flex-col
-        align-middle justify-center
-        max-h-[80vh]
-        my-5 px-15 py-10
-        overflow-y-scroll
+        justify-evenly
+        my-5 px-10 py-5
+        rounded-sm
+        shadow shadow-shadow-cont
         bg-bg-cont
-        border border-border-cont
         ${className}
       `}
     >

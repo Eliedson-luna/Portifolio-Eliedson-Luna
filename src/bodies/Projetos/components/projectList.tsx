@@ -1,16 +1,16 @@
-import { Paragraph, Title } from '@/components/texts/index'
 import Carrousel from "@/components/structural/carrousel";
 import Image from "next/image";
 import Link from "next/link";
 import { allProjects, Project } from 'contentlayer/generated';
 import SubContainer from '@/components/structural/containers/subContainer';
+import { SubTitle } from "@/components/texts/title";
+import { Paragraph } from "@/components/texts/paragraph";
 
 export default function ProjectList() {
     return (
-        <div id="project-box"
+        <div
             className="
             overflow-scroll
-            p-30p
         ">
             {
                 allProjects.map((proj: Project, index: number) => {
@@ -22,9 +22,9 @@ export default function ProjectList() {
                                 '
                             >
                                 <div className="w-[50%] transition-colors">
-                                    <Title className="mb-3 group-hover:text-text-inverted" type="subTitle">
+                                    <SubTitle className="mb-3 group-hover:text-text-inverted">
                                         {proj.title}
-                                    </Title>
+                                    </SubTitle>
                                     <Paragraph className='
                                         group-hover:text-text-inverted
                                         text-justify
@@ -52,14 +52,14 @@ export default function ProjectList() {
                                 flex flex-row justify-start gap-2 mt-2 overflow-x-scroll'
                             >
                                 {proj.tags?.map((tag: string, index) => (
-                                    <Title type='subTitle'
+                                    <SubTitle
                                         key={index}
                                         className='
                                             text-[#a78bfa] hover:text-white
                                             px-1
                                         '>
                                         {tag.trimEnd()}
-                                    </Title>
+                                    </SubTitle>
                                 ))}
                             </div>
                         </ProjectCard>

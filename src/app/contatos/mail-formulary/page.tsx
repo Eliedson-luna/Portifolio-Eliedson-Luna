@@ -1,6 +1,7 @@
 "use client";
-
-import Container from "@/components/structural/containers/container";
+import { FlexLayout } from "@/components/structural/layout/flexLayout";
+import { Title } from "@/components/texts/title";
+import SubmitButton from "@/components/ui/buttons/submitButton";
 import { useState, useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 
@@ -61,15 +62,15 @@ export default function ContatoPage() {
     };
 
     return (
-        <Container>
+        <FlexLayout>
             <div className="justify-center min-h-screen">
-                <div className="max-w-lg mx-auto p-6 bg-[#343434] shadow-md shadow-black rounded-lg">
-                    <h2 className="text-xl font-bold mb-4">Entre em contato</h2>
+                <div className="max-w-lg mx-auto p-6 bg-bg-cont shadow-md shadow-shadow-cont rounded-lg">
+                    <Title>Entre em contato</Title>
 
                     {error && <p className="text-red-500">{error}</p>}
 
                     <form onSubmit={handleSubmit}>
-                        <label className="block mb-2">Email:</label>
+                        <label className="block mb-2 text-text">Email:</label>
                         <input
                             type="email"
                             name="email"
@@ -88,24 +89,18 @@ export default function ContatoPage() {
                             required
                         ></textarea>
 
-                        <div className="mt-4">
+                        <div className="m-4">
                             <ReCAPTCHA
                                 ref={recaptchaRef}
                                 sitekey={'asdasdasdasda'}
                                 onChange={setCaptchaValue}
                             />
                         </div>
-
-                        <button
-                            type="submit"
-                            className="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
-                            disabled={isSubmitting}
-                        >
-                            {isSubmitting ? "Enviando..." : "Enviar"}
-                        </button>
+                        <SubmitButton isSubmitting={isSubmitting} />
                     </form>
                 </div>
             </div>
-        </Container>
+        </FlexLayout>
+
     );
 }

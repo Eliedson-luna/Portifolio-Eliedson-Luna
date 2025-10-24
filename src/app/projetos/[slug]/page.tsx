@@ -1,6 +1,9 @@
 import Container from "@/components/structural/containers/container";
+import SubContainer from "@/components/structural/containers/subContainer";
 import { FlexLayout } from "@/components/structural/layout/flexLayout";
-import { Paragraph, ResponsiveText, Title } from "@/components/texts";
+import { ResponsiveText } from "@/components/texts";
+import { Paragraph } from "@/components/texts/paragraph";
+import { Title } from "@/components/texts/title";
 import { allProjects, Project } from "contentlayer/generated";
 import { useMDXComponent } from "next-contentlayer2/hooks";
 import Image from "next/image";
@@ -36,15 +39,15 @@ export default function ProjetoPage({ params }: { params: { slug: string } }) {
 
   return (
     <FlexLayout>
-      <div className='flex justify-between'>
-        <div className='w-[65%]'>
-          <ResponsiveText type='biggest' className='text-[#4A148C]'>{project.title}</ResponsiveText>
+      <div className='flex justify-evenly'>
+        <div className='w-[60%]'>
+          <ResponsiveText textSize='biggest' className='text-[#4A148C]'>{project.title}</ResponsiveText>
           <Paragraph>{project.description}</Paragraph>
-          <Container className='bg-[#EDE7F6] p-2' >
+          <Container className='p-2' >
             <MDXContent components={components} />
           </Container>
         </div>
-        <div className='flex flex-col mr-15'>
+        <div className='flex flex-col'>
           {project.images!.map((path, index) => (
             <Image key={index}
               width={300} height={100}
@@ -63,8 +66,8 @@ export default function ProjetoPage({ params }: { params: { slug: string } }) {
 
 const About = ({ children }: React.HTMLAttributes<HTMLElement>) => {
   return (
-    <Container className="flex flex-col justify-around p-3 text-gray-950">
-      <Title type='title' className='text-[#4A148C]'>Sobre</Title>
+    <Container>
+      <Title>Sobre</Title>
       <div className="flex flex-col">
         {children}
       </div>
@@ -75,8 +78,8 @@ const About = ({ children }: React.HTMLAttributes<HTMLElement>) => {
 
 const Features = ({ children }: React.HTMLAttributes<HTMLElement>) => {
   return (
-    <Container className="flex flex-col justify-around bg-[#EDE7F6] p-3 text-[#4A148C]">
-      <Title type='title'>Principais Funcionalidades</Title>
+    <Container>
+      <Title>Principais Funcionalidades</Title>
       <div className="flex flex-col">
         {children}
       </div>
@@ -90,19 +93,19 @@ type FeatureType = React.HTMLAttributes<HTMLElement> & {
 
 const Feature = ({ children, title }: FeatureType) => {
   return (
-    <Container className="flex flex-col justify-around bg-[#d7ccddbc] p-3 text-gray-950">
-      <Title type='title'>{title}</Title>
+    <SubContainer>
+      <Title>{title}</Title>
       <div className="flex flex-col">
         {typeof children === 'string' ? <Paragraph>{children}</Paragraph> : children}
       </div>
-    </Container>
+    </SubContainer>
   )
 }
 
 const Tecnologies = ({ children }: React.HTMLAttributes<HTMLElement>) => {
   return (
-    <Container className="flex flex-col justify-around p-3 text-[#4A148C]">
-      <Title type='title'>Tecnologias utilizadas</Title>
+    <Container >
+      <Title>Tecnologias utilizadas</Title>
       <div className="flex flex-col">
         {children}
       </div>
@@ -118,11 +121,11 @@ type TecnologyType = React.HTMLAttributes<HTMLElement> & {
 
 const Tecnology = ({ children, title }: TecnologyType) => {
   return (
-    <Container className="flex flex-col justify-around p-3 bg-[#d7ccddbc] text-gray-950">
-      <Title type='title'>{title}</Title>
+    <SubContainer>
+      <Title>{title}</Title>
       <div className="flex flex-col">
-        {children}
+        <ResponsiveText textSize="small">{children}</ResponsiveText>
       </div>
-    </Container>
+    </SubContainer>
   )
 }
