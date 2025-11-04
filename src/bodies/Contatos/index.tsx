@@ -7,7 +7,7 @@ import { MdEmail } from "react-icons/md";
 export default function PageContactsBody() {
 
     const links = [
-        { desc: 'Email', icon: <MdEmail size={30} className="text-text" />, href: "/contatos/mail-formulary" },
+        { desc: 'Email', icon: <MdEmail size={30} className="text-text" />, href: "/contatos/enviar-email" },
         { desc: 'Linkedin', icon: <FaLinkedin size={30} className="text-text" />, href: "https://www.linkedin.com/in/eliedsonluna/" },
         { desc: 'Github', icon: <FaGithub size={30} className="text-text" />, href: "https://github.com/Eliedson-luna" },
         { desc: 'Curriculo', icon: <FaFilePdf size={30} className="text-text" />, href: "/assets/Curriculo_Eliedson_Luna_Dev_Frontend.pdf" }
