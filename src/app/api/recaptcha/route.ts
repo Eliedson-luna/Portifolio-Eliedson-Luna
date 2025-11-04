@@ -17,7 +17,7 @@ export async function POST(request: Request) {
                     event: {
                         token,
                         expectedAction,
-                        siteKey: process.env.RECAPTCHA_SITE_KEY,
+                        siteKey: process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY,
                     },
                 }),
             }

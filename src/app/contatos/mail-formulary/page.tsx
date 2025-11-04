@@ -13,7 +13,7 @@ export default function ContatoPage() {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [error, setError] = useState<string | null>(null);
     const recaptchaRef = useRef<ReCAPTCHA>(null);
-    const api_key = process.env.RECAPTCHA_SITE_KEY || '';
+    const api_key = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || '';
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
