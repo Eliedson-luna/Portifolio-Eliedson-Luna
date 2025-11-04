@@ -10,7 +10,8 @@ const Project = defineDocumentType(() => ({
         images: { type: 'list', of: { type: 'string' }, required: false },
         publishedAt: { type: 'date', required: true },
         tags: { type: 'list', of: { type: "string" } },
-        description: { type: 'string' }
+        description: { type: 'string' },
+        thumbnail: {type: 'string'}
     },
 }))
 

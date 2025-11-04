@@ -1,23 +1,18 @@
 // contentlayer.config.ts
 import { defineDocumentType, makeSource } from "contentlayer2/source-files";
-var computedFields = {
-  slug: {
-    type: "string",
-    resolve: (doc) => doc._raw.sourceFileName.replace(/\.mdx$/, "")
-  }
-};
 var Project = defineDocumentType(() => ({
   name: "Project",
   filePathPattern: "projects/*.mdx",
-  bodyType: "mdx",
+  contentType: "mdx",
   fields: {
     title: { type: "string", required: true },
     slug: { type: "string", required: true },
-    image1: { type: "image" },
-    published: { type: "date", required: true },
-    tags: { type: "list" }
-  },
-  computedFields
+    images: { type: "list", of: { type: "string" }, required: false },
+    publishedAt: { type: "date", required: true },
+    tags: { type: "list", of: { type: "string" } },
+    description: { type: "string" },
+    thumbnail: { type: "string" }
+  }
 }));
 var contentlayer_config_default = makeSource({
   contentDirPath: "./src/content",
@@ -27,4 +22,4 @@ var contentlayer_config_default = makeSource({
 export {
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-7CATC2II.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-V5NCCXUV.mjs.map

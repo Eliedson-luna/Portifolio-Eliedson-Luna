@@ -1,4 +1,4 @@
-import { ResponsiveText } from "@/components/texts";
+import { ResponsiveText } from "@/components/ui/text/responsiveText";
 
 export default function Footer() {
     return (

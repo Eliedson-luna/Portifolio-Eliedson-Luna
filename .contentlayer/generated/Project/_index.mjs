@@ -3,5 +3,6 @@
 import projects__appCanhotoMdx from './projects__appCanhoto.mdx.json' with { type: 'json' }
 import projects__canhotoApiMdx from './projects__canhotoApi.mdx.json' with { type: 'json' }
 import projects__chatBotMdx from './projects__chatBot.mdx.json' with { type: 'json' }
+import projects__modelMdx from './projects__model.mdx.json' with { type: 'json' }
 
-export const allProjects = [projects__appCanhotoMdx, projects__canhotoApiMdx, projects__chatBotMdx]
+export const allProjects = [projects__appCanhotoMdx, projects__canhotoApiMdx, projects__chatBotMdx, projects__modelMdx]

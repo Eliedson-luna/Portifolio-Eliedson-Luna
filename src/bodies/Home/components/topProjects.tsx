@@ -1,6 +1,6 @@
 'use client'
-import { ResponsiveText } from "@/components/texts";
-import { Title } from "@/components/texts/title";
+import { ResponsiveText } from "@/components/ui/text/responsiveText";
+import { Title } from "@/components/ui/text/title";
 import { allProjects, Project } from "contentlayer/generated";
 import Image from "next/image";
 import Link from "next/link";

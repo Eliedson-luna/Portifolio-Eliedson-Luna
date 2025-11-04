@@ -1,4 +1,4 @@
-import { SubTitle, Title } from "@/components/texts/title";
+import { SubTitle, Title } from "@/components/ui/text/title";
 import Link from "next/link";
 import React, { ReactNode } from "react";
 import { FaFilePdf, FaGithub, FaLinkedin } from "react-icons/fa";
@@ -56,7 +56,6 @@ const ContactsLayout = ({ children }: { children: ReactNode }) => {
     return (
         <section className="flex flex-col flex-wrap justify-center h-[80vh] w-full">
             <div className="jusify-center items-center flex flex-col">
-
                 {children}
             </div>
         </section>

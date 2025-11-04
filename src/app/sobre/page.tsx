@@ -1,5 +1,5 @@
 import PageAboutBody from "@/bodies/Sobre";
-import { FlexLayout } from "@/components/structural/layout/flexLayout";
+import { FlexLayout } from "@/components/structural/layouts/flexLayout";
 
 export default function Sobre() {
     return (

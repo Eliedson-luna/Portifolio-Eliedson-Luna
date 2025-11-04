@@ -1,5 +1,5 @@
 import PageProjectsBody from "@/bodies/Projetos";
-import { FlexLayout } from "@/components/structural/layout/flexLayout";
+import { FlexLayout } from "@/components/structural/layouts/flexLayout";
 export default function Projetos() {
     return (
         <FlexLayout>

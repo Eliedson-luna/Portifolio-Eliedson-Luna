@@ -1,7 +1,7 @@
 import Link from "next/link";
 import ToggleTheme from "../../ui/buttons/toggleThemeBtn";
 import { ReactNode } from "react";
-import { SubTitle, Title } from "@/components/texts/title";
+import { SubTitle, Title } from "@/components/ui/text/title";
 
 export default function Header() {
     return (

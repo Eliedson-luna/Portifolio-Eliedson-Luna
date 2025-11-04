@@ -1,6 +1,6 @@
 "use client";
-import { FlexLayout } from "@/components/structural/layout/flexLayout";
-import { Title } from "@/components/texts/title";
+import { FlexLayout } from "@/components/structural/layouts/flexLayout";
+import { Title } from "@/components/ui/text/title";
 import SubmitButton from "@/components/ui/buttons/submitButton";
 import { useState, useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";

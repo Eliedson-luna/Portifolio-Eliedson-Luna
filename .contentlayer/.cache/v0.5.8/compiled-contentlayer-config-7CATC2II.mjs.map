@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../contentlayer.config.ts"],
-  "sourcesContent": ["import { defineDocumentType, makeSource } from \"contentlayer2/source-files\";\r\n\r\nconst computedFields = {\r\n    slug: {\r\n        type: 'string' as const,\r\n        resolve: (doc: any) => doc._raw.sourceFileName.replace(/\\.mdx$/, '')\r\n    }\r\n}\r\n\r\nconst Project = defineDocumentType(() => ({\r\n    name: 'Project',\r\n    filePathPattern: 'projects/*.mdx',\r\n    bodyType: 'mdx',\r\n    fields: {\r\n        title: { type: 'string', required: true },\r\n        slug: { type: 'string', required: true },\r\n        image1: { type: 'image' },\r\n        published: { type: 'date', required: true },\r\n        tags: { type: 'list' }\r\n    },\r\n    computedFields\r\n}))\r\n\r\nexport default makeSource({\r\n    contentDirPath: './src/content',\r\n    documentTypes: [Project],\r\n    mdx: {}\r\n})"],
-  "mappings": ";AAAA,SAAS,oBAAoB,kBAAkB;AAE/C,IAAM,iBAAiB;AAAA,EACnB,MAAM;AAAA,IACF,MAAM;AAAA,IACN,SAAS,CAAC,QAAa,IAAI,KAAK,eAAe,QAAQ,UAAU,EAAE;AAAA,EACvE;AACJ;AAEA,IAAM,UAAU,mBAAmB,OAAO;AAAA,EACtC,MAAM;AAAA,EACN,iBAAiB;AAAA,EACjB,UAAU;AAAA,EACV,QAAQ;AAAA,IACJ,OAAO,EAAE,MAAM,UAAU,UAAU,KAAK;AAAA,IACxC,MAAM,EAAE,MAAM,UAAU,UAAU,KAAK;AAAA,IACvC,QAAQ,EAAE,MAAM,QAAQ;AAAA,IACxB,WAAW,EAAE,MAAM,QAAQ,UAAU,KAAK;AAAA,IAC1C,MAAM,EAAE,MAAM,OAAO;AAAA,EACzB;AAAA,EACA;AACJ,EAAE;AAEF,IAAO,8BAAQ,WAAW;AAAA,EACtB,gBAAgB;AAAA,EAChB,eAAe,CAAC,OAAO;AAAA,EACvB,KAAK,CAAC;AACV,CAAC;",
-  "names": []
-}

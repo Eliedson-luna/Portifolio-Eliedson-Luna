@@ -19,6 +19,7 @@ export type Project = {
   publishedAt: IsoDateTimeString
   tags?: string[] | undefined
   description?: string | undefined
+  thumbnail?: string | undefined
   /** MDX file body */
   body: MDX
 

@@ -1,4 +1,4 @@
-import { SubTitle, Title } from "@/components/texts/title";
+import { SubTitle, Title } from "@/components/ui/text/title";
 import Link from "next/link";
 import { Key, ReactNode } from "react";
 import { FaBook, FaPortrait, FaProjectDiagram } from "react-icons/fa";

@@ -8,6 +8,7 @@ export default function SubContainer({ children, className = '', ...props }: Con
                 justify-evenly
                 h-60
                 p-3 mx-5
+                bg-bg-subcont
                 border-border-subcont border-b rounded-sm
         ${className}
       `}

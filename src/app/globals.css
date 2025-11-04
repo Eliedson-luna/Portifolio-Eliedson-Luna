@@ -2,76 +2,226 @@
 @import "tailwindcss";
 
 @layer utilities {
+
   /* ====== BASE (mobile first) ====== */
-  .text-size-tiniest { font-size: 0.45rem; }
-  .text-size-tiny { font-size: 0.55rem; }
-  .text-size-small { font-size: 0.65rem; }
-  .text-size-medium { font-size: 0.8rem; }
-  .text-size-paragraph { font-size: 0.8rem; line-height: 1.4; }
-  .text-size-subtitle { font-size: 0.9rem; font-weight: 500; }
-  .text-size-title { font-size: 1rem; font-weight: 600; }
-  .text-size-big { font-size: 1.25rem; font-weight: 600; }
-  .text-size-bigger { font-size: 1.4rem; font-weight: 700; }
-  .text-size-biggest { font-size: 1.6rem; font-weight: 700; }
+  .text-size-tiniest {
+    font-size: 0.45rem;
+  }
+
+  .text-size-tiny {
+    font-size: 0.55rem;
+  }
+
+  .text-size-small {
+    font-size: 0.65rem;
+  }
+
+  .text-size-medium {
+    font-size: 0.8rem;
+  }
+
+  .text-size-paragraph {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .text-size-subtitle {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .text-size-title {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .text-size-big {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .text-size-bigger {
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+
+  .text-size-biggest {
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
 
   /* ====== SM (640px+) ====== */
   @media (min-width: 640px) {
-    .text-size-tiniest { font-size: 0.5rem; }
-    .text-size-tiny { font-size: 0.6rem; }
-    .text-size-small { font-size: 0.7rem; }
-    .text-size-medium { font-size: 0.85rem; }
-    .text-size-paragraph { font-size: 0.85rem; }
-    .text-size-subtitle { font-size: 0.95rem; }
-    .text-size-title { font-size: 1.1rem; }
-    .text-size-big { font-size: 1.35rem; }
-    .text-size-bigger { font-size: 1.5rem; }
-    .text-size-biggest { font-size: 1.8rem; }
+    .text-size-tiniest {
+      font-size: 0.5rem;
+    }
+
+    .text-size-tiny {
+      font-size: 0.6rem;
+    }
+
+    .text-size-small {
+      font-size: 0.7rem;
+    }
+
+    .text-size-medium {
+      font-size: 0.85rem;
+    }
+
+    .text-size-paragraph {
+      font-size: 0.85rem;
+    }
+
+    .text-size-subtitle {
+      font-size: 0.95rem;
+    }
+
+    .text-size-title {
+      font-size: 1.1rem;
+    }
+
+    .text-size-big {
+      font-size: 1.35rem;
+    }
+
+    .text-size-bigger {
+      font-size: 1.5rem;
+    }
+
+    .text-size-biggest {
+      font-size: 1.8rem;
+    }
   }
 
   /* ====== MD (768px+) ====== */
   @media (min-width: 768px) {
-    .text-size-tiniest { font-size: 0.55rem; }
-    .text-size-tiny { font-size: 0.65rem; }
-    .text-size-small { font-size: 0.75rem; }
-    .text-size-medium { font-size: 0.9rem; }
-    .text-size-paragraph { font-size: 0.9rem; }
-    .text-size-subtitle { font-size: 1rem; }
-    .text-size-title { font-size: 1.15rem; }
-    .text-size-big { font-size: 1.4rem; }
-    .text-size-bigger { font-size: 1.55rem; }
-    .text-size-biggest { font-size: 1.9rem; }
+    .text-size-tiniest {
+      font-size: 0.55rem;
+    }
+
+    .text-size-tiny {
+      font-size: 0.65rem;
+    }
+
+    .text-size-small {
+      font-size: 0.75rem;
+    }
+
+    .text-size-medium {
+      font-size: 0.9rem;
+    }
+
+    .text-size-paragraph {
+      font-size: 0.9rem;
+    }
+
+    .text-size-subtitle {
+      font-size: 1rem;
+    }
+
+    .text-size-title {
+      font-size: 1.15rem;
+    }
+
+    .text-size-big {
+      font-size: 1.4rem;
+    }
+
+    .text-size-bigger {
+      font-size: 1.55rem;
+    }
+
+    .text-size-biggest {
+      font-size: 1.9rem;
+    }
   }
 
   /* ====== LG (1024px+) ====== */
   @media (min-width: 1024px) {
-    .text-size-tiniest { font-size: 0.6rem; }
-    .text-size-tiny { font-size: 0.7rem; }
-    .text-size-small { font-size: 0.8rem; }
-    .text-size-medium { font-size: 0.95rem; }
-    .text-size-paragraph { font-size: 0.95rem; }
-    .text-size-subtitle { font-size: 1.05rem; }
-    .text-size-title { font-size: 1.2rem; }
-    .text-size-big { font-size: 1.45rem; }
-    .text-size-bigger { font-size: 1.6rem; }
-    .text-size-biggest { font-size: 2rem; }
+    .text-size-tiniest {
+      font-size: 0.6rem;
+    }
+
+    .text-size-tiny {
+      font-size: 0.7rem;
+    }
+
+    .text-size-small {
+      font-size: 0.8rem;
+    }
+
+    .text-size-medium {
+      font-size: 0.95rem;
+    }
+
+    .text-size-paragraph {
+      font-size: 0.95rem;
+    }
+
+    .text-size-subtitle {
+      font-size: 1.05rem;
+    }
+
+    .text-size-title {
+      font-size: 1.2rem;
+    }
+
+    .text-size-big {
+      font-size: 1.45rem;
+    }
+
+    .text-size-bigger {
+      font-size: 1.6rem;
+    }
+
+    .text-size-biggest {
+      font-size: 2rem;
+    }
   }
 
   /* ====== XL (1280px+) ====== */
   @media (min-width: 1280px) {
-    .text-size-tiniest { font-size: 0.65rem; }
-    .text-size-tiny { font-size: 0.75rem; }
-    .text-size-small { font-size: 0.85rem; }
-    .text-size-medium { font-size: 1rem; }
-    .text-size-paragraph { font-size: 1rem; }
-    .text-size-subtitle { font-size: 1.1rem; }
-    .text-size-title { font-size: 1.3rem; }
-    .text-size-big { font-size: 1.55rem; }
-    .text-size-bigger { font-size: 1.75rem; }
-    .text-size-biggest { font-size: 2.1rem; }
+    .text-size-tiniest {
+      font-size: 0.65rem;
+    }
+
+    .text-size-tiny {
+      font-size: 0.75rem;
+    }
+
+    .text-size-small {
+      font-size: 0.85rem;
+    }
+
+    .text-size-medium {
+      font-size: 1rem;
+    }
+
+    .text-size-paragraph {
+      font-size: 1rem;
+    }
+
+    .text-size-subtitle {
+      font-size: 1.1rem;
+    }
+
+    .text-size-title {
+      font-size: 1.3rem;
+    }
+
+    .text-size-big {
+      font-size: 1.55rem;
+    }
+
+    .text-size-bigger {
+      font-size: 1.75rem;
+    }
+
+    .text-size-biggest {
+      font-size: 2.1rem;
+    }
   }
 }
-
-
 
 ::-webkit-scrollbar {
   display: none;
@@ -89,7 +239,7 @@
   --color-text: #1a1a1a;
   --color-text-secondary: #3d3d3d;
   --color-text-title: #22222b;
-  --color-text-subtitle:#22222a ;
+  --color-text-subtitle: #22222a;
   --color-text-inverted: #fafafa;
   --color-text-footer: #fafafa;
   /* border */
@@ -143,10 +293,7 @@ main {
   transition: background-color 0.8s ease, color 0.8s ease;
 }
 
-html,
-body,
-main,
-section {  
+html {
   font-size: 13px;
   font-family: 'Courier New', Courier, monospace, Helvetica, sans-serif;
   box-sizing: border-box;

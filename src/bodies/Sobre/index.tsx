@@ -1,6 +1,6 @@
-import Container from "@/components/structural/containers/container";
-import { Paragraph } from "@/components/texts/paragraph";
-import { Title } from "@/components/texts/title";
+import Container from "@/components/layout/containers/container";
+import { Paragraph } from "@/components/ui/text/paragraph";
+import { Title } from "@/components/ui/text/title";
 
 export default function PageAboutBody() {
     return (
