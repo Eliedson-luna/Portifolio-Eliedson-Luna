@@ -263,7 +263,7 @@
   --color-bg-subcont: #363643;
   --color-bg-footer: #373744;
   /* buttons */
-  --color-btn-submit: #6e67ff;
+  --color-btn-submit: #656c7d;
   /* text */
   --color-text: #b0b0b0;
   --color-text-secondary: #e5e5e5;
@@ -278,7 +278,7 @@
   --color-border-hover: #7b6fad;
   --color-bg-hover: #3a3a46;
   --color-inverted-hover: #ffffff;
-  --color-btn-hover: #5c56e0;
+  --color-btn-hover: #8885c0;
   /* shadows */
   --color-shadow: #00000040;
   --color-shadow-cont: #0000002b;
@@ -286,10 +286,7 @@
 }
 
 
-html,
-header,
-body,
-main {
+html {
   transition: background-color 0.8s ease, color 0.8s ease;
 }
 

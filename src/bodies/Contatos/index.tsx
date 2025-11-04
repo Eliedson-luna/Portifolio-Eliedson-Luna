@@ -26,11 +26,11 @@ export default function PageContactsBody() {
                     justify-cente
                     rounded-lg
                     ">
-                {links.map((links, index) => (
+                {links.map((item, index) => (
                     <LinkBox>
-                        <Link key={index} href={links.href} target="_blank">
+                        <Link key={index} href={item.href} target={item.desc == 'Email' ? '' : '_blank'}>
                             <div className="flex justify-center pt-2">
-                                {links.icon}
+                                {item.icon}
                             </div>
                             <SubTitle
                                 className="
@@ -41,7 +41,7 @@ export default function PageContactsBody() {
                                     group-hover:border-b-border-subcont
                                 "
                             >
-                                {links.desc}
+                                {item.desc}
                             </SubTitle  >
                         </Link>
                     </LinkBox>

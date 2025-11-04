@@ -65,43 +65,52 @@ export default function ContatoPage() {
 
     return (
         <FlexLayout>
-            <div className="justify-center min-h-screen">
+            
                 <div className="max-w-lg mx-auto p-6 bg-bg-cont shadow-md shadow-shadow-cont rounded-lg">
                     <Title>Entre em contato</Title>
 
                     {error && <p className="text-red-500">{error}</p>}
 
                     <form onSubmit={handleSubmit}>
-                        <ResponsiveText textSize="small">Email:</ResponsiveText>
-                        <input
-                            type="email"
-                            name="email"
-                            className="w-full p-2 border rounded"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            required
-                        />
+                        <div className="flex flex-col justify-evenly h-full min-h-[50vh]">
+                            <div>
 
-                        <ResponsiveText textSize="small">Mensagem:</ResponsiveText>
-                        <textarea
-                            name="message"
-                            className="w-full p-2 border rounded text-text"
-                            value={message}
-                            onChange={(e) => setMessage(e.target.value)}
-                            required
-                        ></textarea>
+                                <ResponsiveText textSize="small">Seu Email:</ResponsiveText>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    className="w-full p-2 border rounded text-text"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    required
+                                />
+                            </div>
+                            <div>
 
-                        <div className="m-4">
-                            <ReCAPTCHA
-                                ref={recaptchaRef}
-                                sitekey={api_key}
-                                onChange={setCaptchaValue}
-                            />
+                                <ResponsiveText textSize="small">Mensagem:</ResponsiveText>
+                                <textarea
+                                    name="message"
+                                    className="w-full p-2 border rounded text-text"
+                                    value={message}
+                                    onChange={(e) => setMessage(e.target.value)}
+                                    required
+                                ></textarea>
+
+                            </div>
+
+                            <div className="m-4">
+                                <ReCAPTCHA
+                                    ref={recaptchaRef}
+                                    sitekey={api_key}
+                                    onChange={setCaptchaValue}
+                                />
+                            </div>
+                            <div className="flex w-full justify-center items-centers">
+                                <SubmitButton isSubmitting={isSubmitting} />
+                            </div>
                         </div>
-                        <SubmitButton isSubmitting={isSubmitting} />
                     </form>
                 </div>
-            </div>
         </FlexLayout>
 
     );
