@@ -4,6 +4,7 @@ import { Title } from "@/components/ui/text/title";
 import SubmitButton from "@/components/ui/buttons/submitButton";
 import { useState, useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
+import { ResponsiveText } from "@/components/ui/text/responsiveText";
 
 export default function ContatoPage() {
     const [email, setEmail] = useState("");
@@ -12,6 +13,7 @@ export default function ContatoPage() {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [error, setError] = useState<string | null>(null);
     const recaptchaRef = useRef<ReCAPTCHA>(null);
+    const api_key = process.env.RECAPTCHA_SITE_KEY || '';
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -70,7 +72,7 @@ export default function ContatoPage() {
                     {error && <p className="text-red-500">{error}</p>}
 
                     <form onSubmit={handleSubmit}>
-                        <label className="block mb-2 text-text">Email:</label>
+                        <ResponsiveText textSize="small">Email:</ResponsiveText>
                         <input
                             type="email"
                             name="email"
@@ -80,10 +82,10 @@ export default function ContatoPage() {
                             required
                         />
 
-                        <label className="block mt-4 mb-2">Mensagem:</label>
+                        <ResponsiveText textSize="small">Mensagem:</ResponsiveText>
                         <textarea
                             name="message"
-                            className="w-full p-2 border rounded"
+                            className="w-full p-2 border rounded text-text"
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}
                             required
@@ -92,7 +94,7 @@ export default function ContatoPage() {
                         <div className="m-4">
                             <ReCAPTCHA
                                 ref={recaptchaRef}
-                                sitekey={'asdasdasdasda'}
+                                sitekey={api_key}
                                 onChange={setCaptchaValue}
                             />
                         </div>

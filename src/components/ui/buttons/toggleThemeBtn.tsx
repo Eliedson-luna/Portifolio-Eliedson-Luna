@@ -16,10 +16,11 @@ export default function ToggleTheme() {
 const ToggleButton = () => {
     const { theme, toggleTheme } = useTheme();
 
+    if (theme === undefined) return null;
+
     return (
         <>
-            {theme == 'light' && <FaSun onClick={toggleTheme} className="text-text hover:text-yellow-200" />}
-            {theme == 'dark' && <FaMoon onClick={toggleTheme} className="text-text hover:text-blue-200" />}
+            {theme == 'light' ? <FaSun onClick={toggleTheme} className="text-text hover:text-yellow-200" /> : <FaMoon onClick={toggleTheme} className="text-text hover:text-blue-200" />}
         </>
     )
 }
