@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../contentlayer.config.ts"],
+  "sourcesContent": ["import { defineDocumentType, makeSource } from \"contentlayer2/source-files\";\r\n\r\nconst Project = defineDocumentType(() => ({\r\n    name: 'Project',\r\n    filePathPattern: '*.mdx',\r\n    contentType: 'mdx',\r\n    fields: {\r\n        title: { type: 'string', required: true },\r\n        slug: { type: 'string', required: true },\r\n        images: { type: 'list', of: { type: 'string' }, required: false },\r\n        publishedAt: { type: 'date', required: true },\r\n        tags: { type: 'list', of: { type: \"string\" } },\r\n        description: { type: 'string' },\r\n        thumbnail: {type: 'string'}\r\n    },\r\n}))\r\n\r\nexport default makeSource({\r\n    contentDirPath: './src/shared/contentlayer',\r\n    documentTypes: [Project],\r\n    mdx: {}\r\n})"],
+  "mappings": ";AAAA,SAAS,oBAAoB,kBAAkB;AAE/C,IAAM,UAAU,mBAAmB,OAAO;AAAA,EACtC,MAAM;AAAA,EACN,iBAAiB;AAAA,EACjB,aAAa;AAAA,EACb,QAAQ;AAAA,IACJ,OAAO,EAAE,MAAM,UAAU,UAAU,KAAK;AAAA,IACxC,MAAM,EAAE,MAAM,UAAU,UAAU,KAAK;AAAA,IACvC,QAAQ,EAAE,MAAM,QAAQ,IAAI,EAAE,MAAM,SAAS,GAAG,UAAU,MAAM;AAAA,IAChE,aAAa,EAAE,MAAM,QAAQ,UAAU,KAAK;AAAA,IAC5C,MAAM,EAAE,MAAM,QAAQ,IAAI,EAAE,MAAM,SAAS,EAAE;AAAA,IAC7C,aAAa,EAAE,MAAM,SAAS;AAAA,IAC9B,WAAW,EAAC,MAAM,SAAQ;AAAA,EAC9B;AACJ,EAAE;AAEF,IAAO,8BAAQ,WAAW;AAAA,EACtB,gBAAgB;AAAA,EAChB,eAAe,CAAC,OAAO;AAAA,EACvB,KAAK,CAAC;AACV,CAAC;",
+  "names": []
+}

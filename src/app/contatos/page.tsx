@@ -1,5 +1,5 @@
-import PageContactsBody from "@/bodies/Contatos";
-import { FlexLayout } from "@/components/structural/layouts/flexLayout";
+import PageContactsBody from "@/features/Contatos";
+import { FlexLayout } from "@/shared/components/structural/layouts/flexLayout";
 export default function ContatcsPage() {
 
     return (

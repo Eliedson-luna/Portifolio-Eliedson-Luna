@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Head from "next/head";
-import Header from "@/components/structural/header";
-import Footer from "@/components/structural/footer";
+import Header from "@/shared/components/structural/header";
+import Footer from "@/shared/components/structural/footer";
 
 export const metadata: Metadata = {
   title: "DevLuna - Portifólio",

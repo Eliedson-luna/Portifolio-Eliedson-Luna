@@ -1,9 +1,9 @@
-import Container from "@/components/layout/containers/container";
-import SubContainer from "@/components/layout/containers/subContainer";
-import { FlexLayout } from "@/components/structural/layouts/flexLayout";
-import { ResponsiveText } from "@/components/ui/text/responsiveText";
-import { Paragraph } from "@/components/ui/text/paragraph";
-import { Title } from "@/components/ui/text/title";
+import Container from "@/shared/components/layout/containers/container";
+import SubContainer from "@/shared/components/layout/containers/subContainer";
+import { FlexLayout } from "@/shared/components/structural/layouts/flexLayout";
+import { Paragraph } from "@/shared/components/ui/text/paragraph";
+import { ResponsiveText } from "@/shared/components/ui/text/responsiveText";
+import { Title } from "@/shared/components/ui/text/title";
 import { allProjects, Project } from "contentlayer/generated";
 import { useMDXComponent } from "next-contentlayer2/hooks";
 import Image from "next/image";

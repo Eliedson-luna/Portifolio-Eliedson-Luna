@@ -1,10 +1,10 @@
 "use client";
-import { FlexLayout } from "@/components/structural/layouts/flexLayout";
-import { Title } from "@/components/ui/text/title";
-import SubmitButton from "@/components/ui/buttons/submitButton";
+import { FlexLayout } from "@/shared/components/structural/layouts/flexLayout";
+import SubmitButton from "@/shared/components/ui/buttons/submitButton";
+import { ResponsiveText } from "@/shared/components/ui/text/responsiveText";
+import { Title } from "@/shared/components/ui/text/title";
 import { useState, useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
-import { ResponsiveText } from "@/components/ui/text/responsiveText";
 
 export default function ContatoPage() {
     const [email, setEmail] = useState("");
@@ -65,52 +65,52 @@ export default function ContatoPage() {
 
     return (
         <FlexLayout>
-            
-                <div className="max-w-lg mx-auto p-6 bg-bg-cont shadow-md shadow-shadow-cont rounded-lg">
-                    <Title>Entre em contato</Title>
 
-                    {error && <p className="text-red-500">{error}</p>}
+            <div className="max-w-lg mx-auto p-6 bg-bg-cont shadow-md shadow-shadow-cont rounded-lg">
+                <Title>Entre em contato</Title>
 
-                    <form onSubmit={handleSubmit}>
-                        <div className="flex flex-col justify-evenly h-full min-h-[50vh]">
-                            <div>
+                {error && <p className="text-red-500">{error}</p>}
 
-                                <ResponsiveText textSize="small">Seu Email:</ResponsiveText>
-                                <input
-                                    type="email"
-                                    name="email"
-                                    className="w-full p-2 border rounded text-text"
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
-                                    required
-                                />
-                            </div>
-                            <div>
+                <form onSubmit={handleSubmit}>
+                    <div className="flex flex-col justify-evenly h-full min-h-[50vh]">
+                        <div>
 
-                                <ResponsiveText textSize="small">Mensagem:</ResponsiveText>
-                                <textarea
-                                    name="message"
-                                    className="w-full p-2 border rounded text-text"
-                                    value={message}
-                                    onChange={(e) => setMessage(e.target.value)}
-                                    required
-                                ></textarea>
-
-                            </div>
-
-                            <div className="m-4">
-                                <ReCAPTCHA
-                                    ref={recaptchaRef}
-                                    sitekey={api_key}
-                                    onChange={setCaptchaValue}
-                                />
-                            </div>
-                            <div className="flex w-full justify-center items-centers">
-                                <SubmitButton isSubmitting={isSubmitting} />
-                            </div>
+                            <ResponsiveText textSize="small">Seu Email:</ResponsiveText>
+                            <input
+                                type="email"
+                                name="email"
+                                className="w-full p-2 border rounded text-text"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                required
+                            />
                         </div>
-                    </form>
-                </div>
+                        <div>
+
+                            <ResponsiveText textSize="small">Mensagem:</ResponsiveText>
+                            <textarea
+                                name="message"
+                                className="w-full p-2 border rounded text-text"
+                                value={message}
+                                onChange={(e) => setMessage(e.target.value)}
+                                required
+                            ></textarea>
+
+                        </div>
+
+                        <div className="m-4">
+                            <ReCAPTCHA
+                                ref={recaptchaRef}
+                                sitekey={api_key}
+                                onChange={setCaptchaValue}
+                            />
+                        </div>
+                        <div className="flex w-full justify-center items-centers">
+                            <SubmitButton isSubmitting={isSubmitting} />
+                        </div>
+                    </div>
+                </form>
+            </div>
         </FlexLayout>
 
     );
