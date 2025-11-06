@@ -12,7 +12,8 @@ export default function ProjectList() {
         <div
             className="
             h-[70vh]
-            grid grid-cols-3 grid-rows-5
+            flex flex-col gap-10 sm:gap-0
+            sm:grid sm:grid-cols-3 sm:grid-rows-5
             overflow-y-scroll
         ">
             {
@@ -23,14 +24,16 @@ export default function ProjectList() {
                                 className='
                                 items-center
                                 flex flex-row 
+                                justify-around
+                                group
                                 '
                             >
                                 <div className="w-[65%] transition-colors">
-                                    <SubTitle className="mb-3 group-hover:text-text-inverted">
+                                    <SubTitle className="mb-3">
                                         {proj.title}
                                     </SubTitle>
                                     <Paragraph className='
-                                        group-hover:text-text-inverted
+                                 
                                         text-justify
                                     '>
                                         {proj.description}
@@ -38,15 +41,22 @@ export default function ProjectList() {
                                 </div>
 
                                 {proj.thumbnail &&
-                                    <div key={index} className="flex w-[50%] justify-center ml-2 align-middle">
-                                        <Carrousel>
-                                            <Image
-                                                src={`${proj.thumbnail.trimEnd()}`}
-                                                alt=""
-                                                height={50}
-                                                width={100}
-                                            />
-                                        </Carrousel>
+                                    <div key={index}
+                                        className="
+                                        relative 
+                                        h-20 w-20 
+                                        overflow-hidden 
+                                        rounded-full 
+                                        flex 
+                                        items-center 
+                                        justify-center
+                                        ">
+                                        <Image
+                                            src={proj.thumbnail.trimEnd()}
+                                            alt=""
+                                            fill
+                                            className="object-cover"
+                                        />
                                     </div>
                                 }
                             </div>
