@@ -1,6 +1,7 @@
 'use client'
 
 import { ThemeProvider, useTheme } from "@/context/themeContext";
+import { ReactNode, useState } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 
 export default function ToggleTheme() {
@@ -15,12 +16,28 @@ export default function ToggleTheme() {
 
 const ToggleButton = () => {
     const { theme, toggleTheme } = useTheme();
+    const [icon, setIcon] = useState<ReactNode>((theme === 'light' ? <FaSun className="hover:text-primary" /> : <FaMoon className="hover:text-primary" />))
 
-    if (theme === undefined) return null;
+    function changeTheme() {
+        setIcon((theme === 'dark' ? <FaSun className="hover:text-primary" /> : <FaMoon className="hover:text-primary" />));
+        toggleTheme();
+    }
 
     return (
-        <>
-            {theme == 'light' ? <FaSun onClick={toggleTheme} className="text-text hover:text-yellow-200" /> : <FaMoon onClick={toggleTheme} className="text-text hover:text-blue-200" />}
-        </>
+        <button
+            onClick={changeTheme}
+            className="
+                mr-10
+                rounded-lg
+                outline-0
+                border-0
+                bg-bg 
+                text-text
+                hover:cursor-pointer
+                hover:scale-110
+            "
+        >
+            {icon}
+        </button>
     )
 }
