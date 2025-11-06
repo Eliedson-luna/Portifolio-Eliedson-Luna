@@ -60,7 +60,6 @@ export default function ProjetoPage({ params }: any) {
   )
 }
 
-
 const About = ({ children }: React.HTMLAttributes<HTMLElement>) => {
   return (
     <Container>
@@ -71,7 +70,6 @@ const About = ({ children }: React.HTMLAttributes<HTMLElement>) => {
     </Container>
   )
 }
-
 
 const Features = ({ children }: React.HTMLAttributes<HTMLElement>) => {
   return (
@@ -110,11 +108,9 @@ const Tecnologies = ({ children }: React.HTMLAttributes<HTMLElement>) => {
   )
 }
 
-
 type TecnologyType = React.HTMLAttributes<HTMLElement> & {
   title: string
 }
-
 
 const Tecnology = ({ children, title }: TecnologyType) => {
   return (
