@@ -7,7 +7,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { JSX, ReactNode } from "react";
 
-
 export default function TopProjects() {
     const projects: Project[] = allProjects.slice(0, 3);
     return (
@@ -21,7 +20,6 @@ export default function TopProjects() {
         </CardContainer>
     )
 }
-
 
 const CardContainer = ({ children }: { children: ReactNode }) => {
     return (
