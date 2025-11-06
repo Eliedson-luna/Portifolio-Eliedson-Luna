@@ -1,0 +1,28 @@
+{
+  "title": "Amazon Scrapper",
+  "slug": "amazon-scrapper",
+  "images": [
+    "/images/projects/mail.png"
+  ],
+  "publishedAt": "2025-08-03T00:00:00.000Z",
+  "tags": [
+    "Node",
+    "Typescript",
+    "Whatsapp-web.js"
+  ],
+  "description": "Automação de atendimento whatsapp criada com javascript.",
+  "thumbnail": "/images/projects/mail.png",
+  "body": {
+    "raw": "\n<About>\n    <Paragraph >\n    Texto sobre o projeto aqui\n    </Paragraph>    \n</About>\n<Features className=\"flex flex-col justify-around \">\n    <Feature title='Feature 1'>\n    Feature description\n    </Feature>\n\n    <Feature title='Feature 2'>\n    Feature description\n    </Feature>\n\n    <Feature title='Feature 2'>\n    Feature description\n    </Feature>\n</Features>\n<Tecnologies>\n    <Tecnology title='Tech 1'>\n    Tech Label\n    </Tecnology>\n    <Tecnology title='Tech 2'>\n    Tech Label\n    </Tecnology>\n    <Tecnology title='Tech 3'>\n    Tech Label\n    </Tecnology>\n    \n</Tecnologies>\n",
+    "code": "var Component=(()=>{var g=Object.create;var l=Object.defineProperty;var x=Object.getOwnPropertyDescriptor;var j=Object.getOwnPropertyNames;var F=Object.getPrototypeOf,T=Object.prototype.hasOwnProperty;var b=(t,e)=>()=>(e||t((e={exports:{}}).exports,e),e.exports),_=(t,e)=>{for(var n in e)l(t,n,{get:e[n],enumerable:!0})},d=(t,e,n,o)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let i of j(e))!T.call(t,i)&&i!==n&&l(t,i,{get:()=>e[i],enumerable:!(o=x(e,i))||o.enumerable});return t};var y=(t,e,n)=>(n=t!=null?g(F(t)):{},d(e||!t||!t.__esModule?l(n,\"default\",{value:t,enumerable:!0}):n,t)),w=t=>d(l({},\"__esModule\",{value:!0}),t);var h=b((v,u)=>{u.exports=_jsx_runtime});var L={};_(L,{default:()=>f,frontmatter:()=>A});var r=y(h()),A={title:\"Amazon Scrapper\",slug:\"amazon-scrapper\",publishedAt:\"2025-08-03\",description:\"Automa\\xE7\\xE3o de atendimento whatsapp criada com javascript.\",thumbnail:\"/images/projects/mail.png\",images:[\"/images/projects/mail.png\"],tags:[\"Node\",\"Typescript\",\"Whatsapp-web.js\"]};function m(t){let e={p:\"p\",...t.components},{About:n,Feature:o,Features:i,Paragraph:s,Tecnologies:p,Tecnology:a}=e;return n||c(\"About\",!0),o||c(\"Feature\",!0),i||c(\"Features\",!0),s||c(\"Paragraph\",!0),p||c(\"Tecnologies\",!0),a||c(\"Tecnology\",!0),(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)(n,{children:(0,r.jsx)(s,{children:(0,r.jsx)(e.p,{children:\"Texto sobre o projeto aqui\"})})}),`\n`,(0,r.jsxs)(i,{className:\"flex flex-col justify-around \",children:[(0,r.jsx)(o,{title:\"Feature 1\",children:(0,r.jsx)(e.p,{children:\"Feature description\"})}),(0,r.jsx)(o,{title:\"Feature 2\",children:(0,r.jsx)(e.p,{children:\"Feature description\"})}),(0,r.jsx)(o,{title:\"Feature 2\",children:(0,r.jsx)(e.p,{children:\"Feature description\"})})]}),`\n`,(0,r.jsxs)(p,{children:[(0,r.jsx)(a,{title:\"Tech 1\",children:(0,r.jsx)(e.p,{children:\"Tech Label\"})}),(0,r.jsx)(a,{title:\"Tech 2\",children:(0,r.jsx)(e.p,{children:\"Tech Label\"})}),(0,r.jsx)(a,{title:\"Tech 3\",children:(0,r.jsx)(e.p,{children:\"Tech Label\"})})]})]})}function f(t={}){let{wrapper:e}=t.components||{};return e?(0,r.jsx)(e,{...t,children:(0,r.jsx)(m,{...t})}):m(t)}function c(t,e){throw new Error(\"Expected \"+(e?\"component\":\"object\")+\" `\"+t+\"` to be defined: you likely forgot to import, pass, or provide it.\")}return w(L);})();\n;return Component;"
+  },
+  "_id": "amazonScrapper.mdx",
+  "_raw": {
+    "sourceFilePath": "amazonScrapper.mdx",
+    "sourceFileName": "amazonScrapper.mdx",
+    "sourceFileDir": ".",
+    "contentType": "mdx",
+    "flattenedPath": "amazonScrapper"
+  },
+  "type": "Project"
+}
