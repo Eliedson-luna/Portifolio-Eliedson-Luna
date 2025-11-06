@@ -26,7 +26,7 @@ export function ResponsiveText({ textSize, children, className = "", align = "le
                     : "text-left";
 
     return (
-        <span className={`${size} ${alignClass} ${className} text-text`} {...rest}>
+        <span className={`${size} ${alignClass} ${className} text-text caret-transparent`} {...rest}>
             {children}
         </span>
     );

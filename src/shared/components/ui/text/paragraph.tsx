@@ -8,7 +8,8 @@ export function Paragraph({ children, className, align }: ParagraphProps) {
             text-${align} 
             m-2
             text-text
-            text-size-paragraph 
+            text-size-paragraph
+            caret-transparent
         `
 
     return (
