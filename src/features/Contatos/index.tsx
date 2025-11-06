@@ -27,8 +27,8 @@ export default function PageContactsBody() {
                     rounded-lg
                     ">
                 {links.map((item, index) => (
-                    <LinkBox>
-                        <Link key={index} href={item.href} target={item.desc == 'Email' ? '' : '_blank'}>
+                    <LinkBox key={index}>
+                        <Link href={item.href} target={item.desc == 'Email' ? '' : '_blank'}>
                             <div className="flex justify-center pt-2">
                                 {item.icon}
                             </div>
