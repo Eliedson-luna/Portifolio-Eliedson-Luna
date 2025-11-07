@@ -242,6 +242,7 @@
   --color-text-subtitle: #22222a;
   --color-text-inverted: #fafafa;
   --color-text-footer: #fafafa;
+  --color-text-link: #00bbff;
   /* border */
   --color-border-cont: #cccccc;
   --color-border-subcont: #dddddd;
@@ -271,6 +272,7 @@
   --color-text-subtitle: #e1e1e1;
   --color-text-inverted: #141414;
   --color-text-footer: #fafafa;
+  --color-text-link: #00bbff;
   /* border */
   --color-border-cont: #3a3a3a;
   --color-border-subcont: #4a4258;
