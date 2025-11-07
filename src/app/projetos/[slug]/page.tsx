@@ -44,7 +44,7 @@ export default function ProjetoPage({ params }: any) {
             <MDXContent components={components} />
           </Container>
         </div>
-        <div className='flex flex-col'>
+        <div className='flex flex-col justify-around'>
           {project.images!.map((path, index) => (
             <Image key={index}
               width={300} height={100}
@@ -64,9 +64,9 @@ const About = ({ children }: React.HTMLAttributes<HTMLElement>) => {
   return (
     <Container>
       <Title>Sobre</Title>
-      <div className="flex flex-col">
+      <Paragraph>
         {children}
-      </div>
+      </Paragraph>
     </Container>
   )
 }
@@ -91,7 +91,7 @@ const Feature = ({ children, title }: FeatureType) => {
     <SubContainer>
       <Title>{title}</Title>
       <div className="flex flex-col">
-        {typeof children === 'string' ? <Paragraph>{children}</Paragraph> : children}
+        <Paragraph>{children}</Paragraph>
       </div>
     </SubContainer>
   )
