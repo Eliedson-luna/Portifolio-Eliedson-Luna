@@ -241,6 +241,7 @@
   --color-text-title: #22222b;
   --color-text-subtitle: #22222a;
   --color-text-inverted: #fafafa;
+  --color-text-light: #ffffff;
   --color-text-footer: #fafafa;
   --color-text-link: #00bbff;
   /* border */
@@ -271,6 +272,7 @@
   --color-text-title: #cfcfcf;
   --color-text-subtitle: #e1e1e1;
   --color-text-inverted: #141414;
+  --color-text-light: #ffffff;
   --color-text-footer: #fafafa;
   --color-text-link: #00bbff;
   /* border */
