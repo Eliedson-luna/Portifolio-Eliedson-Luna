@@ -12,12 +12,12 @@
         "tags": [
           "Node",
           "Typescript",
-          "Whatsapp-web.js"
+          "Whatsapp-web.js\r"
         ],
         "description": "Aplicação web usada para realizar buscas com a api da Amazon.",
         "thumbnail": "/images/projects/amazonScrapper/scrapper_thumbnail.jpg",
         "body": {
-          "raw": "\n<About>\n    <Paragraph >\n    Texto sobre o projeto aqui\n    </Paragraph>    \n</About>\n<Features className=\"flex flex-col justify-around \">\n    <Feature title='Feature 1'>\n    Feature description\n    </Feature>\n\n    <Feature title='Feature 2'>\n    Feature description\n    </Feature>\n\n    <Feature title='Feature 2'>\n    Feature description\n    </Feature>\n</Features>\n<Tecnologies>\n    <Tecnology title='Tech 1'>\n    Tech Label\n    </Tecnology>\n    <Tecnology title='Tech 2'>\n    Tech Label\n    </Tecnology>\n    <Tecnology title='Tech 3'>\n    Tech Label\n    </Tecnology>\n    \n</Tecnologies>\n",
+          "raw": "\r\n<About>\r\n    <Paragraph >\r\n    Texto sobre o projeto aqui\r\n    </Paragraph>    \r\n</About>\r\n<Features className=\"flex flex-col justify-around \">\r\n    <Feature title='Feature 1'>\r\n    Feature description\r\n    </Feature>\r\n\r\n    <Feature title='Feature 2'>\r\n    Feature description\r\n    </Feature>\r\n\r\n    <Feature title='Feature 2'>\r\n    Feature description\r\n    </Feature>\r\n</Features>\r\n<Tecnologies>\r\n    <Tecnology title='Tech 1'>\r\n    Tech Label\r\n    </Tecnology>\r\n    <Tecnology title='Tech 2'>\r\n    Tech Label\r\n    </Tecnology>\r\n    <Tecnology title='Tech 3'>\r\n    Tech Label\r\n    </Tecnology>\r\n    \r\n</Tecnologies>\r\n",
           "code": "var Component=(()=>{var f=Object.create;var p=Object.defineProperty;var b=Object.getOwnPropertyDescriptor;var j=Object.getOwnPropertyNames;var x=Object.getPrototypeOf,F=Object.prototype.hasOwnProperty;var T=(r,e)=>()=>(e||r((e={exports:{}}).exports,e),e.exports),_=(r,e)=>{for(var a in e)p(r,a,{get:e[a],enumerable:!0})},u=(r,e,a,i)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let n of j(e))!F.call(r,n)&&n!==a&&p(r,n,{get:()=>e[n],enumerable:!(i=b(e,n))||i.enumerable});return r};var y=(r,e,a)=>(a=r!=null?f(x(r)):{},u(e||!r||!r.__esModule?p(a,\"default\",{value:r,enumerable:!0}):a,r)),z=r=>u(p({},\"__esModule\",{value:!0}),r);var h=T((M,d)=>{d.exports=_jsx_runtime});var w={};_(w,{default:()=>g,frontmatter:()=>A});var t=y(h()),A={title:\"Amazon Scrapper\",slug:\"amazon-scrapper\",publishedAt:\"2025-08-03\",description:\"Aplica\\xE7\\xE3o web usada para realizar buscas com a api da Amazon.\",thumbnail:\"/images/projects/amazonScrapper/scrapper_thumbnail.jpg\",images:[\"/images/projects/amazonScrapper/scrapper_landing_page.jpg\",\"/images/projects/amazonScrapper/scrapper_thumbnail.jpg\"],tags:[\"Node\",\"Typescript\",\"Whatsapp-web.js\"]};function m(r){let e={p:\"p\",...r.components},{About:a,Feature:i,Features:n,Paragraph:s,Tecnologies:l,Tecnology:o}=e;return a||c(\"About\",!0),i||c(\"Feature\",!0),n||c(\"Features\",!0),s||c(\"Paragraph\",!0),l||c(\"Tecnologies\",!0),o||c(\"Tecnology\",!0),(0,t.jsxs)(t.Fragment,{children:[(0,t.jsx)(a,{children:(0,t.jsx)(s,{children:(0,t.jsx)(e.p,{children:\"Texto sobre o projeto aqui\"})})}),`\n`,(0,t.jsxs)(n,{className:\"flex flex-col justify-around \",children:[(0,t.jsx)(i,{title:\"Feature 1\",children:(0,t.jsx)(e.p,{children:\"Feature description\"})}),(0,t.jsx)(i,{title:\"Feature 2\",children:(0,t.jsx)(e.p,{children:\"Feature description\"})}),(0,t.jsx)(i,{title:\"Feature 2\",children:(0,t.jsx)(e.p,{children:\"Feature description\"})})]}),`\n`,(0,t.jsxs)(l,{children:[(0,t.jsx)(o,{title:\"Tech 1\",children:(0,t.jsx)(e.p,{children:\"Tech Label\"})}),(0,t.jsx)(o,{title:\"Tech 2\",children:(0,t.jsx)(e.p,{children:\"Tech Label\"})}),(0,t.jsx)(o,{title:\"Tech 3\",children:(0,t.jsx)(e.p,{children:\"Tech Label\"})})]})]})}function g(r={}){let{wrapper:e}=r.components||{};return e?(0,t.jsx)(e,{...r,children:(0,t.jsx)(m,{...r})}):m(r)}function c(r,e){throw new Error(\"Expected \"+(e?\"component\":\"object\")+\" `\"+r+\"` to be defined: you likely forgot to import, pass, or provide it.\")}return z(w);})();\n;return Component;"
         },
         "_id": "amazonScrapper.mdx",
@@ -30,7 +30,7 @@
         },
         "type": "Project"
       },
-      "documentHash": "1762457732937",
+      "documentHash": "1762535208099",
       "hasWarnings": false,
       "documentTypeName": "Project"
     },
@@ -63,7 +63,7 @@
         },
         "type": "Project"
       },
-      "documentHash": "1762462348527",
+      "documentHash": "1762535208100",
       "hasWarnings": false,
       "documentTypeName": "Project"
     },
@@ -98,7 +98,7 @@
         },
         "type": "Project"
       },
-      "documentHash": "1762513426266",
+      "documentHash": "1762535208100",
       "hasWarnings": false,
       "documentTypeName": "Project"
     },
@@ -131,7 +131,7 @@
         },
         "type": "Project"
       },
-      "documentHash": "1762265105979",
+      "documentHash": "1762535208101",
       "hasWarnings": false,
       "documentTypeName": "Project"
     },
