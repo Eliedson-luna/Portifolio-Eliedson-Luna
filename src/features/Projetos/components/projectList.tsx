@@ -12,8 +12,10 @@ export default function ProjectList() {
         <div
             className="
             h-[70vh]
-            flex flex-col gap-10 sm:gap-0
-            sm:grid sm:grid-cols-3 sm:grid-rows-5
+            flex flex-col gap-10
+            md:grid-rows-5 md:gap-0
+            md:grid md:grid-cols-2 
+            lg:grid-cols-3
             overflow-y-scroll
         ">
             {
@@ -28,7 +30,7 @@ export default function ProjectList() {
                                 group
                                 '
                             >
-                                <div className="w-[65%] transition-colors">
+                                <div className="w-[65%]  transition-colors">
                                     <SubTitle className="mb-3">
                                         {proj.title}
                                     </SubTitle>
@@ -43,11 +45,10 @@ export default function ProjectList() {
                                 {proj.thumbnail &&
                                     <div key={index}
                                         className="
-                                        relative 
+                                        flex relative
                                         h-20 w-20 
                                         overflow-hidden 
                                         rounded-full 
-                                        flex 
                                         items-center 
                                         justify-center
                                         ">
@@ -80,7 +81,8 @@ const ProjectCard = ({ children, slug, index }: { children: React.ReactNode, slu
             <div
                 className="
                 p-5 my-5 
-                h-35 w-150
+                h-30 w-100
+                md:w-120 md:h-35
                 scale-95 
                 hover:scale-100 
                 rounded-md 
