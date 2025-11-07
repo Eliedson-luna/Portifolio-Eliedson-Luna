@@ -60,12 +60,13 @@ const Card = ({ slug, title, txt, imgUrl }: CardProps): JSX.Element => {
                     {title}
                 </Title>
                 <ResponsiveText
-                    textSize="tiniest"
+                    textSize="small"
                     align="justify"
                     className="
                     px-1
-                    text-text
-                    "
+                    mt-1
+                    text-text-light
+                    " 
                 >
                     {txt}
                 </ResponsiveText>
@@ -91,10 +92,9 @@ const CardLayout = ({ children, href }: { children: ReactNode, href: string }) =
             "
         >
             <div className="absolute inset-0 w-full h-full overflow-hidden">
-                <div className="w-full h-full transform transition-transform duration-500 group-hover:scale-105">
+                <div className="w-full h-full transform transition-transform  duration-500 group-hover:scale-105">
                     {children}
                 </div>
-                <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
         </Link>
     );
@@ -109,9 +109,10 @@ const Description = ({ children }: { children: ReactNode }) => {
             p-4
             text-center
             opacity-0
-            group-hover:opacity-100
             transition-opacity duration-300
-            z-10
+            group-hover:opacity-100
+            bg-black/50
+            z-1
             "
         >
             {children}
