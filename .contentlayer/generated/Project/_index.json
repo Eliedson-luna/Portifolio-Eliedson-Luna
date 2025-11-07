@@ -113,6 +113,7 @@
       "flattenedPath": "chatBot"
     },
     "type": "Project"
+<<<<<<< HEAD
   },
   {
     "title": "model",
@@ -141,5 +142,7 @@
       "flattenedPath": "model"
     },
     "type": "Project"
+=======
+>>>>>>> f6c0317c0b66f1af350e69688908a8764a9516ad
   }
 ]
