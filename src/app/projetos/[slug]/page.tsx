@@ -51,6 +51,7 @@ export default function ProjetoPage({ params }: any) {
               src={path}
               alt='image'
               sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+              className="rounded-md"
             />
           ))}
         </div>
