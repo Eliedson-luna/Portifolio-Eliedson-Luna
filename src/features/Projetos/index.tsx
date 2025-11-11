@@ -1,13 +1,13 @@
-import { Fragment } from "react";
 import ProjectList from "./components/projectList";
 import { Title } from "@/shared/components/ui/text/title";
+import ContentWrapper from "@/shared/components/structural/wrappers";
 
 export default function PageProjectsBody() {
     return (
-        <Fragment>
+        <ContentWrapper>
             <TitleBox />
             <ProjectList />
-        </Fragment>
+        </ContentWrapper>
     )
 }
 

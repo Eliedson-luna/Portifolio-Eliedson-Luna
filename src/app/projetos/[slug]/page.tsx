@@ -1,6 +1,7 @@
 import Container from "@/shared/components/layout/containers/container";
 import SubContainer from "@/shared/components/layout/containers/subContainer";
 import { FlexLayout } from "@/shared/components/structural/layouts/flexLayout";
+import ContentWrapper from "@/shared/components/structural/wrappers";
 import { Paragraph } from "@/shared/components/ui/text/paragraph";
 import { ResponsiveText } from "@/shared/components/ui/text/responsiveText";
 import { Title } from "@/shared/components/ui/text/title";
@@ -36,26 +37,28 @@ export default function ProjetoPage({ params }: any) {
 
   return (
     <FlexLayout>
-      <div className='flex justify-evenly'>
-        <div className='w-[60%]'>
-          <ResponsiveText textSize='biggest' className='text-[#4A148C]'>{project.title}</ResponsiveText>
-          <Paragraph>{project.description}</Paragraph>
-          <Container className='p-2' >
-            <MDXContent components={components} />
-          </Container>
+      <ContentWrapper>
+        <div className='flex justify-evenly'>
+          <div className='w-[60%]'>
+            <ResponsiveText textSize='biggest' className='text-[#4A148C]'>{project.title}</ResponsiveText>
+            <Paragraph>{project.description}</Paragraph>
+            <Container className='p-2' >
+              <MDXContent components={components} />
+            </Container>
+          </div>
+          <div className='flex flex-col justify-around'>
+            {project.images!.map((path, index) => (
+              <Image key={index}
+                width={300} height={100}
+                src={path}
+                alt='image'
+                sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                className="rounded-md"
+              />
+            ))}
+          </div>
         </div>
-        <div className='flex flex-col justify-around'>
-          {project.images!.map((path, index) => (
-            <Image key={index}
-              width={300} height={100}
-              src={path}
-              alt='image'
-              sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-              className="rounded-md"
-            />
-          ))}
-        </div>
-      </div>
+      </ContentWrapper>
     </FlexLayout>
 
   )
