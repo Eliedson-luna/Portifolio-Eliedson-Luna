@@ -54,8 +54,8 @@ export default function PageContactsBody() {
 
 const ContactsLayout = ({ children }: { children: ReactNode }) => {
     return (
-        <section className="flex flex-col flex-wrap justify-center h-[80vh] w-full">
-            <div className="jusify-center items-center flex flex-col">
+        <section className="flex flex-col flex-wrap justify-center h-[90vh] w-full">
+            <div className="justify-center items-center flex flex-col">
                 {children}
             </div>
         </section>
