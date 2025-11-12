@@ -47,7 +47,7 @@ export function VerticalIndicator({ rootClass, trace }: { rootClass?: string, tr
             section?.scrollIntoView({ behavior: "smooth" });
           }}
           aria-label={`Ir para seção ${i + 1}`}
-          className={`w-3 h-20 rounded-full cursor-pointer transition-all mb-5 last-of-type:mb-0 ${activeIndex === i
+          className={`w-1 h-20 rounded-full cursor-pointer transition-all mb-5 last-of-type:mb-0 ${activeIndex === i
             ? "bg-text scale-135"
             : "bg-gray-500/40 hover:bg-gray-400/70"
             }`}

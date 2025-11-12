@@ -1,22 +1,16 @@
-
 import Image from "next/image";
 import Link from "next/link";
-
 import { SubTitle } from "@/shared/components/ui/text/title";
-import { Paragraph } from "@/shared/components/ui/text/paragraph";
-import Carrousel from "@/shared/components/layout/carrousel";
 import { allProjects, Project } from "contentlayer/generated";
+import { ResponsiveText } from "@/shared/components/ui/text/responsiveText";
 
 export default function ProjectList() {
     return (
         <div
             className="
-            h-[70vh]
-            flex flex-col gap-10
-            md:grid-rows-5 md:gap-0
-            md:grid md:grid-cols-2 
-            lg:grid-cols-3
-            overflow-y-scroll
+            mt-10
+            flex flex-col gap-10 
+            md:grid md:grid-cols-3
         ">
             {
                 allProjects.map((proj: Project, index: number) => {
@@ -27,37 +21,35 @@ export default function ProjectList() {
                                 items-center
                                 flex flex-row 
                                 justify-around
-                                group
                                 '
                             >
                                 <div className="w-[65%]  transition-colors">
                                     <SubTitle className="mb-3">
                                         {proj.title}
                                     </SubTitle>
-                                    <Paragraph className='
-                                 
-                                        text-justify
-                                    '>
+                                    <ResponsiveText textSize="small" align="right" className="group-hover:text-text-secondary">
                                         {proj.description}
-                                    </Paragraph>
+                                    </ResponsiveText>
                                 </div>
 
                                 {proj.thumbnail &&
-                                    <div key={index}
-                                        className="
-                                        flex relative
-                                        h-20 w-20 
-                                        overflow-hidden 
-                                        rounded-full 
-                                        items-center 
-                                        justify-center
-                                        ">
-                                        <Image
-                                            src={proj.thumbnail.trimEnd()}
-                                            alt=""
-                                            fill
-                                            className="object-cover"
-                                        />
+                                    <div key={index} className="h-full flex flex-col justify-center">
+                                        <div
+                                            className="
+                                                relative
+                                                h-20 w-20 
+                                                overflow-hidden 
+                                                rounded-full
+                                            "
+                                        >
+
+                                            <Image
+                                                src={proj.thumbnail.trimEnd()}
+                                                alt=""
+                                                fill
+                                                className="object-cover"
+                                            />
+                                        </div>
                                     </div>
                                 }
                             </div>
@@ -80,18 +72,17 @@ const ProjectCard = ({ children, slug, index }: { children: React.ReactNode, slu
         >
             <div
                 className="
-                p-5 my-5 
-                h-30 w-100
-                md:w-120 md:h-35
+                p-5 my-2
+                h-[100%]
+                content-center
                 scale-95 
                 hover:scale-100 
-                rounded-md 
+                rounded-lg 
                 border-b
                 cursor-pointer
-                border-border-subcont
-                bg-bg-subcont
-                hover:shadow hover:shadow-shadow-subcont
+                subContainer
                 active:scale-95
+                group
                 "
             >
 

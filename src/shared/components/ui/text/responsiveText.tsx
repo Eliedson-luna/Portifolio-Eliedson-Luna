@@ -1,9 +1,9 @@
 type TextProps = React.HTMLAttributes<HTMLSpanElement> & {
-    textSize: 'tiniest' | 'tiny' | 'small' | 'medium' | 'big' | 'biggest';
+    textSize?: 'tiniest' | 'tiny' | 'small' | 'medium' | 'big' | 'biggest';
     align?: 'left' | 'center' | 'right' | 'justify';
 }
 
-export function ResponsiveText({ textSize, children, className = "", align = "left", ...rest }: TextProps) {
+export function ResponsiveText({ textSize = "medium", children, className = "", align = "left", ...rest }: TextProps) {
     const sizes = {
         tiniest: "text-size-tiniest",
         tiny: "text-size-tiny",
@@ -11,22 +11,21 @@ export function ResponsiveText({ textSize, children, className = "", align = "le
         medium: "text-size-medium",
         big: "text-size-big",
         biggest: "text-size-biggest",
-        default: "text-size-medium",
+
     };
 
-    const size = sizes[textSize as keyof typeof sizes] || sizes.default;
+    const size = sizes[textSize as keyof typeof sizes];
 
-    const alignClass =
-        align === "center"
-            ? "text-center"
-            : align === "right"
-                ? "text-right"
-                : align === "justify"
-                    ? "text-justify"
-                    : "text-left";
+    const aligns = {
+        left: "text-left",
+        right: "text-right",
+        justify: "text-justify",
+        center: 'text-center',
+    }
+    const alignment = aligns[align as keyof typeof aligns]
 
     return (
-        <span className={`${size} ${alignClass} ${className} text-text caret-transparent`} {...rest}>
+        <span className={`${size} ${alignment} ${className} text-text caret-transparent`} {...rest}>
             {children}
         </span>
     );

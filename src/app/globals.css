@@ -86,6 +86,11 @@ body {
   filter: drop-shadow(0px 2px 5px var(--shadow));
 }
 
+.container {
+  background: var(--color-bg-cont);
+  border-color: var(--color-border-cont);
+}
+
 .subContainer {
   background: var(--color-bg-subcont);
   border-color: var(--color-border-subcont);

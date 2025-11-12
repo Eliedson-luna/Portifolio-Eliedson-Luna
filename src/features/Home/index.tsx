@@ -4,6 +4,7 @@ import ContatcsPage from "@/app/contatos/page";
 import { VerticalIndicator } from "@/shared/components/structural/scroll/verticalIndicator";
 import { SnapLayout } from "@/shared/components/structural/layouts/snapLayout";
 import SnapWrapper from "@/shared/components/structural/wrappers/snapWrapper";
+import PageContactsBody from "../Contatos";
 
 export default function HomepageBody() {
     return (
@@ -16,7 +17,8 @@ export default function HomepageBody() {
                 <TopProjects />
             </SnapWrapper>
             <SnapWrapper>
-                <ContatcsPage />
+                <PageContactsBody/>
+                
             </SnapWrapper>
         </SnapLayout>
     )

@@ -12,7 +12,7 @@ import { JSX, ReactNode } from "react";
 export default function TopProjects() {
     const projects: Project[] = allProjects.slice(0, 3);
     return (
-        <div className="h-full w-full">
+        <div className="h-full w-full mt-15 border-t-border-hover border-t-2">
             <ResponsiveText textSize="medium">Projetos Recentes</ResponsiveText>
             <CardContainer>
                 {projects.map((proj: Project) => {
@@ -39,7 +39,7 @@ const CardContainer = ({ children }: { children: ReactNode }) => {
         text-center
         py-10 px-60
         gap-10
-        border-t-border-hover border-t-2 
+         
         ">
 
             {children}
