@@ -1,12 +1,15 @@
 import { ReactNode } from "react";
 
-export function FlexLayout({ children }: { children: ReactNode }) {
+export function SnapLayout({ children }: { children: ReactNode }) {
     return (
         <main className="
             flex flex-col
             justify-items-center 
             items-center
-            min-h-screen
+            h-screen
+            overflow-y-scroll
+            scroll-smooth
+            snap-y snap-mandatory
         ">
             {children}
         </main>

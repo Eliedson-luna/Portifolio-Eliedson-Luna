@@ -1,7 +1,7 @@
 import Container from "@/shared/components/layout/containers/container";
 import SubContainer from "@/shared/components/layout/containers/subContainer";
 import { FlexLayout } from "@/shared/components/structural/layouts/flexLayout";
-import ContentWrapper from "@/shared/components/structural/wrappers";
+import ContentWrapper from "@/shared/components/structural/wrappers/contentWrapper";
 import { Paragraph } from "@/shared/components/ui/text/paragraph";
 import { ResponsiveText } from "@/shared/components/ui/text/responsiveText";
 import { Title } from "@/shared/components/ui/text/title";

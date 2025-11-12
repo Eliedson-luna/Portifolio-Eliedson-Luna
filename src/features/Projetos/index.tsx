@@ -1,6 +1,6 @@
 import ProjectList from "./components/projectList";
 import { Title } from "@/shared/components/ui/text/title";
-import ContentWrapper from "@/shared/components/structural/wrappers";
+import ContentWrapper from "@/shared/components/structural/wrappers/contentWrapper";
 
 export default function PageProjectsBody() {
     return (

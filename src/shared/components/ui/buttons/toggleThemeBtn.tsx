@@ -7,7 +7,7 @@ import { FaMoon, FaSun } from "react-icons/fa";
 export default function ToggleTheme() {
     return (
         <ThemeProvider>
-            <div className="flex place-self-center mr-10 transition-all hover:cursor-pointer">
+            <div className="flex place-self-center transition-all hover:cursor-pointer">
                 <ToggleButton />
             </div>
         </ThemeProvider>
