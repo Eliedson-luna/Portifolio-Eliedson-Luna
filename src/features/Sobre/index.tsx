@@ -1,5 +1,5 @@
 import Container from "@/shared/components/layout/containers/container";
-import ContentWrapper from "@/shared/components/structural/wrappers";
+import ContentWrapper from "@/shared/components/structural/wrappers/contentWrapper";
 import { Paragraph } from "@/shared/components/ui/text/paragraph";
 import { Title } from "@/shared/components/ui/text/title";
 

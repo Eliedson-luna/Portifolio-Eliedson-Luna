@@ -1,0 +1,50 @@
+/* Home - Dark */
+html {
+    position: relative;
+    width: 1920px;
+    height: 4320px;
+
+    background: linear-gradient(95.61deg, #121218 46.19%, #171822 100.03%);
+}
+
+
+/* Home - Light */
+html {
+    position: relative;
+    width: 1920px;
+    height: 4320px;
+
+    background: linear-gradient(95.55deg, #F4F4F4 40.29%, #EDFEFF 100.05%);
+    border-radius: 0px;
+}
+
+
+/* github */
+
+.butao {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 178px;
+    height: 112px;
+    left: 0px;
+    top: 0px;
+
+    background: linear-gradient(90.2deg, rgba(56, 54, 54, 0.075) 1.31%, rgba(246, 243, 243, 0.075) 99.83%);
+    border: 1px solid rgba(116, 116, 116, 0.6);
+    border-radius: 5px;
+}
+
+.botaolight {
+    /* Sobre Mim */
+
+    position: absolute;
+    width: 135px;
+    height: 46px;
+    left: 0px;
+    top: 0px;
+
+    background: linear-gradient(90deg, rgba(249, 249, 249, 0.3) 0%, rgba(223, 223, 223, 0.3) 100%);
+    border-radius: 10px;
+
+}

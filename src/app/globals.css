@@ -1,237 +1,15 @@
 /*#343434 cinza solido para caso surja ideias*/
 @import "tailwindcss";
 
-@layer utilities {
-
-  /* ====== BASE (mobile first) ====== */
-  .text-size-tiniest {
-    font-size: 0.45rem;
-  }
-
-  .text-size-tiny {
-    font-size: 0.55rem;
-  }
-
-  .text-size-small {
-    font-size: 0.65rem;
-  }
-
-  .text-size-medium {
-    font-size: 0.8rem;
-  }
-
-  .text-size-paragraph {
-    font-size: 0.8rem;
-    line-height: 1.4;
-  }
-
-  .text-size-subtitle {
-    font-size: 0.9rem;
-    font-weight: 500;
-  }
-
-  .text-size-title {
-    font-size: 1rem;
-    font-weight: 600;
-  }
-
-  .text-size-big {
-    font-size: 1.25rem;
-    font-weight: 600;
-  }
-
-  .text-size-bigger {
-    font-size: 1.4rem;
-    font-weight: 700;
-  }
-
-  .text-size-biggest {
-    font-size: 1.6rem;
-    font-weight: 700;
-  }
-
-  /* ====== SM (640px+) ====== */
-  @media (min-width: 640px) {
-    .text-size-tiniest {
-      font-size: 0.5rem;
-    }
-
-    .text-size-tiny {
-      font-size: 0.6rem;
-    }
-
-    .text-size-small {
-      font-size: 0.7rem;
-    }
-
-    .text-size-medium {
-      font-size: 0.85rem;
-    }
-
-    .text-size-paragraph {
-      font-size: 0.85rem;
-    }
-
-    .text-size-subtitle {
-      font-size: 0.95rem;
-    }
-
-    .text-size-title {
-      font-size: 1.1rem;
-    }
-
-    .text-size-big {
-      font-size: 1.35rem;
-    }
-
-    .text-size-bigger {
-      font-size: 1.5rem;
-    }
-
-    .text-size-biggest {
-      font-size: 1.8rem;
-    }
-  }
-
-  /* ====== MD (768px+) ====== */
-  @media (min-width: 768px) {
-    .text-size-tiniest {
-      font-size: 0.55rem;
-    }
-
-    .text-size-tiny {
-      font-size: 0.65rem;
-    }
-
-    .text-size-small {
-      font-size: 0.75rem;
-    }
-
-    .text-size-medium {
-      font-size: 0.9rem;
-    }
-
-    .text-size-paragraph {
-      font-size: 0.9rem;
-    }
-
-    .text-size-subtitle {
-      font-size: 1rem;
-    }
-
-    .text-size-title {
-      font-size: 1.15rem;
-    }
-
-    .text-size-big {
-      font-size: 1.4rem;
-    }
-
-    .text-size-bigger {
-      font-size: 1.55rem;
-    }
-
-    .text-size-biggest {
-      font-size: 1.9rem;
-    }
-  }
-
-  /* ====== LG (1024px+) ====== */
-  @media (min-width: 1024px) {
-    .text-size-tiniest {
-      font-size: 0.6rem;
-    }
-
-    .text-size-tiny {
-      font-size: 0.7rem;
-    }
-
-    .text-size-small {
-      font-size: 0.8rem;
-    }
-
-    .text-size-medium {
-      font-size: 0.95rem;
-    }
-
-    .text-size-paragraph {
-      font-size: 0.95rem;
-    }
-
-    .text-size-subtitle {
-      font-size: 1.05rem;
-    }
-
-    .text-size-title {
-      font-size: 1.2rem;
-    }
-
-    .text-size-big {
-      font-size: 1.45rem;
-    }
-
-    .text-size-bigger {
-      font-size: 1.6rem;
-    }
-
-    .text-size-biggest {
-      font-size: 2rem;
-    }
-  }
-
-  /* ====== XL (1280px+) ====== */
-  @media (min-width: 1280px) {
-    .text-size-tiniest {
-      font-size: 0.65rem;
-    }
-
-    .text-size-tiny {
-      font-size: 0.75rem;
-    }
-
-    .text-size-small {
-      font-size: 0.85rem;
-    }
-
-    .text-size-medium {
-      font-size: 1rem;
-    }
-
-    .text-size-paragraph {
-      font-size: 1rem;
-    }
-
-    .text-size-subtitle {
-      font-size: 1.1rem;
-    }
-
-    .text-size-title {
-      font-size: 1.3rem;
-    }
-
-    .text-size-big {
-      font-size: 1.55rem;
-    }
-
-    .text-size-bigger {
-      font-size: 1.75rem;
-    }
-
-    .text-size-biggest {
-      font-size: 2.1rem;
-    }
-  }
-}
-
 ::-webkit-scrollbar {
   display: none;
 }
 
 @theme {
   /* backgrounds */
-  --color-bg: #f5f5f7;
+  --color-bg: linear-gradient(95.55deg, #FFFFFF 40.29%, #EDFEFF 100.05%);
   --color-bg-cont: #ffffff;
-  --color-bg-subcont: #f0f0f2;
+  --color-bg-subcont: linear-gradient(90deg, rgba(249, 249, 249, 0.3) 0%, rgba(223, 223, 223, 0.3) 100%);
   --color-bg-footer: #1f1f29;
   /* buttons */
   --color-btn-submit: #625bff;
@@ -251,7 +29,7 @@
   --color-border-hover: #9a94d8;
   --color-bg-hover: #e6e6ea;
   --color-inverted-hover: #111111;
-  --color-btn-hover: #4f48e8;
+  --color-btn-hover: #A6ECFF;
   /* shadows */
   --color-shadow: #00000026;
   --color-shadow-cont: #0000001a;
@@ -260,9 +38,9 @@
 
 .dark {
   /* backgrounds */
-  --color-bg: #121218;
+  --color-bg: linear-gradient(95.61deg, #121218 46.19%, #171822 100.03%);
   --color-bg-cont: #2a2a34;
-  --color-bg-subcont: #363643;
+  --color-bg-subcont: linear-gradient(90.2deg, rgba(56, 54, 54, 0.075) 1.31%, rgba(246, 243, 243, 0.075) 99.83%);
   --color-bg-footer: #373744;
   /* buttons */
   --color-btn-submit: #656c7d;
@@ -295,11 +73,29 @@
 }
 
 html {
+  font-family: 'Roboto Mono';
+}
+
+body {
   font-size: 15px;
-  font-family: 'IBM Plex Mono', 'sans-serif';
   box-sizing: border-box;
+  background: var(--color-bg);
 }
 
 #menuContainer {
   filter: drop-shadow(0px 2px 5px var(--shadow));
+}
+
+.container {
+  background: var(--color-bg-cont);
+  border-color: var(--color-border-cont);
+}
+
+.subContainer {
+  background: var(--color-bg-subcont);
+  border-color: var(--color-border-subcont);
+}
+
+.subContainer:hover {
+  border-color: var(--color-btn-hover);
 }

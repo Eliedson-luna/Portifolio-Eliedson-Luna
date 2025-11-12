@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "@/shared/fonts/robotoMono/robotoMono.css";
+import "@/shared/fonts/fontSize/fontsize.css";
 import Head from "next/head";
 import Header from "@/shared/components/structural/header";
 import Footer from "@/shared/components/structural/footer";
@@ -19,10 +21,10 @@ export default function RootLayout({
       <Head>
         <link rel="icon" href="/assets/favicon.ico" />
       </Head>
-      <body className={`antialiased bg-bg`}>
+      <body className="antialiased">
         <Header />
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );

@@ -1,87 +1,31 @@
-
-import { SubTitle, Title } from "@/shared/components/ui/text/title";
-import Link from "next/link";
-import { Key, ReactNode } from "react";
-import { FaBook, FaPortrait, FaProjectDiagram } from "react-icons/fa";
-
-const menuData = [
-    {
-        title: 'Sobre mim',
-        description: 'Saiba um pouco sobre mim',
-        link: '/sobre',
-        icon: <FaPortrait className="text-text" size={50} />
-    },
-    {
-        title: 'Projetos',
-        description: 'Confira minha lista de projetos',
-        link: '/projetos',
-        icon: <FaProjectDiagram className="text-text" size={50} />
-    },
-    {
-        title: 'Contatos',
-        description: 'Entre em contato comigo.',
-        link: '/contatos',
-        icon: <FaBook className="text-text" size={50} />
-    }
-]
-
+import { Paragraph } from "@/shared/components/ui/text/paragraph";
+import { Title } from "@/shared/components/ui/text/title";
 
 export default function HomePageMenu() {
     return (
-        <nav className="max-h-50">
-            <div className="flex justify-evenly">
-                {menuData.map((item) => (
-                    <ItemLayout key={item.title} href={item.link}>
-                        <IconLayout>
-                            {item.icon}
-                        </IconLayout>
-                        <TitleBox>
-                            <Title className="self-center">
-                                {item.title}
-                            </Title>
-                            <SubTitle className="self-center text-center">
-                                {item.description}
-                            </SubTitle>
-                        </TitleBox>
-                    </ItemLayout>
-                ))}
+        <div className="flex w-full h-full">
+            <div className="flex flex-col justify-evenly  w-[60%] h-full">
+                <div className="place-content-start flex flex-col justify-center">
+                    <Title className="mb-10">
+                        ELIEDSON LUNA,
+                    </Title>
+                    <Title>
+                        DESENVOLVIMENTO DE SOFTWARE.
+                    </Title>
+                </div>
             </div>
-        </nav>
-    )
-}
-
-const ItemLayout = ({ children, key, href }: { children: ReactNode, key: Key, href: string }) => {
-    return (
-        <Link
-            href={href}
-            className="
-                flex flex-col
-                group
-                "
-            key={key}>
-            {children}
-        </Link>
-    )
-}
-
-const IconLayout = ({ children }: { children: ReactNode }) => {
-    return (
-        <div className="
-                place-self-center
-                justify-center
-                overflow-hidden
-                group-hover:animate-bounce
-            ">
-            {children}
-        </div>
-    )
-}
-
-const TitleBox = ({ children }: { children: ReactNode }) => {
-    return (
-        <div className="flex flex-col group-active:scale-110">
-            <div className="flex flex-col mt-3 gap-1">
-                {children}
+            <div className="flex flex-col justify-center h-full w-[25%] ">
+                <div className="flex flex-col justify-center gap-5 border-l-border-subcont border-l h-[70%] pl-5">
+                    <Paragraph align="justify">
+                        Opa tudo bom? Seja bem vindo ao DEV LUNA, meu portifólio profissional!
+                    </Paragraph>
+                    <Paragraph align="justify">
+                        Me chamo Eliedson e te convido à conhecer um pouco do meu trabalho.
+                    </Paragraph>
+                    <Paragraph align="justify">
+                        Sinta-se à vontade para navegar pelo meu site!
+                    </Paragraph>
+                </div>
             </div>
         </div>
     )

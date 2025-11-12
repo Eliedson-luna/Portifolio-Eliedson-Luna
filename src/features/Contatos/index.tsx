@@ -7,7 +7,7 @@ import { MdEmail } from "react-icons/md";
 export default function PageContactsBody() {
 
     const links = [
-        { desc: 'Email', icon: <MdEmail size={30} className="text-text" />, href: "/contatos/enviar-email" },
+        { desc: 'Mensagem', icon: <MdEmail size={30} className="text-text" />, href: "/contatos/enviar-email" },
         { desc: 'Linkedin', icon: <FaLinkedin size={30} className="text-text" />, href: "https://www.linkedin.com/in/eliedsonluna/" },
         { desc: 'Github', icon: <FaGithub size={30} className="text-text" />, href: "https://github.com/Eliedson-luna" },
         { desc: 'Curriculo', icon: <FaFilePdf size={30} className="text-text" />, href: "/assets/Curriculo_Eliedson_Luna_Dev_Frontend.pdf" }
@@ -17,18 +17,18 @@ export default function PageContactsBody() {
         <ContactsLayout>
             <div className="px-25 pb-3">
                 <Title>
-                    O que acha de trabalharmos juntos?
+                    Contatos
                 </Title>
             </div>
             <div
                 className="
-                    flex flex-col 
-                    justify-cente
+                    flex
+                    justify-center w-full
                     rounded-lg
                     ">
                 {links.map((item, index) => (
                     <LinkBox key={index}>
-                        <Link href={item.href} target={item.desc == 'Email' ? '' : '_blank'}>
+                        <Link href={item.href} target={item.desc == 'Mensagem' ? '' : '_blank'}>
                             <div className="flex justify-center pt-2">
                                 {item.icon}
                             </div>
@@ -37,8 +37,7 @@ export default function PageContactsBody() {
                                     text-center 
                                     rounded-xl
                                     pb-2
-                                    group-hover:border-b-2 
-                                    group-hover:border-b-border-subcont
+                                    
                                 "
                             >
                                 {item.desc}
@@ -54,10 +53,8 @@ export default function PageContactsBody() {
 
 const ContactsLayout = ({ children }: { children: ReactNode }) => {
     return (
-        <section className="flex flex-col flex-wrap justify-center h-[90vh] w-full">
-            <div className="justify-center items-center flex flex-col">
-                {children}
-            </div>
+        <section className="flex flex-wrap flex-col items-center justify-center h-[90vh] w-full">
+            {children}
         </section>
     )
 }
@@ -65,13 +62,17 @@ const ContactsLayout = ({ children }: { children: ReactNode }) => {
 const LinkBox = ({ children }: { children: ReactNode }) => {
     return (
         <div className="
-            m-2 p-1
-            w-200 
+            p-1 my-25 mx-15
+            w-50 h-25
+            flex flex-col
+            justify-center items-center 
             hover:scale-105
             active:scale-100
             group 
-            bg-bg-subcont
+            subContainer 
+            border
             rounded-xl
+            cursor-pointer
             ">
             {children}
         </div>

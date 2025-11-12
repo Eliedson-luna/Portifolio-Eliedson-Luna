@@ -1,5 +1,7 @@
 'use client'
 
+import { HorizontalIndicator } from "@/shared/components/structural/scroll/horizontalIndicator";
+import { VerticalIndicator } from "@/shared/components/structural/scroll/verticalIndicator";
 import { ResponsiveText } from "@/shared/components/ui/text/responsiveText";
 import { Title } from "@/shared/components/ui/text/title";
 import { allProjects, Project } from "contentlayer/generated";
@@ -10,31 +12,38 @@ import { JSX, ReactNode } from "react";
 export default function TopProjects() {
     const projects: Project[] = allProjects.slice(0, 3);
     return (
-        <CardContainer>
-            {projects.map((proj: Project) => {
-                const image = proj.images ? proj.images[0] : '/not-found-image.png';
-                return (
-                    <Card key={proj._id} slug={proj.slug} title={proj.title} txt={proj.description} imgUrl={image} />
-                )
-            })}
-        </CardContainer>
+        <div className="h-full w-full mt-15 border-t-border-hover border-t-2">
+            <ResponsiveText textSize="medium">Projetos Recentes</ResponsiveText>
+            <CardContainer>
+                {projects.map((proj: Project) => {
+                    const image = proj.images ? proj.images[0] : '/not-found-image.png';
+                    return (
+                        <Card key={proj._id} slug={proj.slug} title={proj.title} txt={proj.description} imgUrl={image} />
+                    )
+                })}
+            </CardContainer>
+            <HorizontalIndicator rootClass=".scroll-card" trace=".card" />
+        </div>
     )
 }
 
 const CardContainer = ({ children }: { children: ReactNode }) => {
     return (
         <div className="
-        flex flex-col 
-        text-center 
-        justify-evenly 
-        pt-10 px-60
+        scroll-card
+        flex
+        h-[85%]
+        w-full
+        snap-x snap-mandatory
+        overflow-x-scroll
+        text-center
+        py-10 px-60
         gap-10
-        border-t-subcontainer-border border-t-2 
+         
         ">
-            <Title>Projetos recentes</Title>
-            <div className="flex flex-row gap-15">
-                {children}
-            </div>
+
+            {children}
+
         </div>
     )
 }
@@ -49,73 +58,65 @@ type CardProps = {
 const Card = ({ slug, title, txt, imgUrl }: CardProps): JSX.Element => {
     return (
         <CardLayout href={`/projetos/${slug}`}>
-            <Image
-                alt={title!}
-                src={imgUrl!}
-                fill
-                className="object-cover transition-all duration-300 group-hover:blur-sm"
-            />
-            <Description>
-                <Title>
+            <div className="flex justify-center w-[90vw] h-[60%] relative">
+                <Image
+                    alt={title!}
+                    src={imgUrl!}
+                    fill
+                    className="object-cover rounded-lg"
+                />
+            </div>
+            <div
+                className="
+                    flex
+                    h-[40%]
+                    justify-start items-center
+                    text-center
+                    transition-opacity duration-300
+                    z-1
+                "
+            >
+                <Title className="uppercase">
                     {title}
                 </Title>
                 <ResponsiveText
                     textSize="small"
                     align="justify"
                     className="
-                    px-1
+                    py-10
                     mt-1
-                    text-text-light
-                    " 
+                    ml-10 pl-10
+                    border-l border-l-border-subcont
+                    hover:text-text-secondary
+                    "
                 >
                     {txt}
                 </ResponsiveText>
-            </Description>
+            </div>
         </CardLayout>
     );
 };
+
+
 const CardLayout = ({ children, href }: { children: ReactNode, href: string }) => {
     return (
         <Link
             href={href}
             className="
-            group
-            relative
-            w-60 h-40
-            overflow-hidden
-            rounded-lg
-            cursor-pointer
-            transition-all duration-300
-            shadow-md
-            hover:shadow-xl
-            hover:scale-110
+                card
+                flex
+                snap-center
+                cursor-pointer
             "
         >
-            <div className="absolute inset-0 w-full h-full overflow-hidden">
-                <div className="w-full h-full transform transition-transform  duration-500 group-hover:scale-105">
-                    {children}
-                </div>
+            <div
+                className="
+                w-[90%]
+                h-[90%]
+            "
+            >
+                {children}
             </div>
         </Link>
-    );
-};
-
-const Description = ({ children }: { children: ReactNode }) => {
-    return (
-        <div
-            className="
-            absolute inset-0
-            flex flex-col justify-center items-center
-            p-4
-            text-center
-            opacity-0
-            transition-opacity duration-300
-            group-hover:opacity-100
-            bg-black/50
-            z-1
-            "
-        >
-            {children}
-        </div>
     );
 };
