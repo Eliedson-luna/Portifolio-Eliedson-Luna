@@ -12,24 +12,55 @@ tags:
     - Expo
 ---
 
+export const { thumbnail, title, images } = frontmatter;
+
 <About>
     O AppCanhoto foi criado para fotografar assinaturas que comprovam o recebimento de 
     cargas pelos compradores, garantindo uma maior segurança no processo de logística 
     de uma empresa.
 </About>
-<Features className="flex flex-col justify-around ">
-    <Feature title='Armazenamento de Imagens'>
-    Permite que as fotos das assinaturas sejam salvas diretamente no dispositivo, mesmo sem conexão com a internet.
-    </Feature>
 
-    <Feature title='Consulta de Imagens Armazenadas'>
-    O usuário pode visualizar as imagens registradas, facilitando a verificação e controle dos comprovantes de entrega.
-    </Feature>
+<BannerContainer>
+{thumbnail &&
+  <img
+    src={thumbnail}
+    alt={title}
+    className="w-full h-[100%] object-cover"
+  />
+}
+</BannerContainer>
 
-    <Feature title='Envio de imagens via API'>
-    As imagens podem ser enviadas posteriormente para um servidor, permitindo centralização dos dados e integração com sistemas corporativos.   
-    </Feature>
-</Features>
+<div className='flex flex-col justify-evenly'>
+    <Features className="flex flex-col justify-around ">
+        <Feature title='Armazenamento de Imagens'>
+        Permite que as fotos sejam salvas diretamente no dispositivo, mesmo sem conexão com a internet.
+        </Feature>
+
+        <Feature title='Consulta de Imagens Armazenadas'>
+        O usuário pode visualizar as imagens registradas, facilitando a verificação e controle dos comprovantes de entrega.
+        </Feature>
+
+        <Feature title='Envio de imagens via API'>
+        As imagens podem ser enviadas posteriormente para um servidor, permitindo centralização dos dados e integração com sistemas corporativos.   
+        </Feature>
+    </Features>
+    <div className="flex">
+        {images.map((image, index)=>{
+            return(
+                <>
+                    <ImgContainer key={index}>
+                        <Image
+                            alt={title}
+                            src={image}
+                            fill
+                            className="object-cover rounded-md"
+                        />
+                    </ImgContainer>
+                </>
+            )})}
+    </div>
+</div>
+
 <Tecnologies>
     <Tecnology title='Frameworks'>
     React Native, Expo, Node.js

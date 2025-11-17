@@ -3,9 +3,9 @@ title: CanhotoApi
 slug: canhoto-api
 publishedAt: 2025-08-03
 description: Api para armazenamento de imagens e persistência de dados em servidor.
-thumbnail: /images/projects/canhotoApi/canhoto_api_thumbnail.webp
+thumbnail: /images/projects/canhotoApi/canhoto-api_logo_banner.svg
 images: 
-    - /images/projects/canhotoApi/canhoto_api_thumbnail.webp
+    - /images/projects/canhotoApi/canhoto-api_logo.svg
     - /images/projects/canhotoApi/canhoto_api_config.webp
     - /images/projects/canhotoApi/canhoto_api_home.webp
 tags: 
@@ -14,34 +14,65 @@ tags:
     - Whatsapp-web.js
 ---
 
-<About className="gap-2">
-    <Text type='small' align='justify' className='m-2'>
+export const { thumbnail, title, images } = frontmatter;
+
+<About>
+    <Paragraph align='justify'>
     API desenvolvida em Node.js para receber imagens via requisições HTTP, armazená-las em um servidor local e persistir os dados em um banco de dados SQL Server. 
-    A API é projetada para atuar junto com o <Link className='text-text-link' href='app-canhoto'>AppCanhoto</Link>, permitindo o envio automático de imagens recebidas para servidor
+    A API é projetada para atuar junto com o <Link className='text-text-link hover:text-text-secondary' href='app-canhoto'>AppCanhoto</Link>, permitindo o envio automático de imagens recebidas para servidor
     especificado.
-    </Text>
-    <Text type='small' align='justify' className='m-2'>
+    </Paragraph >
+    <Paragraph align='justify'>
     A aplicação utiliza o framework Express para gerenciar as rotas e o middleware Multer para lidar com o upload de arquivos. O banco de dados SQL Server é utilizado para armazenar 
     informações sobre as imagens recebidas, incluindo metadados como nome do arquivo, caminho de armazenamento e timestamp. 
-    </Text>
-    <Text type='small' align='justify' className='m-2'>
+    </Paragraph>
+   <Paragraph align='justify'>
     A API é configurada para rodar em um servidor
     local, mas pode ser facilmente adaptada para ambientes de produção com ajustes na configuração do banco de dados e do servidor.
-    </Text>
+    </Paragraph>
 </About>
-<Features className="flex flex-col justify-around ">
-    <Feature title='Armazenamento de Imagens'>
-    A API permite o upload e armazenamento de imagens em um servidor local, facilitando a gestão de arquivos.
-    </Feature>
 
-    <Feature title='Persistência de Dados'>
-    Os metadados das imagens, como nome do arquivo e timestamp, são armazenados em um banco de dados SQL Server.
-    </Feature>
+<BannerContainer>
+{thumbnail &&
+  <img
+    src={thumbnail}
+    alt={title}
+    className="w-full h-[100%] object-cover"
+  />
+}
+</BannerContainer>
 
-    <Feature title='Processamento de Imagens'>
-    A API pode ser estendida para incluir recursos de processamento de imagens, como redimensionamento e aplicação de filtros.
-    </Feature>
-</Features>
+<div className='flex flex-col justify-evenly'>
+    <Features className="flex flex-col justify-around ">
+        <Feature title='Armazenamento de Imagens'>
+        A API permite o upload e armazenamento de imagens em um servidor local, facilitando a gestão de arquivos.
+        </Feature>
+
+        <Feature title='Persistência de Dados'>
+        Os metadados das imagens, como nome do arquivo e timestamp, são armazenados em um banco de dados SQL Server.
+        </Feature>
+
+        <Feature title='Processamento de Imagens'>
+        A API pode ser estendida para incluir recursos de processamento de imagens, como redimensionamento e aplicação de filtros.
+        </Feature>
+    </Features>
+    <div className="flex">
+        {images.map((image, index)=>{
+            return(
+                <>
+                    <ImgContainer key={index}>
+                        <Image
+                            alt={title}
+                            src={image}
+                            fill
+                            className="object-cover rounded-md"
+                        />
+                    </ImgContainer>
+                </>
+            )})}
+    </div>
+</div>
+
 <Tecnologies>
 
     <Tecnology title='Framworks'>
