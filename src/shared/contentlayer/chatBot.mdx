@@ -3,33 +3,64 @@ title: ChatBot
 slug: chat-bot
 publishedAt: 2025-08-03
 description: Automação de atendimento whatsapp criada com javascript.
-thumbnail: /images/projects/mail.png
+thumbnail: ""
 images: 
-    - /images/projects/mail.png
+    - ""
 tags: 
     - Node
     - Typescript
     - Whatsapp-web.js
 ---
 
-<About>
-    <Paragraph >
+export const { thumbnail, title, images } = frontmatter;
 
+<About>
+    <Paragraph align="justify">
+    Esse foi um projeto onde eu desenvolvi um Chatbot para proporcionaratendimento facilitado.
     </Paragraph>    
 </About>
-<Features className="flex flex-col justify-around ">
-    <Feature title='Feature 1'>
-    Feature description
-    </Feature>
 
-    <Feature title='Feature 2'>
-    Feature description
-    </Feature>
+<BannerContainer>
+{thumbnail &&
+  <img
+    src={thumbnail}
+    alt={title}
+    className="w-full h-[100%] object-cover"
+  />
+}
+</BannerContainer>
 
-    <Feature title='Feature 2'>
-    Feature description
-    </Feature>
-</Features>
+<div className='flex flex-col justify-evenly'>
+    <Features className="flex flex-col justify-around ">
+        <Feature title='Feature 1'>
+        Feature description
+        </Feature>
+
+        <Feature title='Feature 2'>
+        Feature description
+        </Feature>
+
+        <Feature title='Feature 2'>
+        Feature description
+        </Feature>
+    </Features>
+    <div className="flex">
+        {images.map((image, index)=>{
+            return(
+                <>
+                    <ImgContainer key={index}>
+                        <Image
+                            alt={title}
+                            src={image}
+                            fill
+                            className="object-cover rounded-md"
+                        />
+                    </ImgContainer>
+                </>
+            )})}
+    </div>
+</div>
+
 <Tecnologies>
 
     <Tecnology title='Tech 1'>

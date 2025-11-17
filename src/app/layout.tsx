@@ -4,7 +4,6 @@ import "@/shared/fonts/robotoMono/robotoMono.css";
 import "@/shared/fonts/fontSize/fontsize.css";
 import Head from "next/head";
 import Header from "@/shared/components/structural/header";
-import Footer from "@/shared/components/structural/footer";
 
 export const metadata: Metadata = {
   title: "DevLuna - Portifólio",

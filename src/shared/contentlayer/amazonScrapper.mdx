@@ -13,6 +13,8 @@ tags:
     - Whatsapp-web.js
 ---
 
+export const { thumbnail, title, images } = frontmatter;
+
 <About>
     <Paragraph align="justify">
     Esse projeto se trata de um desafio que encontrei pelo meu caminho como desenvolvedor. Nele eu precisava criar uma interface que fazia requisições para um backend e depois exibisse as informações na tela.
@@ -25,19 +27,48 @@ tags:
     </Paragraph>    
 
 </About>
-<Features className="flex flex-col justify-around ">
-    <Feature title='Feature 1'>
-    Feature description
-    </Feature>
 
-    <Feature title='Feature 2'>
-    Feature description
-    </Feature>
+<BannerContainer>
+{thumbnail &&
+  <img
+    src={thumbnail}
+    alt={title}
+    className="w-full h-[100%] object-cover"
+  />
+}
+</BannerContainer>
 
-    <Feature title='Feature 2'>
-    Feature description
-    </Feature>
-</Features>
+<div className='flex flex-col justify-evenly'>
+    <Features className="flex flex-col justify-around ">
+        <Feature title='Feature 1'>
+        Feature description
+        </Feature>
+
+        <Feature title='Feature 2'>
+        Feature description
+        </Feature>
+
+        <Feature title='Feature 3'>
+        Feature description
+        </Feature>
+    </Features>
+    <div className="flex">
+        {images.map((image, index)=>{
+            return(
+                <>
+                    <ImgContainer key={index}>
+                        <Image
+                            alt={title}
+                            src={image}
+                            fill
+                            className="object-cover rounded-md"
+                        />
+                    </ImgContainer>
+                </>
+            )})}
+    </div>
+</div>
+
 <Tecnologies>
     <Tecnology title='Tech 1'>
     Tech Label
@@ -47,6 +78,5 @@ tags:
     </Tecnology>
     <Tecnology title='Tech 3'>
     Tech Label
-    </Tecnology>
-    
+    </Tecnology>   
 </Tecnologies>
