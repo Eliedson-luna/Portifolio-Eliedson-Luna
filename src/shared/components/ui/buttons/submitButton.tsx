@@ -11,13 +11,13 @@ export default function SubmitButton({ isSubmitting }: { isSubmitting: boolean }
                 cursor-pointer
                 hover:scale-105
                 active:scale-100
-                border border-btn-submit
-                hover:bg-btn-hover
+                subContainer
+                border
                 group
                 "
             disabled={isSubmitting}
         >
-            {isSubmitting ? <ResponsiveText textSize="small" className="group-hover:text-text-inverted">Enviando...</ResponsiveText> : <ResponsiveText textSize="small" className="group-hover:text-text-inverted">Enviar</ResponsiveText>}
+            {isSubmitting ? <ResponsiveText textSize="small" className="group-hover:text-text-secondary">Enviando...</ResponsiveText> : <ResponsiveText textSize="small" className="group-hover:text-text-secondary">Enviar</ResponsiveText>}
         </button>
     )
 }

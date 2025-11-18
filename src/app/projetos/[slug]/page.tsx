@@ -4,7 +4,7 @@ import { FlexLayout } from "@/shared/components/structural/layouts/flexLayout";
 import ContentWrapper from "@/shared/components/structural/wrappers/contentWrapper";
 import { Paragraph } from "@/shared/components/ui/text/paragraph";
 import { ResponsiveText } from "@/shared/components/ui/text/responsiveText";
-import { SubTitle, Title } from "@/shared/components/ui/text/title";
+import { SubTitle } from "@/shared/components/ui/text/title";
 import { Topic } from "@/shared/components/ui/text/topic";
 import { allProjects } from "contentlayer/generated";
 import { Metadata } from "next";
@@ -56,7 +56,7 @@ export default function ProjetoPage({ params }: any) {
       <ContentWrapper>
         <div className='flex justify-center'>
           <div className='w-[85%] pt-10'>
-            <ResponsiveText textSize='big' className='mb-10 text-[#4A148C]'>{project.title}</ResponsiveText>
+            <SubTitle>{project.title}</SubTitle>
             <MDXContent components={components} />
           </div>
         </div>
