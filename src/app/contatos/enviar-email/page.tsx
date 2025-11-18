@@ -1,19 +1,37 @@
 "use client";
 import { FlexLayout } from "@/shared/components/structural/layouts/flexLayout";
+import ContentWrapper from "@/shared/components/structural/wrappers/contentWrapper";
 import SubmitButton from "@/shared/components/ui/buttons/submitButton";
-import { ResponsiveText } from "@/shared/components/ui/text/responsiveText";
-import { Title } from "@/shared/components/ui/text/title";
+import { SubTitle } from "@/shared/components/ui/text/title";
 import { useState, useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 
 export default function ContatoPage() {
-    const [email, setEmail] = useState("");
+    
+    return (
+        <FlexLayout>
+            <ContentWrapper>
+                <div className="flex w-full h-[100vh] items-center content-center">
+                    <div className="w-[60%] h-full mr-10">
+                    <MessageForm />
+                    </div>
+                </div>
+            </ContentWrapper>
+        </FlexLayout>
+
+    );
+}
+
+const MessageForm = () => {
+    const [contact, setContact] = useState("");
     const [message, setMessage] = useState("");
     const [captchaValue, setCaptchaValue] = useState<string | null>(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [error, setError] = useState<string | null>(null);
     const recaptchaRef = useRef<ReCAPTCHA>(null);
     const api_key = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || '';
+    const contactMaxLenght = 40;
+    const messageMaxLenght = 500;
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -21,6 +39,16 @@ export default function ContatoPage() {
 
         if (!captchaValue) {
             setError("⚠️ Por favor, confirme que você não é um robô.");
+            return;
+        }
+
+        if(message.length > messageMaxLenght) {
+            setError("⚠️ Sua mensagem possui muitos caracteres.");
+            return;
+        }
+
+        if(contact.length > contactMaxLenght) {
+            setError("⚠️ Seu contato possui muitos caracteres.");
             return;
         }
 
@@ -41,11 +69,11 @@ export default function ContatoPage() {
                 await fetch("https://formsubmit.co/goncalveseliedson@gmail.com", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ email, message }),
+                    body: JSON.stringify({ contact, message }),
                 });
 
                 alert("✅ Mensagem enviada com sucesso!");
-                setEmail("");
+                setContact("");
                 setMessage("");
                 recaptchaRef.current?.reset();
                 setCaptchaValue(null);
@@ -62,56 +90,65 @@ export default function ContatoPage() {
             setIsSubmitting(false);
         }
     };
-
     return (
-        <FlexLayout>
-
-            <div className="max-w-lg mx-auto p-6 bg-bg-cont shadow-md shadow-shadow-cont rounded-lg">
-                <Title>Entre em contato</Title>
-
-                {error && <p className="text-red-500">{error}</p>}
-
-                <form onSubmit={handleSubmit}>
-                    <div className="flex flex-col justify-evenly h-full min-h-[50vh]">
-                        <div>
-
-                            <ResponsiveText textSize="small">Seu Email:</ResponsiveText>
-                            <input
-                                type="email"
-                                name="email"
-                                className="w-full p-2 border rounded text-text"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                                required
-                            />
-                        </div>
-                        <div>
-
-                            <ResponsiveText textSize="small">Mensagem:</ResponsiveText>
-                            <textarea
-                                name="message"
-                                className="w-full p-2 border rounded text-text"
-                                value={message}
-                                onChange={(e) => setMessage(e.target.value)}
-                                required
-                            ></textarea>
-
-                        </div>
-
-                        <div className="m-4">
-                            <ReCAPTCHA
-                                ref={recaptchaRef}
-                                sitekey={api_key}
-                                onChange={setCaptchaValue}
-                            />
-                        </div>
-                        <div className="flex w-full justify-center items-centers">
-                            <SubmitButton isSubmitting={isSubmitting} />
-                        </div>
+        <div className="border-r border-r-border-subcont pr-20 h-[100%]">
+            {error && <p className="text-red-500">{error}</p>}
+            <form onSubmit={handleSubmit} className="flex flex-col justify-evenly h-[100%]">
+                <div>
+                    <SubTitle className="mb-5">SEU CONTATO:</SubTitle>
+                    <input
+                        type="text"
+                        name="contato"
+                        className="
+                            w-full 
+                            px-5 py-2 ml-5
+                            rounded 
+                            text-text 
+                            caret-text 
+                            inputbg 
+                            text-size-tiny 
+                            focus:outline-0
+                        "
+                        value={contact}
+                        onChange={(e) => setContact(e.target.value)}
+                        required
+                        placeholder="seu telefone, Email, linkedin ..."
+                        maxLength={contactMaxLenght}
+                        
+                    />
+                </div>
+                <div>
+                    <SubTitle className="mb-5">SUA MENSAGEM:</SubTitle>
+                    <textarea
+                        name="message"
+                        className="
+                            w-full h-[250px] 
+                            px-5 py-2 ml-5
+                            rounded 
+                            text-text 
+                            caret-text 
+                            inputbg 
+                            text-size-tiny 
+                            resize-none
+                            focus:outline-0
+                            "
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
+                        required
+                        maxLength={messageMaxLenght}
+                    />
+                </div>
+                <div className="flex justify-evenly items-center">
+                    <div>
+                        <ReCAPTCHA
+                            ref={recaptchaRef}
+                            sitekey={api_key}
+                            onChange={setCaptchaValue}
+                        />
                     </div>
-                </form>
-            </div>
-        </FlexLayout>
-
-    );
+                    <SubmitButton isSubmitting={isSubmitting}/>
+                </div>
+            </form>
+        </div>
+    )
 }
