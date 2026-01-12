@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <Head>
-        <link rel="icon" href="/assets/favicon.ico" />
+        <link rel="icon" href="/assets/favicon.svg" />
       </Head>
       <body className="antialiased">
         <Header />
