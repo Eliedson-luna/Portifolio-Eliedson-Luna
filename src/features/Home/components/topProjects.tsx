@@ -1,24 +1,23 @@
 'use client'
 
 import { HorizontalIndicator } from "@/shared/components/structural/scroll/horizontalIndicator";
-import { VerticalIndicator } from "@/shared/components/structural/scroll/verticalIndicator";
 import { ResponsiveText } from "@/shared/components/ui/text/responsiveText";
 import { Title } from "@/shared/components/ui/text/title";
-import { allProjects, Project } from "contentlayer/generated";
 import Image from "next/image";
 import Link from "next/link";
 import { JSX, ReactNode } from "react";
+import { Post, posts } from "#site/content"
 
 export default function TopProjects() {
-    const projects: Project[] = allProjects.slice(0, 3);
+    const projects: any[] = posts.slice(0, 3);
     return (
         <div className="h-full w-full mt-15 border-t-border-hover border-t-2">
             <ResponsiveText textSize="medium">Projetos Recentes</ResponsiveText>
             <CardContainer>
-                {projects.map((proj: Project) => {
+                {projects.map((proj: Post, index) => {
                     const image = proj.images ? proj.images[0] : '/not-found-image.png';
                     return (
-                        <Card key={proj._id} slug={proj.slug} title={proj.title} txt={proj.description} imgUrl={image} />
+                        <Card key={index} slug={proj.slug} title={proj.title} txt={proj.description} imgUrl={image} />
                     )
                 })}
             </CardContainer>

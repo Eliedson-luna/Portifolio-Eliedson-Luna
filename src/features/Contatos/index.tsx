@@ -1,6 +1,6 @@
 import { SubTitle, Title } from "@/shared/components/ui/text/title";
 import Link from "next/link";
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 import { FaFilePdf, FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
@@ -27,8 +27,8 @@ export default function PageContactsBody() {
                     rounded-lg
                     ">
                 {links.map((item, index) => (
-                    <LinkBox key={index}>
-                        <Link href={item.href} target={item.desc == 'Mensagem' ? '' : '_blank'}>
+                    <LinkBox key={index} >
+                        <Link href={item.href} id={`contact-${index+1}`} target={item.desc == 'Mensagem' ? '' : '_blank'}>
                             <div className="flex justify-center pt-2">
                                 {item.icon}
                             </div>
@@ -37,7 +37,6 @@ export default function PageContactsBody() {
                                     text-center 
                                     rounded-xl
                                     pb-2
-                                    
                                 "
                             >
                                 {item.desc}

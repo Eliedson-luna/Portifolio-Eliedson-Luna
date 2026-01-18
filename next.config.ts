@@ -1,17 +1,13 @@
-import type { NextConfig } from "next";
-import { withContentlayer } from "next-contentlayer2";
+import type { NextConfig } from 'next'
 
+const isDev = process.argv.indexOf('dev') !== -1
+const isBuild = process.argv.indexOf('build') !== -1
+if (!process.env.VELITE_STARTED && (isDev || isBuild)) {
+  process.env.VELITE_STARTED = '1'
+  import('velite').then(m => m.build({ watch: isDev, clean: !isDev }))
+}
 const nextConfig: NextConfig = {
-  images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'drive.google.com', // substitua pelo domínio real
-        port: '',
-        pathname: '/**',
-      }
-    ],
-  },
+  turbopack:{}
 }
 
-export default withContentlayer(nextConfig);
+export default nextConfig

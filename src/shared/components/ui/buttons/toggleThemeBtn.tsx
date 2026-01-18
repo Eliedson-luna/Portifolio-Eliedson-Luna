@@ -1,16 +1,14 @@
 'use client'
 
-import { ThemeProvider, useTheme } from "@/context/themeContext";
+import { useTheme } from "@/context/themeContext";
 import { ReactNode, useState } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 
 export default function ToggleTheme() {
     return (
-        <ThemeProvider>
             <div className="flex place-self-center transition-all hover:cursor-pointer">
                 <ToggleButton />
             </div>
-        </ThemeProvider>
     )
 }
 
