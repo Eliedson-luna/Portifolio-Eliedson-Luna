@@ -45,3 +45,7 @@ next-env.d.ts
 
 # models
 model.mdx
+
+#velite
+
+/.velite/
