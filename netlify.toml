@@ -1,6 +1,5 @@
 [build]
-  command = "npx velite"
-  command = "npm run build"
+  command = "npx velite && npm run build"
   publish = ".next"
 
 [build.environment]
