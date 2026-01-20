@@ -15,16 +15,17 @@ export default function PageContactsBody() {
 
     return (
         <ContactsLayout>
-            <div className="px-25 pb-3">
+            <div className="sm:px-25 sm:pb-3">
                 <Title>
                     Contatos
                 </Title>
             </div>
             <div
-                className="
-                    flex
-                    justify-center w-full
+                className=" 
+                    grid grid-cols-2 grid-rows-2
                     rounded-lg
+                    sm:flex sm:justify-center sm:w-full
+
                     ">
                 {links.map((item, index) => (
                     <LinkBox key={index} >
@@ -52,7 +53,7 @@ export default function PageContactsBody() {
 
 const ContactsLayout = ({ children }: { children: ReactNode }) => {
     return (
-        <section className="flex flex-wrap flex-col items-center justify-center h-[90vh] w-full">
+        <section className="flex flex-col justify-center items-center sm:justify-around h-[95vh]">
             {children}
         </section>
     )
@@ -61,7 +62,8 @@ const ContactsLayout = ({ children }: { children: ReactNode }) => {
 const LinkBox = ({ children }: { children: ReactNode }) => {
     return (
         <div className="
-            p-1 my-25 mx-15
+            my-5 mx-2
+            sm:p-1 sm:my-25 sm:mx-15
             w-50 h-25
             flex flex-col
             justify-center items-center 

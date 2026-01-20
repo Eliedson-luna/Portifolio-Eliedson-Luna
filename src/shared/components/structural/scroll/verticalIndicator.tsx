@@ -38,7 +38,7 @@ export function VerticalIndicator({ rootClass, trace }: { rootClass?: string, tr
   }, []);
 
   return (
-    <div className="fixed right-6 top-1/2 -translate-y-1/2 flex flex-col gap-3 z-50">
+    <div className="fixed right-3 top-1/2 -translate-y-1/2 flex flex-col gap-3 z-50">
       {Array.from({ length: count - 1 }).map((_, i) => (
         <button
           key={i}

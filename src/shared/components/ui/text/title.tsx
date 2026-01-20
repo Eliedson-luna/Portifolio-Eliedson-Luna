@@ -2,7 +2,7 @@ type TitleProps = React.HTMLAttributes<HTMLSpanElement>
 
 export function Title({ children, className = "", ...rest }: TitleProps) {
 
-    const combinedClass = `${className} text-text-title text-size-title caret-transparent`;
+    const combinedClass = `${className} text-text-title text-size-biggest sm:text-size-title caret-transparent`;
 
     return <h1 className={combinedClass} {...rest}>{children}</h1>;
 }

@@ -1,4 +1,4 @@
-import HomePageMenu from "./components/menu";
+import HomePageStart from "./components/start";
 import TopProjects from "./components/topProjects";
 import { VerticalIndicator } from "@/shared/components/structural/scroll/verticalIndicator";
 import { SnapLayout } from "@/shared/components/structural/layouts/snapLayout";
@@ -10,7 +10,7 @@ export default function HomepageBody() {
         <SnapLayout>
             <VerticalIndicator />
             <SnapWrapper>
-                <HomePageMenu />
+                <HomePageStart />
             </SnapWrapper>
             <SnapWrapper>
                 <TopProjects />

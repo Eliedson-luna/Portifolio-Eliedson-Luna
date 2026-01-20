@@ -1,11 +1,19 @@
 import { Paragraph } from "@/shared/components/ui/text/paragraph";
 import { Title } from "@/shared/components/ui/text/title";
 
-export default function HomePageMenu() {
+export default function HomePageStart() {
     return (
-        <div className="flex w-full h-full">
-            <div className="flex flex-col justify-evenly  w-[60%] h-full">
-                <div className="place-content-start flex flex-col justify-center">
+        <div className="
+                    flex
+                    not-sm:gap-20 
+                    not-sm:items-center
+                    justify-center
+                    sm:flex-row 
+                    flex-col 
+                    w-full h-full 
+                    ">
+            <div className="flex w-full sm:w-[60%] sm:h-full">
+                <div className="flex flex-col justify-center place-content-start">
                     <Title className="mb-10">
                         ELIEDSON LUNA,
                     </Title>
@@ -14,8 +22,14 @@ export default function HomePageMenu() {
                     </Title>
                 </div>
             </div>
-            <div className="flex flex-col justify-center h-full w-[25%] ">
-                <div className="flex flex-col justify-center gap-5 border-l-border-subcont border-l h-[70%] pl-5">
+            <div className="flex flex-row sm:flex-col justify-center w-[85vw] sm:w-[25%] ">
+                <div className="
+                    flex flex-col sm:flex-col 
+                    sm:justify-center 
+                    gap-5 
+                    sm:border-l-border-subcont sm:border-l  border-t-border-subcont not-sm:border-t
+                    sm:h-[70%] 
+                    pt-10 sm:pl-5">
                     <Paragraph align="justify">
                         Opa tudo bom? Seja bem vindo ao DEV LUNA, meu portifólio profissional!
                     </Paragraph>

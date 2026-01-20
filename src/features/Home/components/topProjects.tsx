@@ -36,7 +36,7 @@ const CardContainer = ({ children }: { children: ReactNode }) => {
         snap-x snap-mandatory
         overflow-x-scroll
         text-center
-        py-10 px-60
+        py-20 sm:py-10
         gap-10
          
         ">
@@ -57,7 +57,7 @@ type CardProps = {
 const Card = ({ slug, title, txt, imgUrl }: CardProps): JSX.Element => {
     return (
         <CardLayout href={`/projetos/${slug}`}>
-            <div className="flex justify-center w-[90vw] h-[60%] relative">
+            <div className="flex sm:justify-start w-[90vw] h-[60%] relative">
                 <Image
                     alt={title!}
                     src={imgUrl!}
