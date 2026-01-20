@@ -7,7 +7,7 @@ export default function HomePageStart() {
                     flex
                     not-sm:gap-20 
                     not-sm:items-center
-                    justify-center
+                    not-sm:justify-center
                     sm:flex-row 
                     flex-col 
                     w-full h-full 
