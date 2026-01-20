@@ -10,12 +10,11 @@ export default function PageAboutBody() {
         <FlexLayout>
             <ContentWrapper>
                 <Container>
-                    <div className="w-300" >
-
+                    <div className="w-[80vw]" >
                         <SubTitle className="mb-15">
                             🖐 Olá! Sou Eliedson!
                         </SubTitle>
-                        <div className="w-250" >
+                        <div className="w-[75vw]" >
                             <Paragraph align="justify" className="mb-10">
                                 Sou um desenvolvedor apaixonado por Frontend, mas também exploro
                                 Backend e outras áreas da tecnologia. Tenho formação em Análise e
