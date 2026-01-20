@@ -11,8 +11,8 @@ export default function ContatoPage() {
     return (
         <FlexLayout>
             <ContentWrapper>
-                <div className="flex w-full h-[100vh] items-center content-center">
-                    <div className="w-[60%] h-full mr-10">
+                <div className="flex w-full h-[80vh] items-center content-center">
+                    <div className="w-full sm:w-[60%] h-full sm:mr-10">
                     <MessageForm />
                     </div>
                 </div>
@@ -66,7 +66,7 @@ const MessageForm = () => {
             const data = await response.json();
 
             if (data.tokenProperties?.valid) {
-                await fetch("https://formsubmit.co/goncalveseliedson@gmail.com", {
+                await fetch("https://formsubmit.co/eliglunadev@gmail.com", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ contact, message }),
@@ -91,7 +91,7 @@ const MessageForm = () => {
         }
     };
     return (
-        <div className="border-r border-r-border-subcont pr-20 h-[100%]">
+        <div className="sm:border-r sm:border-r-border-subcont pr-10 sm:pr-20 h-[100%]">
             {error && <p className="text-red-500">{error}</p>}
             <form onSubmit={handleSubmit} className="flex flex-col justify-evenly h-[100%]">
                 <div>
@@ -100,13 +100,14 @@ const MessageForm = () => {
                         type="text"
                         name="contato"
                         className="
-                            w-full 
+                            w-full
+                            h-15 
                             px-5 py-2 ml-5
                             rounded 
                             text-text 
                             caret-text 
-                            inputbg 
-                            text-size-tiny 
+                            inputbg
+                            text-size-small 
                             focus:outline-0
                         "
                         value={contact}
@@ -128,7 +129,7 @@ const MessageForm = () => {
                             text-text 
                             caret-text 
                             inputbg 
-                            text-size-tiny 
+                            text-size-small
                             resize-none
                             focus:outline-0
                             "
@@ -138,7 +139,7 @@ const MessageForm = () => {
                         maxLength={messageMaxLenght}
                     />
                 </div>
-                <div className="flex justify-evenly items-center">
+                <div className="flex not-sm:flex-col justify-evenly items-center">
                     <div>
                         <ReCAPTCHA
                             ref={recaptchaRef}
