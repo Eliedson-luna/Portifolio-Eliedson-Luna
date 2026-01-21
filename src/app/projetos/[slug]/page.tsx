@@ -38,7 +38,7 @@ export default async function ProjetoPage({ params }: PostProps) {
       <div className="pt-15" />
       <ContentWrapper>
         <div className='flex justify-center'>
-          <div className='w-[90%] sm:w-[80%] pt-10'>
+          <div className='w-[90%] sm:w-[65%] pt-10'>
             <div className="flex flex-row justify-between items-center  mb-5">
               <div className="flex flex-row gap-5 items-center">
               <SubTitle>
