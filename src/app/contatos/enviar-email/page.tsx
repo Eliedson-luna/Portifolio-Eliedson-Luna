@@ -95,9 +95,9 @@ const MessageForm = () => {
             {error && <p className="text-red-500">{error}</p>}
             <form onSubmit={handleSubmit} className="flex flex-col justify-evenly h-[100%]">
                 <div>
-                    <SubTitle className="mb-5">SEU CONTATO:</SubTitle>
+                    <SubTitle className="mb-5">SEU EMAIL:</SubTitle>
                     <input
-                        type="text"
+                        type="email"
                         name="contato"
                         className="
                             w-full
@@ -113,7 +113,7 @@ const MessageForm = () => {
                         value={contact}
                         onChange={(e) => setContact(e.target.value)}
                         required
-                        placeholder="seu telefone, Email, linkedin ..."
+                        placeholder="exemplo@exemplo.com"
                         maxLength={contactMaxLenght}
                         
                     />
