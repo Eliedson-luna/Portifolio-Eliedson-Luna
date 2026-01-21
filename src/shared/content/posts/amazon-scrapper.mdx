@@ -10,6 +10,7 @@ tags:
  - "Node"
  - "Typescript"
  - "Whatsapp-web.js"
+github: "https://github.com/Eliedson-luna/Amazon-Scrapper"
 ---
 
 export const { thumbnail, title, images } = frontmatter;
@@ -23,19 +24,18 @@ export const { thumbnail, title, images } = frontmatter;
     </Paragraph>
     <Paragraph align="justify">
     Tentei ao máximo desenvolver uma interface limpa e responsiva para oferecer a melhor experiência ao usuário. Fiquei muito contente com o resultado, pois ,apesar de ser um projeto simples e com uma interface mais simples ainda, não deixou de ser uma boa fonte de experiência para mim.
-    </Paragraph>    
-
+    </Paragraph>
 </About>
 
-<BannerContainer>
 {thumbnail &&
+<BannerContainer>
   <img
     src={thumbnail}
     alt={title}
     className="w-full h-[100%] object-cover"
   />
-}
 </BannerContainer>
+}
 
 <div className='flex flex-col justify-evenly'>
     <Features className="flex flex-col justify-around ">
@@ -52,9 +52,8 @@ export const { thumbnail, title, images } = frontmatter;
         </Feature>
     </Features>
     <div className="flex">
-        {images.map((image, index)=>{
+        {images && images.map((image, index)=>{
             return(
-                <>
                     <ImgContainer key={index}>
                         <Image
                             alt={title}
@@ -63,19 +62,18 @@ export const { thumbnail, title, images } = frontmatter;
                             className="object-cover rounded-md"
                         />
                     </ImgContainer>
-                </>
             )})}
     </div>
 </div>
 
 <Tecnologies>
-    <Tecnology title='Tech 1'>
+    <Tecnology title='Javascript'>
     Tech Label
     </Tecnology>
-    <Tecnology title='Tech 2'>
+    <Tecnology title='NodeJs'>
     Tech Label
     </Tecnology>
-    <Tecnology title='Tech 3'>
+    <Tecnology title='HTML5 e CSS'>
     Tech Label
     </Tecnology>   
 </Tecnologies>

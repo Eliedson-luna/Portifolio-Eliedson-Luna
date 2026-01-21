@@ -70,7 +70,7 @@ const LinkBox = ({ children }: { children: ReactNode }) => {
             hover:scale-105
             active:scale-100
             group 
-            subContainer 
+            subContainer
             border
             rounded-xl
             cursor-pointer

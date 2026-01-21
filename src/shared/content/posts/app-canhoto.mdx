@@ -9,6 +9,7 @@ tags:
     - Node
     - Javascript
     - Expo
+github: "Repositório Privado"
 ---
 
 export const { thumbnail, title, images } = frontmatter;
@@ -19,15 +20,15 @@ export const { thumbnail, title, images } = frontmatter;
     de uma empresa.
 </About>
 
-<BannerContainer>
 {thumbnail &&
+<BannerContainer>
   <img
     src={thumbnail}
     alt={title}
     className="w-full h-[100%] object-cover"
   />
-}
 </BannerContainer>
+}
 
 <div className='flex flex-col justify-evenly'>
     <Features className="flex flex-col justify-around ">
@@ -44,9 +45,8 @@ export const { thumbnail, title, images } = frontmatter;
         </Feature>
     </Features>
     <div className="flex">
-        {images.map((image, index)=>{
+        {images && images.map((image, index)=>{
             return(
-                <>
                     <ImgContainer key={index}>
                         <Image
                             alt={title}
@@ -55,7 +55,6 @@ export const { thumbnail, title, images } = frontmatter;
                             className="object-cover rounded-md"
                         />
                     </ImgContainer>
-                </>
             )})}
     </div>
 </div>
