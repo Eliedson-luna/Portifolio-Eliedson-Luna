@@ -2,7 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { SubTitle } from "@/shared/components/ui/text/title";
 import { ResponsiveText } from "@/shared/components/ui/text/responsiveText";
-import {Post, posts} from '#site/content'
+import { Post, posts } from '#site/content'
+import { FaLink } from "react-icons/fa";
 
 export default function ProjectList() {
     return (
@@ -13,9 +14,9 @@ export default function ProjectList() {
             md:grid md:grid-cols-3
         ">
             {
-                posts.map((proj: Post ,index: number) => {
+                posts.map((post: Post, index: number) => {
                     return (
-                        <ProjectCard key={index} slug={proj.slugAsParams} index={index}>
+                        <ProjectCard key={index} slug={post.slugAsParams} index={index}>
                             <div
                                 className='
                                 items-center
@@ -25,14 +26,14 @@ export default function ProjectList() {
                             >
                                 <div className="w-[65%]  transition-colors">
                                     <SubTitle className="mb-3">
-                                        {proj.title}
+                                        {post.title}
                                     </SubTitle>
                                     <ResponsiveText textSize="small" align="right" className="group-hover:text-text-secondary">
-                                        {proj.description}
+                                        {post.description}
                                     </ResponsiveText>
                                 </div>
 
-                                {proj.thumbnail &&
+                                {post.thumbnail &&
                                     <div key={index} className="h-full flex flex-col justify-center">
                                         <div
                                             className="
@@ -44,7 +45,7 @@ export default function ProjectList() {
                                         >
 
                                             <Image
-                                                src={proj.thumbnail.trimEnd()}
+                                                src={post.thumbnail.trimEnd()}
                                                 alt=""
                                                 fill
                                                 className="object-cover"
