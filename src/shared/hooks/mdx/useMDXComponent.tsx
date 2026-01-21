@@ -15,8 +15,8 @@ type MDXContentProps = {
 }
 
 const useMDXComponent = (code: string, frontmatter: Record<string, any> = {}) => {
-  const fn = new Function('runtime','frontmatter',`${code}` )
-  return fn({ ...runtime }, frontmatter ).default
+  const fn = new Function('runtime', 'frontmatter', `${code}`)
+  return fn({ ...runtime }, frontmatter).default
 }
 
 export function MDXContent({ code, frontmatter }: MDXContentProps) {
@@ -29,9 +29,11 @@ export function MDXContent({ code, frontmatter }: MDXContentProps) {
 
 export const About = ({ children }: React.HTMLAttributes<HTMLElement>) => {
   return (
-    <div>
+    <SubContainer>
+
       {children}
-    </div>
+
+    </SubContainer>
   )
 }
 
