@@ -29,9 +29,9 @@ export function MDXContent({ code, frontmatter }: MDXContentProps) {
 
 export const About = ({ children }: React.HTMLAttributes<HTMLElement>) => {
   return (
-    <Paragraph>
+    <div>
       {children}
-    </Paragraph>
+    </div>
   )
 }
 
@@ -89,7 +89,14 @@ export const Tecnology = ({ children, title }: TecnologyType) => {
 
 export const ImgContainer = ({ children }: { children: ReactNode }) => {
   return (
-    <div className="flex justify-center w-[300px] h-[250px] ml-10 relative">
+    <div className="
+    flex justify-center 
+    relative
+    w-[20vw] h-[10vh] 
+    sm:w-[300px] sm:h-[250px] 
+    mx-5
+    overflow-x-scroll 
+    ">
       {children}
     </div>
   )
