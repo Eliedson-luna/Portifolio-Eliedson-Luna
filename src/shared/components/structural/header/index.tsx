@@ -69,9 +69,9 @@ const NavButtons = () => {
         <nav className="flex justify-start">
             <div className=" flex justify-evenly">
                 {pathname != '/' &&
-                    <ButtonLayout href={'/'}>
+                    <HomeButtonBox href={'/'}>
                         {icon}
-                    </ButtonLayout>}
+                    </HomeButtonBox>}
                 {menuData.map((item) => (
                     <ButtonLayout key={item.title} href={item.link}>
                         <ResponsiveText textSize="tiny" className={`self-center group-hover:text-text-secondary uppercase px-3 ${pathname === item.link ? 'border-b border-border-subcont text-text-secondary' : ''}`}>
@@ -96,4 +96,24 @@ const ButtonLayout = ({ children, href }: { children: ReactNode, href: string })
             {children}
         </Link>
     )
+}
+
+const HomeButtonBox = ({ children, href }: { children: ReactNode, href: string }) => {
+    return (
+        <Link  href={href} className="
+            my-2 ml-3 px-5
+            flex flex-col
+            justify-center items-center 
+            hover:scale-105
+            active:scale-100
+            group 
+            subContainer
+            border
+            rounded-md
+            cursor-pointer
+            ">
+            {children}
+        </Link>
+    )
+
 }
