@@ -13,9 +13,10 @@ const posts = defineCollection({
         slug: s.path(),
         publishedAt: s.isodate(),
         description: s.string().max(150).optional(),
-        thumbnail: s.string(),
+        thumbnail: s.string().optional(),
         images: s.array(s.string()).optional(),
         tags: s.array(s.string()).default([]),
+        github: s.string().optional(),
         body: s.mdx(),
     })
     .transform(computedFields)
