@@ -25,6 +25,7 @@
   --color-text-footer: #fafafa;
   --color-text-link: #00bbff;
   /* border */
+  --color-border-header: #dddddd;
   --color-border-cont: #cccccc;
   --color-border-subcont: #dddddd;
   /* hover */
@@ -58,6 +59,7 @@
   --color-text-footer: #fafafa;
   --color-text-link: #00bbff;
   /* border */
+  --color-border-header: #1C2B6F;
   --color-border-cont: #3a3a3a;
   --color-border-subcont: #4a4258;
   /* hover */

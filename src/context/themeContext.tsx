@@ -39,7 +39,6 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
             {children}
         </ThemeContext.Provider>
     )
-
 }
 
 export function useTheme(): ThemeContextType {

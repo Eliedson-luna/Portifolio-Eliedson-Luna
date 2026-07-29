@@ -10,17 +10,14 @@ import { ThemeProvider, useTheme } from "@/context/themeContext";
 const menuData = [
     {
         title: 'Sobre mim',
-        description: 'Saiba um pouco sobre mim',
         link: '/sobre',
     },
     {
         title: 'Projetos',
-        description: 'Confira minha lista de projetos',
         link: '/projetos',
     },
     {
         title: 'Contatos',
-        description: 'Entre em contato comigo.',
         link: '/contatos',
     }
 ]
@@ -32,7 +29,7 @@ export default function Header() {
                 <div className="flex p-1 gap-5 justify-evenly">
                     <NavButtons />
                 </div>
-                <div className="mt-5">
+                <div className="self-center">
                     <ToggleTheme />
                 </div>
             </HeaderLayout>
@@ -46,16 +43,24 @@ export default function Header() {
 const HeaderLayout = ({ children }: { children: ReactNode }) => {
     return (
         <header className="
-        flex
         absolute
         w-full
-        sm:text-[0.5rem] md:text-[1rem] lg:text-md
-        h-15 
         justify-between
+        "
+        ><div
+        className="
+        my-2 mx-2
+        border rounded-xl
+        border-border-cont
+        flex
+        sm:text-[0.5rem] md:text-[1rem] lg:text-md
+        h-10 
+        justify-end
         backdrop-blur-md
         "
         >
             {children}
+        </div>
         </header>
     )
 }
@@ -71,7 +76,8 @@ const NavButtons = () => {
                 {pathname != '/' &&
                     <HomeButtonBox href={'/'}>
                         {icon}
-                    </HomeButtonBox>}
+                    </HomeButtonBox>
+                    }
                 {menuData.map((item) => (
                     <ButtonLayout key={item.title} href={item.link}>
                         <ResponsiveText textSize="tiny" className={`self-center group-hover:text-text-secondary uppercase px-3 ${pathname === item.link ? 'border-b border-border-subcont text-text-secondary' : ''}`}>
@@ -88,9 +94,9 @@ const ButtonLayout = ({ children, href }: { children: ReactNode, href: string })
     return (
         <Link
             href={href}
-            className="                
-                rounded-md
-                px-5 py-3
+            className="
+                px-5
+                self-center
                 group
                 ">
             {children}
@@ -101,19 +107,18 @@ const ButtonLayout = ({ children, href }: { children: ReactNode, href: string })
 const HomeButtonBox = ({ children, href }: { children: ReactNode, href: string }) => {
     return (
         <Link  href={href} className="
-            my-2 ml-3 px-5
+            h-8 w-8
             flex flex-col
-            justify-center items-center 
+            justify-center items-center self-center
             hover:scale-105
             active:scale-100
             group 
             subContainer
             border
-            rounded-md
+            rounded-full
             cursor-pointer
             ">
             {children}
         </Link>
     )
-
 }
