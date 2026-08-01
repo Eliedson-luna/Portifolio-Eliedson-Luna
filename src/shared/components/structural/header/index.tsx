@@ -51,7 +51,7 @@ const HeaderLayout = ({ children }: { children: ReactNode }) => {
         className="
         my-2 mx-2
         border rounded-xl
-        border-border-cont
+        border-border-subcont
         flex
         sm:text-[0.5rem] md:text-[1rem] lg:text-md
         h-10 
