@@ -15,36 +15,37 @@ export default function PageContactsBody() {
 
     return (
         <ContactsLayout>
-            <div className="sm:px-25 sm:pb-3">
-                <Title>
-                    Contatos
-                </Title>
-            </div>
-            <div
-                className=" 
-                    grid grid-cols-2 grid-rows-2
-                    rounded-lg
-                    sm:flex sm:justify-center sm:w-full
+            <div className="pt-50">
 
-                    ">
-                {links.map((item, index) => (
-                    <LinkBox key={index} >
-                        <Link href={item.href} id={`contact-${index+1}`} target={item.desc == 'Mensagem' ? '' : '_blank'}>
-                            <div className="flex justify-center pt-2">
-                                {item.icon}
-                            </div>
-                            <SubTitle
-                                className="
-                                    text-center 
-                                    rounded-xl
-                                    pb-2
+                <div className="sm:px-25 sm:pb-3 flex justify-center w-full">
+                    <Title>
+                        Contatos
+                    </Title>
+                </div>
+                <div
+                    className=" 
+                grid grid-cols-2 grid-rows-2
+                lg:flex lg:justify-center lg:w-full
+                ">
+                    {links.map((item, index) => (
+                        <LinkBox key={index} >
+                            <Link href={item.href} id={`contact-${index + 1}`} target={item.desc == 'Mensagem' ? '' : '_blank'}>
+                                <div className="flex justify-center pt-2">
+                                    {item.icon}
+                                </div>
+                                <SubTitle
+                                    className="
+                                text-center 
+                                rounded-xl
+                                pb-2
                                 "
-                            >
-                                {item.desc}
-                            </SubTitle  >
-                        </Link>
-                    </LinkBox>
-                ))}
+                                >
+                                    {item.desc}
+                                </SubTitle  >
+                            </Link>
+                        </LinkBox>
+                    ))}
+                </div>
             </div>
         </ContactsLayout>
 
@@ -53,7 +54,7 @@ export default function PageContactsBody() {
 
 const ContactsLayout = ({ children }: { children: ReactNode }) => {
     return (
-        <section className="flex flex-col justify-center items-center h-[95vh]">
+        <section className="flex flex-col justify-center items-center h-full">
             {children}
         </section>
     )
