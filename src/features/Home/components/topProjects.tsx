@@ -57,7 +57,7 @@ type CardProps = {
 const Card = ({ slug, title, txt, imgUrl }: CardProps): JSX.Element => {
     return (
         <CardLayout href={`/projetos/${slug}`}>
-            <div className="flex sm:justify-start w-[90vw] h-[60%] relative">
+            <div className="flex sm:justify-start sm:w-[70vw] md:w-[78vw] lg:w-[63vw] h-[60%] relative">
                 <Image
                     alt={title!}
                     src={imgUrl!}
@@ -106,6 +106,10 @@ const CardLayout = ({ children, href }: { children: ReactNode, href: string }) =
                 flex
                 snap-center
                 cursor-pointer
+                bg-neutral-10
+                rounded-lg
+                p-10
+                bg-black/10
             "
         >
             <div
