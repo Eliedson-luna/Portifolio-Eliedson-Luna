@@ -38,7 +38,7 @@ export function HorizontalIndicator({ rootClass, trace }: { rootClass?: string, 
   }, []);
 
   return (
-    <div className="items-center-safe flex gap-10 z-50">
+    <div className="items-center-safe flex justify-center gap-15 z-50">
       {Array.from({ length: count }).map((_, i) => (
         <button
           key={i}
@@ -47,8 +47,9 @@ export function HorizontalIndicator({ rootClass, trace }: { rootClass?: string, 
             section?.scrollIntoView({ behavior: "smooth" });
           }}
           aria-label={`Ir para seção ${i + 1}`}
-          className={`w-20 h-3 rounded-md caret-transparent cursor-pointer transition-all mb-5 last-of-type:mb-0 ${activeIndex === i
-            ? "bg-text scale-115"
+          className={`
+            w-20 h-3 rounded-md caret-transparent cursor-pointer transition-all mb-5 ${activeIndex === i
+            ? "bg-blue-500 scale-115"
             : "bg-gray-500/40 hover:bg-gray-400/70"
             }`}
         />
