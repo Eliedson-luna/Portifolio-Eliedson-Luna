@@ -42,7 +42,7 @@
 
 .dark {
   /* backgrounds */
-  --color-bg: radial-gradient(73.75% 154.94% at 47.27% 52.92%, #111117 0%, #1B1B40 100%);
+  --color-bg: radial-gradient(73.75% 154.94% at 47.27% 52.92%, #0b0b22 0%, #1B1B40 100%);
   --color-bg-cont: #2a2a34;
   --color-bg-subcont: linear-gradient(90.2deg, rgba(56, 54, 54, 0.075) 1.31%, rgba(246, 243, 243, 0.075) 99.83%);
   --color-bg-footer: #373744;
