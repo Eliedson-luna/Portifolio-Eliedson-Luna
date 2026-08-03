@@ -6,6 +6,7 @@ export function SnapLayout({ children }: { children: ReactNode }) {
             flex flex-col
             justify-items-center 
             items-center
+            lg:mx-60
             h-screen
             overflow-y-scroll
             scroll-smooth
