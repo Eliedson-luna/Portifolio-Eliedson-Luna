@@ -14,49 +14,39 @@ export default function PageContactsBody() {
     ]
 
     return (
-        <ContactsLayout>
-            <div className="pt-50">
+        <div className="flex flex-col justify-center items-center h-screen">
 
-                <div className="sm:px-25 sm:pb-3 flex justify-center w-full">
-                    <Title>
-                        Contatos
-                    </Title>
-                </div>
-                <div
-                    className=" 
+            <div className="sm:px-25 sm:pb-3 flex justify-center w-fit">
+                <Title>
+                    Contatos
+                </Title>
+            </div>
+            <div
+                className=" 
                 grid grid-cols-2 grid-rows-2
                 lg:flex lg:justify-center lg:w-full
                 ">
-                    {links.map((item, index) => (
-                        <LinkBox key={index} >
-                            <Link href={item.href} id={`contact-${index + 1}`} target={item.desc == 'Mensagem' ? '' : '_blank'}>
-                                <div className="flex justify-center pt-2">
-                                    {item.icon}
-                                </div>
-                                <SubTitle
-                                    className="
+                {links.map((item, index) => (
+                    <LinkBox key={index} >
+                        <Link href={item.href} id={`contact-${index + 1}`} target={item.desc == 'Mensagem' ? '' : '_blank'}>
+                            <div className="flex justify-center pt-2">
+                                {item.icon}
+                            </div>
+                            <SubTitle
+                                className="
                                 text-center 
                                 rounded-xl
                                 pb-2
                                 "
-                                >
-                                    {item.desc}
-                                </SubTitle  >
-                            </Link>
-                        </LinkBox>
-                    ))}
-                </div>
+                            >
+                                {item.desc}
+                            </SubTitle  >
+                        </Link>
+                    </LinkBox>
+                ))}
             </div>
-        </ContactsLayout>
+        </div>
 
-    )
-}
-
-const ContactsLayout = ({ children }: { children: ReactNode }) => {
-    return (
-        <section className="flex flex-col justify-center items-center h-full">
-            {children}
-        </section>
     )
 }
 
