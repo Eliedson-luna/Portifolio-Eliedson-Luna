@@ -15,6 +15,7 @@
   /* buttons */
   --color-btn-submit: #625bff;
   /* text */
+  --text-frontend: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 255, 0.7) 38.94%, rgba(170, 0, 255, 0.7) 100%);
   --color-text: #1a1a1a;
   --color-text-secondary: #3d3d3d;
   --color-text-title: #22222b;
@@ -41,7 +42,7 @@
 
 .dark {
   /* backgrounds */
-  --color-bg: linear-gradient(95.61deg, #121218 46.19%, #272938 100.03%);
+  --color-bg: radial-gradient(73.75% 154.94% at 47.27% 52.92%, #111117 0%, #1B1B40 100%);
   --color-bg-cont: #2a2a34;
   --color-bg-subcont: linear-gradient(90.2deg, rgba(56, 54, 54, 0.075) 1.31%, rgba(246, 243, 243, 0.075) 99.83%);
   --color-bg-footer: #373744;
@@ -49,6 +50,7 @@
   /* buttons */
   --color-btn-submit: #656c7d;
   /* text */
+  --text-frontend: radial-gradient(50% 50% at 50% 50%, rgba(115, 216, 236, 0.767) 38.94%, rgba(0, 76, 255, 0.644) 100%);
   --color-text: #b0b0b0;
   --color-text-secondary: #e5e5e5;
   --color-text-title: #cfcfcf;
@@ -108,4 +110,13 @@ body {
 
 .inputbg {
   background: var(--color-bg-input);
+}
+
+.text-gradient {
+  background: var(--text-frontend);
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
