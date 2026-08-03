@@ -49,7 +49,7 @@ const RightContainer = () => {
                 </Title>
             </div>
             <div>
-                <SubTitle className="shadow-2xl">
+                <SubTitle className="shadow-2xl animate-pulse transition-colors">
                     <span className="text-red-400"> problema </span>
                     →
                     <span className="text-blue-400"> solução </span>
