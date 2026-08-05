@@ -1,6 +1,6 @@
 'use client'
 
-import { HorizontalIndicator } from "@/shared/components/structural/scroll/horizontalIndicator";
+import { HorizontalIndicator } from "@/shared/components/ui/scroll/horizontalIndicator";
 import { ResponsiveText } from "@/shared/components/ui/text/responsiveText";
 import { Title } from "@/shared/components/ui/text/title";
 import Image from "next/image";
