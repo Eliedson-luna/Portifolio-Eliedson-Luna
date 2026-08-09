@@ -4,13 +4,13 @@ export function SnapLayout({ children }: { children: ReactNode }) {
     return (
         <main className="
             flex flex-col
-            justify-items-center 
             items-center
-            lg:mx-60
-            h-screen
+            h-screen w-full
             overflow-y-scroll
             scroll-smooth
             snap-y snap-mandatory
+            *:self-center
+            *:px-60
         ">
             {children}
         </main>

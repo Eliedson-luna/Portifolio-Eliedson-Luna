@@ -40,7 +40,7 @@ export default function Header() {
 const HeaderLayout = ({ children }: { children: ReactNode }) => {
     return (
         <header className="
-        absolute
+        fixed
         w-full
         justify-around
         "
