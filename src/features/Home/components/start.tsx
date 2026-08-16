@@ -2,7 +2,6 @@
 import GenericButton from "@/shared/components/ui/buttons/genericButton";
 import { SubTitle, Title } from "@/shared/components/ui/text/title";
 import { useRouter } from "next/navigation";
-import { useRef } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 
@@ -23,9 +22,6 @@ export default function HomePageStart() {
             <div className="flex w-full sm:w-[60%] sm:h-full">
                 <RightContainer />
             </div>
-            {/* <div className="flex flex-row sm:flex-col justify-center w-[85vw] sm:w-[25%] ">
-                <LeftContainer />
-            </div> */}
         </div>
     )
 }
@@ -64,30 +60,3 @@ const RightContainer = () => {
         </div>
     )
 }
-
-// const LeftContainer = () => {
-
-//     const container = useRef<HTMLDivElement>(null);
-//     const boxRef = useRef<HTMLDivElement>(null);
-
-//     useGSAP(() => {
-//         gsap.to(boxRef.current, {
-//             rotation: 720,
-//             repeat: -10,
-//             duration: 50,
-//         });
-//     }, { scope: container });
-
-//     return (
-//         <div className="
-//                     flex flex-col sm:flex-col 
-//                     sm:justify-center 
-//                     gap-5 
-//                     sm:h-[70%] 
-//                     pt-10 sm:pl-5">
-//             <div className="self-center" ref={container}>
-//                 <div className="w-50 h-50 bg-amber-400" ref={boxRef} />
-//             </div>
-//         </div>
-//     )
-// }
