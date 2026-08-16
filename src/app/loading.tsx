@@ -1,7 +1,11 @@
+'use client'
+
+import LunaSvg from "@/shared/components/animations/luna-svg/lunaSvg"
+
 export default function Loading(): React.ReactNode {
     return (
-        <div className="text-center text-[#ff0000]">
-            <span>Carregando...</span>
+        <div className="h-screen items-center w-full flex justify-center">
+            <LunaSvg />
         </div>
     )
 

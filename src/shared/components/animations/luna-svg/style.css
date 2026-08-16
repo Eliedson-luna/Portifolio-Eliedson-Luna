@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+    --color-stroke: #00AAFF;
+}
+
+.dark {
+    --color-stroke: #ffffff;
+}
+
+.loading-polygon {
+    stroke: var(--color-stroke);
+    stroke-dasharray: 10, 3;
+    stroke-width: 2;
+    animation: dash alternate 4s cubic-bezier(1, 0.1, 0.63, 0.5) infinite;
+
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 150;
+    }
+}
