@@ -3,7 +3,6 @@ import Link from "next/link";
 import { SubTitle } from "@/shared/components/ui/text/title";
 import { ResponsiveText } from "@/shared/components/ui/text/responsiveText";
 import { Post, posts } from '#site/content'
-import { FaLink } from "react-icons/fa";
 
 export default function ProjectList() {
     return (

@@ -1,3 +1,4 @@
+import ContentWrapper from "@/shared/components/structural/wrappers/contentWrapper";
 import { SubTitle, Title } from "@/shared/components/ui/text/title";
 import Link from "next/link";
 import { ReactNode } from "react";
@@ -14,50 +15,49 @@ export default function PageContactsBody() {
     ]
 
     return (
-        <div className="flex flex-col justify-center items-center h-screen w-fit">
-
-            <div className="sm:px-25 sm:pb-3 flex justify-center w-fit">
+        <ContentWrapper>
+            <div className="sm:px-25 sm:pb-3 flex w-full">
                 <Title>
                     Contatos
                 </Title>
             </div>
-            <div
-                className=" 
-                grid grid-cols-2 grid-rows-2
-                lg:flex lg:justify-center lg:w-full
+            <div className="h-80 flex">
+                <div
+                    className="self-center
+                        grid grid-cols-2 grid-rows-2
+                        lg:flex lg:justify-center lg:w-full
                 ">
-                {links.map((item, index) => (
-                    <LinkBox key={index} >
-                        <Link href={item.href} id={`contact-${index + 1}`} target={item.desc == 'Mensagem' ? '' : '_blank'}>
-                            <div className="flex justify-center pt-2">
-                                {item.icon}
-                            </div>
-                            <SubTitle
-                                className="
+                    {links.map((item, index) => (
+                        <LinkBox key={index} >
+                            <Link href={item.href} id={`contact-${index + 1}`} target={item.desc == 'Mensagem' ? '' : '_blank'}>
+                                <div className="flex justify-center pt-2">
+                                    {item.icon}
+                                </div>
+                                <SubTitle
+                                    className="
                                 text-center 
                                 rounded-xl
                                 pb-2
                                 "
-                            >
-                                {item.desc}
-                            </SubTitle  >
-                        </Link>
-                    </LinkBox>
-                ))}
+                                >
+                                    {item.desc}
+                                </SubTitle  >
+                            </Link>
+                        </LinkBox>
+                    ))}
+                </div>
             </div>
-        </div>
-
+        </ContentWrapper>
     )
 }
 
 const LinkBox = ({ children }: { children: ReactNode }) => {
     return (
         <div className="
-            my-5 mx-2
-            sm:p-1 sm:my-25 sm:mx-15
-            w-50 h-25
-            flex flex-col
-            justify-center items-center 
+            min-w-40 min-h-20
+            max-w-50 max-h-25
+            my-2 mx-2
+            md:my-15 md:mx-15
             hover:scale-105
             active:scale-100
             group 
@@ -66,7 +66,13 @@ const LinkBox = ({ children }: { children: ReactNode }) => {
             rounded-xl
             cursor-pointer
             ">
-            {children}
+            <div className="
+                flex flex-col
+                justify-center items-center
+                h-full w-full
+                ">
+                {children}
+            </div>
         </div>
     )
 

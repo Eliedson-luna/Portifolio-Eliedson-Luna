@@ -7,7 +7,6 @@ export default function PageProjectsBody() {
     return (
         <FlexLayout>
             <ContentWrapper>
-                <div className="mt-20" />
                 <TitleBox />
                 <ProjectList />
             </ContentWrapper>
