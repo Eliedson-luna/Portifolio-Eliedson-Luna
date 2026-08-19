@@ -16,8 +16,8 @@ export default function PageProjectsBody() {
 
 const TitleBox = () => {
     return (
-        <div className="px-50 pb-2 bg-bg border-b border-border-subcont">
-            <Title className="uppercase">Projetos</Title>
+        <div className="border-b border-border-subcont">
+            <Title>Projetos</Title>
         </div>
     )
 }
