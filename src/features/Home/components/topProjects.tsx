@@ -1,125 +1,111 @@
-'use client'
+'use client';
 
-import { HorizontalIndicator } from "@/shared/components/ui/scroll/horizontalIndicator";
-import { ResponsiveText } from "@/shared/components/ui/text/responsiveText";
-import { Title } from "@/shared/components/ui/text/title";
-import Image from "next/image";
-import Link from "next/link";
-import { JSX, ReactNode } from "react";
-import { Post, posts } from "#site/content"
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+
+import Image from 'next/image';
+import Link from 'next/link';
+
+import { ResponsiveText } from '@/shared/components/ui/text/responsiveText';
+import { Title } from '@/shared/components/ui/text/title';
+import { posts } from '#site/content';
 
 export default function TopProjects() {
-    const projects: Post[] = posts.slice(0, 3);
+    const topProjects = posts.slice(0, 3);
+
     return (
-        <div className="h-full w-full mt-15 border-t-border-hover border-t-2">
-            <ResponsiveText textSize="medium">Projetos Recentes</ResponsiveText>
-            <CardContainer>
-                {projects.map((proj: Post, index) => {
-                    const image = proj.images ? proj.images[0] : '/not-found-image.png';
-                    return (
-                        <Card key={index} slug={proj.slugAsParams} title={proj.title} txt={proj.description} imgUrl={image} />
-                    )
-                })}
-            </CardContainer>
-            <HorizontalIndicator rootClass=".scroll-card" trace=".card" />
-        </div>
-    )
-}
+        <div className="w-full mt-15 border-t-2 border-t-border-hover pt-8">
+            <ResponsiveText textSize="medium">
+                Projetos Recentes
+            </ResponsiveText>
 
-const CardContainer = ({ children }: { children: ReactNode }) => {
-    return (
-        <div className="
-        scroll-card
-        flex
-        h-[85%]
-        w-full
-        snap-x snap-mandatory
-        overflow-x-scroll
-        text-center
-        py-20 sm:py-10
-        gap-10
-         
-        ">
-
-            {children}
-
-        </div>
-    )
-}
-
-type CardProps = {
-    slug?: string;
-    title?: string;
-    txt?: string;
-    imgUrl?: string;
-};
-
-const Card = ({ slug, title, txt, imgUrl }: CardProps): JSX.Element => {
-    return (
-        <CardLayout href={`/projetos/${slug}`}>
-            <div className="flex sm:justify-start sm:w-[70vw] md:w-[78vw] lg:w-[63vw] h-[60%] relative">
-                <Image
-                    alt={title!}
-                    src={imgUrl!}
-                    fill
-                    className="object-cover rounded-lg"
-                />
-            </div>
-            <div
-                className="
-                    flex
-                    h-[40%]
-                    justify-start items-center
-                    text-center
-                    transition-opacity duration-300
-                    z-1
-                "
+            <Carousel
+                autoPlay
+                infiniteLoop
+                emulateTouch
+                showThumbs={false}
+                showStatus={false}
+                showIndicators
+                className="mt-10"
             >
-                <Title className="uppercase">
-                    {title}
-                </Title>
-                <ResponsiveText
-                    textSize="small"
-                    align="justify"
-                    className="
-                    py-10
-                    mt-1
-                    ml-10 pl-10
-                    border-l border-l-border-subcont
-                    hover:text-text-secondary
-                    "
-                >
-                    {txt}
-                </ResponsiveText>
-            </div>
-        </CardLayout>
-    );
-};
+                {topProjects.map((project) => (
+                    <Link
+                        key={project.slugAsParams}
+                        href={`/projetos/${project.slugAsParams}`}
+                        className="
+                            block
+                            w-full
+                            px-4
+                            pb-10
+                        "
+                    >
+                        <article
+                            className="
+                                mx-auto
+                                flex
+                                w-full
+                                max-w-5xl
+                                flex-col
+                                overflow-hidden
+                                rounded-xl
+                                border
+                                border-border-subcont
+                                bg-black/10
+                                text-left
+                                transition-all
+                                duration-300
+                                hover:border-border-hover
+                                hover:bg-black/20
+                            "
+                        >
+                            <div className="relative h-64 w-full overflow-hidden sm:h-80 lg:h-96">
+                                <Image
+                                    src={project.images?.[0] || '/projects/mail.png'}
+                                    alt={project.title}
+                                    fill
+                                    className="
+                                        object-cover
+                                        transition-transform
+                                        duration-500
+                                        hover:scale-105
+                                    "
+                                />
+                            </div>
 
+                            <div
+                                className="
+                                    flex
+                                    flex-col
+                                    gap-4
+                                    p-6
+                                    sm:flex-row
+                                    sm:items-center
+                                    sm:p-8
+                                "
+                            >
+                                <Title className="shrink-0 uppercase">
+                                    {project.title}
+                                </Title>
 
-const CardLayout = ({ children, href }: { children: ReactNode, href: string }) => {
-    return (
-        <Link
-            href={href}
-            className="
-                card
-                flex
-                snap-center
-                cursor-pointer
-                bg-neutral-10
-                rounded-lg
-                p-10
-                bg-black/10
-            "
-        >
-            <div
-                className="
-                w-[90%]
-                h-[90%]
-            "
-            >
-                {children}
-            </div>
-        </Link>
+                                <ResponsiveText
+                                    textSize="small"
+                                    align="justify"
+                                    className="
+                                        border-l-0
+                                        pl-0
+                                        text-text-secondary
+                                        sm:border-l
+                                        sm:border-l-border-subcont
+                                        sm:pl-6
+                                    "
+                                >
+                                    {project.description}
+                                </ResponsiveText>
+                            </div>
+                        </article>
+                    </Link>
+                ))}
+            </Carousel>
+        </div>
     );
-};
+}
