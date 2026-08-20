@@ -9,7 +9,7 @@ export async function POST(request: Request) {
         }
 
         const response = await fetch(
-            `${process.env.RECAPTCHA_API_KEY}`,
+            `https://recaptchaenterprise.googleapis.com/v1/projects/portifolioelieds-1742338758804/assessments?key=${process.env.RECAPTCHA_API_KEY}`,
             {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },

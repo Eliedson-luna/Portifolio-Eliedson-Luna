@@ -7,13 +7,13 @@ import { useState, useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 
 export default function ContatoPage() {
-    
+
     return (
         <FlexLayout>
             <ContentWrapper>
                 <div className="flex w-full h-[80vh] items-center content-center">
                     <div className="w-full sm:w-[60%] h-full sm:mr-10">
-                    <MessageForm />
+                        <MessageForm />
                     </div>
                 </div>
             </ContentWrapper>
@@ -29,9 +29,14 @@ const MessageForm = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [error, setError] = useState<string | null>(null);
     const recaptchaRef = useRef<ReCAPTCHA>(null);
-    const api_key = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || '';
+    const reCaptchaSiteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || '';
     const contactMaxLenght = 40;
     const messageMaxLenght = 500;
+
+    if (!reCaptchaSiteKey) {
+        console.warn("reCaptchaSiteKey is missing");
+
+    }
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -42,12 +47,12 @@ const MessageForm = () => {
             return;
         }
 
-        if(message.length > messageMaxLenght) {
+        if (message.length > messageMaxLenght) {
             setError("⚠️ Sua mensagem possui muitos caracteres.");
             return;
         }
 
-        if(contact.length > contactMaxLenght) {
+        if (contact.length > contactMaxLenght) {
             setError("⚠️ Seu contato possui muitos caracteres.");
             return;
         }
@@ -115,7 +120,7 @@ const MessageForm = () => {
                         required
                         placeholder="exemplo@exemplo.com"
                         maxLength={contactMaxLenght}
-                        
+
                     />
                 </div>
                 <div>
@@ -143,11 +148,11 @@ const MessageForm = () => {
                     <div>
                         <ReCAPTCHA
                             ref={recaptchaRef}
-                            sitekey={api_key}
+                            sitekey={reCaptchaSiteKey}
                             onChange={setCaptchaValue}
                         />
                     </div>
-                    <SubmitButton isSubmitting={isSubmitting}/>
+                    <SubmitButton isSubmitting={isSubmitting} />
                 </div>
             </form>
         </div>
