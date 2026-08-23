@@ -4,7 +4,7 @@ import "./style.css"
 export default function LunaSvg({ className, ...rest }: React.HTMLAttributes<HTMLDivElement>) {
     return (
         <div className={`flex justify-center w-fit ` + className} {...rest}>
-            <svg width="100" height="33" viewBox="0 0">
+            <svg width="100" height="33" viewBox="0 0 100 33">
                 <polygon
                     className="loading-polygon"
                     fill="none"
