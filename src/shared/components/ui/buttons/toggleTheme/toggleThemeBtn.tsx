@@ -16,12 +16,13 @@ export default function ToggleTheme() {
 const ToggleButton = () => {
     const { theme, toggleTheme } = useTheme();
     const [spining, setSpining] = useState<boolean>(false);
+
     function changeTheme() {
         setSpining(true);
         toggleTheme();
 
         setTimeout(() => {
-            setSpining(false)            
+            setSpining(false)
         }, 1000);
     }
 
@@ -30,15 +31,14 @@ const ToggleButton = () => {
             onClick={changeTheme}
             className={
                 spining ?
-                "btn-theme-style *:animate-[spin_1s_linear] *:hover:scale-105 *:transition-all"
-                :
-                 "btn-theme-style *:hover:scale-105 *:transition-transform"
+                    "btn-theme-style *:animate-[spin_1s_linear] *:hover:scale-105 *:transition-all"
+                    :
+                    "btn-theme-style *:hover:scale-105 *:transition-transform"
             }
         >
 
-            <FaSun className={theme == "light" ? "show text-icon" : "hide"} />
-
-            <FaMoon className={theme == "dark" ? "show text-icon" : "hide"} />
+            <FaSun className={theme == "light" ? "text-icon" : "hide"} />
+            <FaMoon className={theme == "dark" ? "text-icon" : "hide"} />
         </button>
     )
 }
