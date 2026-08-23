@@ -98,7 +98,9 @@ const MessageForm = () => {
     return (
         <div className="sm:border-r sm:border-r-border-subcont pr-10 sm:pr-20 h-[100%]">
             {error && <p className="text-red-500">{error}</p>}
-            <form onSubmit={handleSubmit} className="flex flex-col justify-evenly h-[100%]">
+            <form
+                onSubmit={handleSubmit}
+                className="flex flex-col justify-evenly h-[100%]">
                 <div>
                     <SubTitle className="mb-5">SEU EMAIL:</SubTitle>
                     <input
@@ -126,7 +128,7 @@ const MessageForm = () => {
                 <div>
                     <SubTitle className="mb-5">SUA MENSAGEM:</SubTitle>
                     <textarea
-                        name="message"
+                        name="mensagem"
                         className="
                             w-full h-[250px] 
                             px-5 py-2 ml-5
