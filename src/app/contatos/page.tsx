@@ -1,5 +1,4 @@
-import PageContactsBody from "@/features/Contatos";
-import { FlexLayout } from "@/shared/components/structural/layouts/flexLayout";
+import ContatcsPageBody from "@/features/Contatos";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -9,8 +8,6 @@ export const metadata: Metadata = {
 export default function ContatcsPage() {
 
     return (
-        <FlexLayout>
-            <PageContactsBody />
-        </FlexLayout>
+        <ContatcsPageBody/>
     )
 }
