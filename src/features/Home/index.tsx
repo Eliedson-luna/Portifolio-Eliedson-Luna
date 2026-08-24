@@ -3,6 +3,7 @@ import TopProjects from "./components/topProjects";
 import { SnapLayout } from "@/shared/components/structural/layouts/snapLayout";
 import SnapWrapper from "@/shared/components/structural/wrappers/snapWrapper";
 import Contacts from "./components/contacts";
+import About from "./components/about";
 
 export default function HomepageBody() {
     return (
@@ -13,11 +14,12 @@ export default function HomepageBody() {
             <SnapWrapper>
                 <TopProjects />
             </SnapWrapper>
-            
             <SnapWrapper>
-               <Contacts/>
+                <About/>
             </SnapWrapper>
-
+            <SnapWrapper>
+                <Contacts />
+            </SnapWrapper>
         </SnapLayout>
     )
 }
