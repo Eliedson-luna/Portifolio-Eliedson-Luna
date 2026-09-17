@@ -1,0 +1,39 @@
+﻿# Portfólio Profissional - Eliedson Luna
+URL: https://devluna.com.br
+
+## Descrição
+Portfólio profissional desenvolvido com Next.js 15 (App Router), TypeScript e Tailwind CSS v4. Apresenta projetos, blog técnico com MDX, animações GSAP e formulário de contato com reCAPTCHA.
+
+## Stack Tecnológico
+- Framework: Next.js 15 (App Router, Turbopack)
+- Estilização: Tailwind CSS v4
+- Linguagem: TypeScript 5 (strict)
+- CMS/Conteúdo: Velite (MDX + frontmatter)
+- Animações: GSAP 3 + @gsap/react
+- Formulários: react-google-recaptcha v3
+- Deploy: Netlify
+
+## Rotas Principais
+- \/\ — Home (hero, projetos em destaque, sobre, contatos)
+- \/sobre\ — Página sobre o desenvolvedor
+- \/projetos\ — Listagem de todos os projetos
+- \/projetos/[slug]\ — Detalhe de projeto (MDX)
+- \/contatos\ — Formulário de contato com reCAPTCHA
+- \/contatos/enviar-email\ — Confirmação de envio
+
+## Blog Posts (MDX via Velite)
+| Slug | Título | Data | Descrição | Tags | GitHub |
+|------|--------|------|-----------|------|--------|
+| whatsapp-chatbot | ChatBot | 2025-08-03 | Automação de atendimento whatsapp | Node, TypeScript, Whatsapp-web.js | https://github.com/Eliedson-luna/Whatsapp-ChatBot |
+| model | model | 2025-08-03 | Exemplo de descrição | Node, TypeScript, Whatsapp-web.js | https://github.com/Eliedson-luna/Whatsapp-ChatBot |
+| canhoto-api | CanhotoApi | 2025-08-03 | API para armazenamento de imagens e persistência | Node, TypeScript, Whatsapp-web.js | Privado |
+| app-canhoto | AppCanhoto | 2025-08-03 | App mobile para registro de recebimento de cargas | Node, JavaScript, Expo | Privado |
+| amazon-scrapper | Amazon Scrapper | 2025-08-03 | Aplicação web para buscas com API da Amazon | Node, TypeScript, Whatsapp-web.js | https://github.com/Eliedson-luna/Amazon-Scrapper |
+
+## Funcionalidades Chave
+- Blog técnico MDX com frontmatter tipado (Velite)
+- Animações GSAP (scroll indicators, Luna SVG)
+- Dark/Light mode persistido via localStorage
+- reCAPTCHA v3 server-side verification
+- Thumbnails WebP/JPG responsivas
+- Turbopack no dev, build otimizado
